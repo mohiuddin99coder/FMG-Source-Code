@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rstk__Product_rs_addprod__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>When checked, a Rootstock Product will be (or has been) added for this SF Product.</inlineHelpText>
+    <label>Add to Rootstock Product Catalog</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

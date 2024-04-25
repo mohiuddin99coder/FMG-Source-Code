@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Work_Orders_Firm_Scheduled</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__wocst_ordno__c</columns>
+    <columns>rstk__wocst_ordsts__c</columns>
+    <columns>rstk__wocst_item__c</columns>
+    <columns>rstk__wocst_qtyreq__c</columns>
+    <columns>rstk__wocst_qtyacc__c</columns>
+    <columns>rstk__wocst_duedte__c</columns>
+    <columns>rstk__wocst_refurbind__c</columns>
+    <columns>rstk__wocst_reworkind__c</columns>
+    <columns>rstk__wocst_disassmind__c</columns>
+    <columns>rstk__wocst_numbops__c</columns>
+    <columns>FMG_Safety_Stock_Qty__c</columns>
+    <columns>FMG_On_Hand_Qty__c</columns>
+    <columns>FMG_Pct_of_SS_OH__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__wocst_ordsts__c</field>
+        <operation>equals</operation>
+        <value>2,3,4</value>
+    </filters>
+    <filters>
+        <field>rstk__wocst_numbops__c</field>
+        <operation>greaterThan</operation>
+        <value>0</value>
+    </filters>
+    <label>Work Orders Firm &amp; Scheduled</label>
+</ListView>

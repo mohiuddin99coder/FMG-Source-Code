@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disassembly_Work_Orders_All</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__wocst_ordno__c</columns>
+    <columns>rstk__wocst_item__c</columns>
+    <columns>rstk__wocst_ordsts_pl__c</columns>
+    <columns>rstk__wocst_qtyreq__c</columns>
+    <columns>rstk__wocst_qtyacc__c</columns>
+    <columns>rstk__wocst_duedte__c</columns>
+    <columns>rstk__wocst_refurbind__c</columns>
+    <columns>rstk__wocst_reworkind__c</columns>
+    <columns>rstk__wocst_disassmind__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__wocst_disassmind__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Disassembly Work Orders</label>
+</ListView>

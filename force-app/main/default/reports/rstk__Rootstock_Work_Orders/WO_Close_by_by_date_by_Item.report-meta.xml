@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>rstk__sytxncst__c.rstk__sytxncst_txnid__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>rstk__sytxncst__c.rstk__sytxncst_item__c</field>
+    </columns>
+    <description>WO Close by Date by Item</description>
+    <filter>
+        <criteriaItems>
+            <column>rstk__sytxncst__c.rstk__sytxncst_txnid__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>WOCLOSE,WOCLOSER</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>rstk__sytxncst__c.rstk__sytxncst_usrno__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>WO Close by Date by Item</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$rstk__sytxncst__c@rstk__sytxncst__c.rstk__sytxncst_orddiv__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>CUST_CREATED_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>rstk__sytxncst__c.rstk__sytxncst_acctgdate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

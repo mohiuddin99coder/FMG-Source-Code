@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Filtered_Inventory_by_Location</fullName>
+    <columns>NAME</columns>
+    <columns>rootstock__Item__c</columns>
+    <columns>rstk__iclocitem_locid__c</columns>
+    <columns>rstk__iclocitem_loctype_pl__c</columns>
+    <columns>rstk__iclocitem_locnum__c</columns>
+    <columns>rstk__iclocitem_locqty__c</columns>
+    <columns>rstk__iclocitem_availind__c</columns>
+    <columns>rstk__iclocitem_comments__c</columns>
+    <columns>rstk__iclocitem_lastcountdate__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>rstk__iclocitem_locsec__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__iclocitem_locid__c</field>
+        <operation>contains</operation>
+        <value>P1</value>
+    </filters>
+    <filters>
+        <field>rstk__iclocitem_locnum__c</field>
+        <operation>equals</operation>
+        <value>C1</value>
+    </filters>
+    <label>Filtered Inventory by Location</label>
+</ListView>

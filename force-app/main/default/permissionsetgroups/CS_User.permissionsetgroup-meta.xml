@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>CS User</label>
+    <permissionSets>Accounts</permissionSets>
+    <permissionSets>B2C_CRM_JWT</permissionSets>
+    <permissionSets>B2C_CRM_SYNC</permissionSets>
+    <permissionSets>Enable_Filters</permissionSets>
+    <permissionSets>Order_Summaries</permissionSets>
+    <permissionSets>Order_Summary_Routing_Salesforce</permissionSets>
+    <permissionSets>RMA_CS</permissionSets>
+    <permissionSets>Run_Flows</permissionSets>
+    <permissionSets>rootstock__RS_Baseline_Lightning</permissionSets>
+    <permissionSets>rootstock__RS_Baseline_Permission_Set</permissionSets>
+    <permissionSets>rootstock__RS_SO_Entry_Visibility</permissionSets>
+    <permissionSets>rootstock__Rootstock_Custom_UI_Rules_and_Actions_ReadOnly_V2</permissionSets>
+    <permissionSets>rootstock__Rootstock_Lightning_Toolkit_User</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

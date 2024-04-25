@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>rstk__ictransreq__c.rstk__ictransreq_item__c</field>
+    </columns>
+    <columns>
+        <field>rstk__ictransreq__c.rstk__ictransreq_frlocno__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>rstk__ictransreq__c.rstk__ictransreq_transqty__c</field>
+    </columns>
+    <columns>
+        <field>rstk__ictransreq__c.rstk__ictransreq_tolocno__c</field>
+    </columns>
+    <columns>
+        <field>rstk__ictransreq__c.rstk__ictransreq_status__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <description>DRP Transfers</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>rstk__ictransreq__c.rstk__ictransreq_frlocid__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>rstk__ictransreq__c.rstk__ictransreq_tolocid__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>DRP Transfers</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$rstk__ictransreq__c@rstk__ictransreq__c.rstk__ictransreq_icreplenish__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>rstk__ictransreq__c.rstk__ictransreq_procdate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

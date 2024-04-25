@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Filtered_SO_API</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__soapi_mode__c</columns>
+    <columns>rstk__soapi_socust__c</columns>
+    <columns>rstk__soapi_processed__c</columns>
+    <columns>rstk__soapi_soline__c</columns>
+    <columns>rstk__soapi_error__c</columns>
+    <columns>rstk__soapi_async__c</columns>
+    <columns>rstk__soapi_orderno__c</columns>
+    <columns>rstk__soapi_retry__c</columns>
+    <columns>rstk__soapi_soprod__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>rstk__soapi_throwerrors__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>4/16/2024 9:22 PM</value>
+    </filters>
+    <label>Filtered SO-API</label>
+</ListView>

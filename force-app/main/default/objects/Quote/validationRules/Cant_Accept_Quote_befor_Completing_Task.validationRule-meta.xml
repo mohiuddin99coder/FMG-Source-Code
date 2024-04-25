@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cant_Accept_Quote_befor_Completing_Task</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(Status,&quot;Accepted&quot;),
+ISPICKVAL(PRIORVALUE(Status),&quot;Needs Review&quot;),
+Quote_Task_Completed__c == False
+
+)</errorConditionFormula>
+    <errorMessage>Please complete the &quot;Follow Up the Quote Estimation&quot;  task before Accepting the Quote.</errorMessage>
+</ValidationRule>

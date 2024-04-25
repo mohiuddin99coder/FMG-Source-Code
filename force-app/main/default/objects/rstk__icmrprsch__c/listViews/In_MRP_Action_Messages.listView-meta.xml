@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>In_MRP_Action_Messages</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__icmrprsch_dmditem__c</columns>
+    <columns>rstk__icmrprsch_ordtype__c</columns>
+    <columns>rstk__formula_ordtypedesc__c</columns>
+    <columns>rstk__icmrprsch_ordno__c</columns>
+    <columns>rstk__icmrprsch_msgtype__c</columns>
+    <columns>rstk__icmrprsch_wocst__c</columns>
+    <columns>rstk__icmrprsch_dmddtereqd__c</columns>
+    <columns>rstk__icmrprsch_datetime__c</columns>
+    <columns>rstk__icmrprsch_poline__c</columns>
+    <columns>rstk__icmrprsch_icreq__c</columns>
+    <columns>rstk__formula_msgtypedesc__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__formula_msgtypedesc__c</field>
+        <operation>contains</operation>
+        <value>In</value>
+    </filters>
+    <label>In MRP Action Messages</label>
+</ListView>

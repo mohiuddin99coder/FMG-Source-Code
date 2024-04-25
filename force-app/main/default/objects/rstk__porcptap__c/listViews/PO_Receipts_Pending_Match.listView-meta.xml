@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PO_Receipts_Pending_Match</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__porcptap_div__c</columns>
+    <columns>rstk__porcptap_vendno__c</columns>
+    <columns>rstk__porcptap_ordno__c</columns>
+    <columns>rstk__porcptap_poline__c</columns>
+    <columns>rstk__porcptap_rcptdate__c</columns>
+    <columns>rstk__porcptap_amtcomp__c</columns>
+    <columns>rstk__porcptap_packslipno__c</columns>
+    <columns>rstk__porcptap_rcptno__c</columns>
+    <columns>rstk__porcptap_apmatchind__c</columns>
+    <columns>rstk__porcptap_poitem__c</columns>
+    <columns>rstk__porcptap_upricercpt__c</columns>
+    <columns>rstk__porcptap_qtycomp__c</columns>
+    <columns>rstk__formula_amtcompmcurr__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__porcptap_apmatchind__c</field>
+        <operation>notEqual</operation>
+        <value>Automatic Match,Manual Match</value>
+    </filters>
+    <label>PO Receipts - Pending Match</label>
+</ListView>

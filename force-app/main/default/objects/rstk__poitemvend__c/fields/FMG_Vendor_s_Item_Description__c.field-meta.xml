@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FMG_Vendor_s_Item_Description__c</fullName>
+    <description>Extended description for Vendor</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Extended description for Vendor</inlineHelpText>
+    <label>Vendor&apos;s Item Description</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

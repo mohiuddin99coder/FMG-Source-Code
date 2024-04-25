@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ResultCode_Needed_before_Completing</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+Subject == &quot;PM Place Order with Vendor&quot;,
+Subject == &quot;PM Vendor Confirmation Details&quot;,
+Subject == &quot;Special Order Review by Platinum Team&quot;,
+Subject == &quot;Special Order Review by CS Team&quot;
+),
+ISPICKVAL(Status,&quot;Completed&quot;),
+ISBLANK(TEXT(Result_Code__c)) 
+)</errorConditionFormula>
+    <errorMessage>Please Mention &quot;ResultCode&quot; before Completing task.</errorMessage>
+</ValidationRule>

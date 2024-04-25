@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Catalog Request</fullName>
+        <default>false</default>
+        <label>Catalog Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Platinum Program</fullName>
+        <default>false</default>
+        <label>Platinum Program</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Manual</fullName>
+        <default>true</default>
+        <label>Manual</label>
+    </standardValue>
+</StandardValueSet>

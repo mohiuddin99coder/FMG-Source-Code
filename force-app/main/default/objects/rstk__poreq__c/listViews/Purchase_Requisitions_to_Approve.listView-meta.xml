@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Purchase_Requisitions_to_Approve</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__poreq_povend__c</columns>
+    <columns>rstk__poreq_status__c</columns>
+    <columns>rstk__poreq_pjproj__c</columns>
+    <columns>rstk__poreq_syorg__c</columns>
+    <columns>rstk__poreq_pohdr__c</columns>
+    <columns>rstk__poreq_comments__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>rstk__poreq_requestedby__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__poreq_status__c</field>
+        <operation>equals</operation>
+        <value>New</value>
+    </filters>
+    <label>Purchase Requisitions to Approve</label>
+</ListView>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Platinum Queue Task</name>
+    <queueMembers>
+        <users>
+            <user>madrigala@firemtn.com</user>
+            <user>bakerc@firemtn.com</user>
+            <user>saulk@firemtn.com</user>
+            <user>berryk@firemtn.com</user>
+            <user>burnsl@firemtn.com</user>
+            <user>raymonds@firemtn.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>

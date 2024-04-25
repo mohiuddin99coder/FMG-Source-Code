@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Replenishment_Location_Maintenance_Pilot</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__icreplenish_item__c</columns>
+    <columns>rstk__icreplenish_locid__c</columns>
+    <columns>rstk__icreplenish_locnum__c</columns>
+    <columns>rstk__icreplenish_minstockqty__c</columns>
+    <columns>rstk__icreplenish_dfltxferqty__c</columns>
+    <columns>rstk__icreplenish_multiplier__c</columns>
+    <columns>rstk__icreplenish_frlocid__c</columns>
+    <columns>rstk__icreplenish_frlocnum__c</columns>
+    <columns>rstk__icreplenish_tolocid__c</columns>
+    <columns>rstk__icreplenish_tolocnum__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>contains</operation>
+        <value>2344</value>
+    </filters>
+    <label>Replenishment Location Maintenance Pilot</label>
+</ListView>

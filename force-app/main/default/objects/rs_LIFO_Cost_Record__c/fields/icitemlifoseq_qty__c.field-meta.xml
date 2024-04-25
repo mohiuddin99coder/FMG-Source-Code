@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>icitemlifoseq_qty__c</fullName>
+    <description>This is the quantity associated with this LIFO record
+
+When a purchase receipt is processed for a FIFO controlled item (PEITEM_FIFOIND = ‘T’) and the ICITEMFIFOSEQ record is added, this quantity field is set to the quantity (in the inventory unit of measure) on the purchased item receipt. (An ICITEMFIFOSEQ record is added when there is an addition to inventory or an adjustment up in inventory or a work order issue reversal).
+
+When a work order issue is processed the quantity is reduced by the quantity of the issue. (DD)</description>
+    <externalId>false</externalId>
+    <label>Quantity</label>
+    <precision>16</precision>
+    <required>false</required>
+    <scale>6</scale>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

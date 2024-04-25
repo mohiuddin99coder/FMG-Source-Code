@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permissions for granting access to Financial Reports</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Financial Reporting User</label>
+    <permissionSets>Reports_and_Dashboards</permissionSets>
+    <permissionSets>rstkf__RSF_Baseline_Permission_Set_1</permissionSets>
+    <permissionSets>rstkf__RSF_Financial_Report_Entries_1</permissionSets>
+    <permissionSets>rstkf__RSF_Financial_Report_Generation_1</permissionSets>
+    <permissionSets>rstkf__RSF_Financial_Report_Maintenance_1</permissionSets>
+    <permissionSets>rstkf__RSF_Financial_Reporting_1</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

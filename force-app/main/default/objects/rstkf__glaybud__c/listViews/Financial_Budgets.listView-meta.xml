@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Financial_Budgets</fullName>
+    <columns>NAME</columns>
+    <columns>rstkf__glaybud_glcmp__c</columns>
+    <columns>rstkf__glaybud_glyear__c</columns>
+    <columns>rstkf__glaybud_glacct__c</columns>
+    <columns>rstkf__glaybud_scope__c</columns>
+    <columns>rstkf__glaybud_revlevel__c</columns>
+    <columns>rstkf__glaybud_revdate__c</columns>
+    <columns>rstkf__glaybud_revstatus__c</columns>
+    <columns>rstkf__glaybud_begbaldr__c</columns>
+    <columns>rstkf__glaybud_begbalcr__c</columns>
+    <columns>rstkf__glaybud_dimval__c</columns>
+    <columns>rstkf__glaybud_gldiv__c</columns>
+    <columns>rstkf__glaybud_glproj__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <label>Financial Budgets</label>
+</ListView>

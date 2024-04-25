@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Change_Status</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+  AND(
+    ISPICKVAL(PRIORVALUE(Status), &quot;Accepted&quot;), 
+    ISCHANGED(Status)
+  ), 
+  AND(
+    ISPICKVAL(PRIORVALUE(Status), &quot;Denied&quot;), 
+    ISCHANGED(Status)
+  )
+)</errorConditionFormula>
+    <errorMessage>Can&apos;t Change Status If Accepted or Denied</errorMessage>
+</ValidationRule>

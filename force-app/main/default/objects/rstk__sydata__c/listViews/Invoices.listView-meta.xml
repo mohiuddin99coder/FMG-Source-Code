@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoices</fullName>
+    <columns>LAST_UPDATE</columns>
+    <columns>NAME</columns>
+    <columns>rstk__sydata_txntype__c</columns>
+    <columns>rstk__sydata_process__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>rstk__sydata_message__c</columns>
+    <columns>rstk__sydata_soinv__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__sydata_txntype__c</field>
+        <operation>equals</operation>
+        <value>Approve Sales Invoice,Create Invoice for Shipper,Transfer Sales Invoice</value>
+    </filters>
+    <label>Invoices</label>
+</ListView>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>rstk__poline__c.rstk__poline_duedte__c</field>
+    </columns>
+    <columns>
+        <field>rstk__pohdr__c.rstk__pohdr_vendno__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>rstk__poline__c.rstk__poline_item__c</field>
+    </columns>
+    <columns>
+        <field>rstk__poline__c.rstk__poline_qtyreq__c</field>
+    </columns>
+    <columns>
+        <field>rstk__poline__c.rstk__formula_qtyrcvd__c</field>
+    </columns>
+    <columns>
+        <field>rstk__poline__c.rstk__poline_qtyoutstdg__c</field>
+    </columns>
+    <columns>
+        <field>rstk__poline__c.rstk__poline_vendshipdte__c</field>
+    </columns>
+    <description>Presents open PO line items by due date</description>
+    <filter>
+        <criteriaItems>
+            <column>rstk__poline__c.rstk__poline_qtyoutstdg__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>0</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>KCs Open Line Item -  By Due Date</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$rstk__pohdr__c$rstk__poline__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>rstk__poline__c.rstk__poline_duedte__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>rstk__pohdr__c.rstk__pohdr_actplacedate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

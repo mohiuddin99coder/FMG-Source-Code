@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inventory_by_Locations_FCST</fullName>
+    <columns>NAME</columns>
+    <columns>rootstock__Item__c</columns>
+    <columns>rstk__iclocitem_locid__c</columns>
+    <columns>rstk__iclocitem_loctype_pl__c</columns>
+    <columns>rstk__iclocitem_locnum__c</columns>
+    <columns>rstk__iclocitem_locqty__c</columns>
+    <columns>rstk__iclocitem_locsec__c</columns>
+    <columns>FMG_Lot_Reference__c</columns>
+    <columns>rstk__iclocitem_availind__c</columns>
+    <columns>rstk__iclocitem_comments__c</columns>
+    <columns>rstk__iclocitem_lastcountdate__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>rstk__iclocitem_icitem__c</columns>
+    <columns>rstk__iclocitem_itemnumber__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>contains</operation>
+        <value>A2911sb</value>
+    </filters>
+    <label>Inventory by Locations FCST</label>
+</ListView>

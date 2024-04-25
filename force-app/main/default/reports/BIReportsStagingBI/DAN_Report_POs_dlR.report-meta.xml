@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FK_$rstk__poitem__c.rstk__poitem_itemno__c</field>
+    </columns>
+    <columns>
+        <field>rstk__poline__c.rstk__poline_firstrcptdate__c</field>
+    </columns>
+    <columns>
+        <field>rstk__poline__c.rstk__poline_lstbookdtetime__c</field>
+    </columns>
+    <columns>
+        <field>rstk__poline__c.rstk__poline_ordsts__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>rstk__poline__c.rstk__poline_qtyoutstdg__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>rstk__poline__c.rstk__formula_qtyrcvd__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>DAN Report - PO&apos;s</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$rstk__pohdr__c$rstk__poline__c@rstk__poline__c.rstk__poline_item__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>FK_$rstk__poitem__c.rstk__poitem_itemno__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>rstk__pohdr__c.rstk__pohdr_actplacedate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

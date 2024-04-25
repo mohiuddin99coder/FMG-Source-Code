@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Access to the Lighting page for Inventory Requisition Workbench</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Inventory Requisition WorkBench</label>
+    <tabSettings>
+        <tab>rootstock__Inventory_Requisition_Workbench</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+</PermissionSet>

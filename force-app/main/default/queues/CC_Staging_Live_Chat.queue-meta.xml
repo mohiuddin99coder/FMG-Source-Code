@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>CC Staging Live Chat</name>
+    <queueMembers>
+        <users>
+            <user>mythili.g@etg.digital.fmgprod</user>
+            <user>harinatha.etg@fmg.prod</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>CC_Staging_Live_Chat</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>LiveChatTranscript</sobjectType>
+    </queueSobject>
+</Queue>

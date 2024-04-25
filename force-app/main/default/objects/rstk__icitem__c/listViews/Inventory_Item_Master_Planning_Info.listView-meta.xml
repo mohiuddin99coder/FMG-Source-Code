@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inventory_Item_Master_Planning_Info</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__icitem_item__c</columns>
+    <columns>rstk__icitem_descr__c</columns>
+    <columns>rstk__icitem_iccomcod__c</columns>
+    <columns>rstk__icitem_src_pl__c</columns>
+    <columns>rstk__icitem_invuom__c</columns>
+    <columns>rstk__formula_mrpplanpol__c</columns>
+    <columns>rstk__formula_mrppolqty__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__formula_mrpplanpol__c</field>
+        <operation>contains</operation>
+        <value>days</value>
+    </filters>
+    <label>Inventory Item Master Planning Info</label>
+</ListView>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GL_Transactions_AR_Filtered</fullName>
+    <columns>NAME</columns>
+    <columns>rstkf__gltxn_tranno__c</columns>
+    <columns>rstkf__gltxn_glacct__c</columns>
+    <columns>rstkf__gltxn_dramt__c</columns>
+    <columns>rstkf__gltxn_cramt__c</columns>
+    <columns>rstkf__gltxn_source__c</columns>
+    <columns>rstkf__gltxn_trandate__c</columns>
+    <columns>rstkf__gltxn_acctdate__c</columns>
+    <columns>rstkf__gltxn_sytxncst__c</columns>
+    <columns>rstkf__gltxn_arinvtxn__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstkf__gltxn_glacct__c</field>
+        <operation>contains</operation>
+        <value>103000</value>
+    </filters>
+    <filters>
+        <field>rstkf__gltxn_cramt__c</field>
+        <operation>equals</operation>
+        <value>755.98</value>
+    </filters>
+    <label>GL Transactions - AR Filtered</label>
+</ListView>

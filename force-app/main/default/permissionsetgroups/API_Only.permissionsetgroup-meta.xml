@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>API Only</label>
+    <permissionSets>FMG_API_Fulfillment_Processing</permissionSets>
+    <permissionSets>FMG_Rootstock_Access</permissionSets>
+    <permissionSets>RSF_Baseline_Permission_Set_V1_No_VF</permissionSets>
+    <permissionSets>RS_Baseline_Permission_Set_No_VF</permissionSets>
+    <permissionSets>RS_SO_Entry_Fulfillment_Processing_No_VF</permissionSets>
+    <permissionSets>RS_Standard_Platform_User_No_VF</permissionSets>
+    <permissionSets>rootstock__RS_Baseline_Lightning</permissionSets>
+    <permissionSets>rstkf__ERP_Financials_Transactional_Access_1</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

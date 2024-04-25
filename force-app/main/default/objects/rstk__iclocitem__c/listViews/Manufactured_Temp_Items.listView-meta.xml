@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Manufactured_Temp_Items</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__iclocitem_locqty__c</columns>
+    <columns>rstk__iclocitem_locid__c</columns>
+    <columns>rstk__iclocitem_locnum__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__iclocitem_icitem__c</field>
+        <operation>contains</operation>
+        <value>-MF</value>
+    </filters>
+    <filters>
+        <field>rstk__iclocitem_locqty__c</field>
+        <operation>notEqual</operation>
+        <value>0</value>
+    </filters>
+    <label>Manufactured Temp Items</label>
+</ListView>

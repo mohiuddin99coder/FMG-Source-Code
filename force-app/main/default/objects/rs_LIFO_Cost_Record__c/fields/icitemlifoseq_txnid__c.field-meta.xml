@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>icitemlifoseq_txnid__c</fullName>
+    <description>This is the transaction ID created when the record was created
+
+Some of the values are as follows:
+
+‘PORCPT’ – if created by a purchase receipt
+
+‘INVLOCADD’ – if created by an inventory location addition
+
+‘INVLOCADJ’ – if created by an adjustment (up)
+
+‘WOISSR’ – if created by a work order issue reversal
+
+‘SOISSR’ – if created by a sales order pick reversal. (DD)</description>
+    <externalId>false</externalId>
+    <label>Txn ID</label>
+    <length>15</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>PM User</label>
+    <permissionSets>Add_API</permissionSets>
+    <permissionSets>DOX__Dox</permissionSets>
+    <permissionSets>DOX__RootForms_admin</permissionSets>
+    <permissionSets>DOX__RootForms_user</permissionSets>
+    <permissionSets>Inventory_Requisition_WorkBench</permissionSets>
+    <permissionSets>PO_Demand_Management_Buyers</permissionSets>
+    <permissionSets>PO_Entry_and_Processing_Buyers</permissionSets>
+    <permissionSets>RS_MRP_with_Forcasting</permissionSets>
+    <permissionSets>Reports_and_Dashboards</permissionSets>
+    <permissionSets>rootstock__ERP_RootForm_User</permissionSets>
+    <permissionSets>rootstock__RS_Baseline_Lightning</permissionSets>
+    <permissionSets>rootstock__RS_Baseline_Permission_Set</permissionSets>
+    <permissionSets>rootstock__RS_PO_AP_Match</permissionSets>
+    <permissionSets>rootstock__RS_PO_Inbound_Shipment</permissionSets>
+    <permissionSets>rootstock__RS_Purchasing_Setup_Data_Manager</permissionSets>
+    <permissionSets>rootstock__RS_Requisitions</permissionSets>
+    <permissionSets>rootstock__RS_Sales_Order_Setup</permissionSets>
+    <permissionSets>rootstock__Rootstock_Custom_UI_Rules_and_Actions_Edit_V2</permissionSets>
+    <permissionSets>rootstock__Rootstock_Lightning_Toolkit_User</permissionSets>
+    <permissionSets>rstk__FLC</permissionSets>
+    <permissionSets>rstkf__ERP_Financials_Transactional_Access_1</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

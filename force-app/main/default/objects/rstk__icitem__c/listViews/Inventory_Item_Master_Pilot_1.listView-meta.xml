@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inventory_Item_Master_Pilot_1</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__icitem_item__c</columns>
+    <columns>rstk__icitem_descr__c</columns>
+    <columns>rstk__icitem_iccomcod__c</columns>
+    <columns>rstk__icitem_src_pl__c</columns>
+    <columns>rstk__icitem_invuom__c</columns>
+    <columns>rstk__formula_mrpplanpol__c</columns>
+    <columns>rstk__formula_mrppolqty__c</columns>
+    <columns>rstk__icitem_sspolqty__c</columns>
+    <columns>rstk__icitem_mrpminqty__c</columns>
+    <columns>rstk__icitem_ltmfgwoshopflr__c</columns>
+    <columns>rstk__formula_ltmfgwoshopflr__c</columns>
+    <columns>rstk__icitem_usageforecast__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__icitem_src_pl__c</field>
+        <operation>equals</operation>
+        <value>Manufactured</value>
+    </filters>
+    <label>Inventory Item Master Pilot 1</label>
+</ListView>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FMG_Item_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>FMG Item Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NP_Regular</fullName>
+                <default>false</default>
+                <label>New Product - Regular</label>
+            </value>
+            <value>
+                <fullName>NP_DNS</fullName>
+                <default>false</default>
+                <label>New Product - Do Not Sell</label>
+            </value>
+            <value>
+                <fullName>NP_Limited</fullName>
+                <default>false</default>
+                <label>New Product - Limited Quantity</label>
+            </value>
+            <value>
+                <fullName>Reg</fullName>
+                <default>false</default>
+                <label>Regular Items</label>
+            </value>
+            <value>
+                <fullName>Reg_At_Risk</fullName>
+                <default>false</default>
+                <label>Regular At Risk Items</label>
+            </value>
+            <value>
+                <fullName>Parent</fullName>
+                <default>false</default>
+                <label>Parent Items</label>
+            </value>
+            <value>
+                <fullName>Component</fullName>
+                <default>false</default>
+                <label>Component Items</label>
+            </value>
+            <value>
+                <fullName>FreeGift</fullName>
+                <default>false</default>
+                <label>Free Gift</label>
+            </value>
+            <value>
+                <fullName>GWP</fullName>
+                <default>false</default>
+                <label>GWP</label>
+            </value>
+            <value>
+                <fullName>Limited</fullName>
+                <default>false</default>
+                <label>Limited Quantity Items</label>
+            </value>
+            <value>
+                <fullName>Closeout</fullName>
+                <default>false</default>
+                <label>Closeout Items</label>
+            </value>
+            <value>
+                <fullName>Big_Box</fullName>
+                <default>false</default>
+                <label>Big Box</label>
+            </value>
+            <value>
+                <fullName>DNR</fullName>
+                <default>false</default>
+                <label>Do Not Reorder</label>
+            </value>
+            <value>
+                <fullName>Spec_Hndlng</fullName>
+                <default>false</default>
+                <label>Special Handling</label>
+            </value>
+            <value>
+                <fullName>Misc</fullName>
+                <default>false</default>
+                <label>Misc Items</label>
+            </value>
+            <value>
+                <fullName>DC_Sup</fullName>
+                <default>false</default>
+                <label>DC Supply</label>
+            </value>
+            <value>
+                <fullName>Stop_Ship</fullName>
+                <default>false</default>
+                <label>Stop Ship</label>
+            </value>
+            <value>
+                <fullName>No_Longer_Used</fullName>
+                <default>false</default>
+                <label>No Longer Used</label>
+            </value>
+            <value>
+                <fullName>Dis_Regular</fullName>
+                <default>false</default>
+                <label>Discontinued Regular</label>
+            </value>
+            <value>
+                <fullName>Undetermined</fullName>
+                <default>true</default>
+                <label>Undetermined</label>
+            </value>
+            <value>
+                <fullName>Do_not_migrate</fullName>
+                <default>false</default>
+                <label>Do not migrate</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

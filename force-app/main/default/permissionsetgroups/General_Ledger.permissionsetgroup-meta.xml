@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permissions for General Ledger access</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>General Ledger</label>
+    <permissionSets>B2C_CRM_JWT</permissionSets>
+    <permissionSets>B2C_CRM_SYNC</permissionSets>
+    <permissionSets>Financial_Analytics</permissionSets>
+    <permissionSets>General_Journal_Workbench</permissionSets>
+    <permissionSets>General_Ledger_with_Sub_Ledger</permissionSets>
+    <permissionSets>rootstock__RS_Mfg_Engineering</permissionSets>
+    <permissionSets>rootstock__RS_Standard_Cost</permissionSets>
+    <permissionSets>rootstock__RS_System_Setup</permissionSets>
+    <permissionSets>rstkf__Kenandy_Analytics_Admin</permissionSets>
+    <permissionSets>rstkf__RSF_Bank_Process_1</permissionSets>
+    <permissionSets>rstkf__RSF_Baseline_Permission_Set_1</permissionSets>
+    <permissionSets>rstkf__RSF_GL_Transactions_1</permissionSets>
+    <permissionSets>rstkf__RSF_Journal_Entries_1</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

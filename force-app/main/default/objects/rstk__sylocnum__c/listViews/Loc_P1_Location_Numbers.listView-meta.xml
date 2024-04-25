@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loc_P1_Location_Numbers</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__sylocnum_locid__c</columns>
+    <columns>rstk__sylocnum_locnum__c</columns>
+    <columns>rstk__sylocnum_descr__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__sylocnum_locid__c</field>
+        <operation>contains</operation>
+        <value>P1</value>
+    </filters>
+    <filters>
+        <field>rstk__sylocnum_locnum__c</field>
+        <operation>startsWith</operation>
+        <value>50</value>
+    </filters>
+    <label>Loc P1 Location Numbers</label>
+</ListView>

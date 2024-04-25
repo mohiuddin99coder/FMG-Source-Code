@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Filtered_BOM_Master</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__pebom_item__c</columns>
+    <columns>rstk__pebom_compitem__c</columns>
+    <columns>rstk__pebom_qtyper__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__pebom_item__c</field>
+        <operation>contains</operation>
+        <value>7803</value>
+    </filters>
+    <label>Filtered BOM Master</label>
+</ListView>

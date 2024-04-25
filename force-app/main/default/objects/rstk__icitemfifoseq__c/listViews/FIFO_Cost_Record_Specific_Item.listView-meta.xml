@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FIFO_Cost_Record_Specific_Item</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__icitemfifoseq_item__c</columns>
+    <columns>rstk__icitemfifoseq_rcptno__c</columns>
+    <columns>rstk__icitemfifoseq_origtxnqty__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>rstk__icitemfifoseq_qty__c</columns>
+    <columns>rstk__icitemfifoseq_seq__c</columns>
+    <columns>rstk__icitemfifoseq_datetime__c</columns>
+    <columns>rstk__icitemfifoseq_actucstmtl__c</columns>
+    <columns>rstk__icitemfifoseq_lstadjdatetime__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>rstk__icitemfifoseq_txnid__c</columns>
+    <columns>rstk__icitemfifoseq_proj__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__icitemfifoseq_item__c</field>
+        <operation>contains</operation>
+        <value>5609BS</value>
+    </filters>
+    <label>FIFO Cost  Record - Specific Item</label>
+</ListView>

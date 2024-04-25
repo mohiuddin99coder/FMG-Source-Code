@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>1</calculatedFormula>
+        <datatype>number</datatype>
+        <description>One way to count orders</description>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>ORDER_ORDERED_DATE</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Count of Orders</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <field>ORDER_NUMBER</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>ORDER_ITEM_QUANTITY</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>ORDER_TOT_ADJ_PRODAMT</field>
+    </columns>
+    <description>Shows # of Orders, Product Sales, Lines, and Units Sold for the prior day.  Uses the Orders with Products Report Type.</description>
+    <filter>
+        <criteriaItems>
+            <column>OI_TYPE_CODE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>P</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <field>ORDER_ORDERED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Product Sales Reports - for Checking!</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>OrderItemList</reportType>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>ORDER_ORDERED_DATE</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

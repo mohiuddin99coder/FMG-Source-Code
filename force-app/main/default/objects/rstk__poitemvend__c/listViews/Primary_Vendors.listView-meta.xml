@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Vendors</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__poitemvend_item__c</columns>
+    <columns>rstk__poitemvend_vendno__c</columns>
+    <columns>rstk__poitemvend_primeind__c</columns>
+    <columns>rstk__poitemvend_venduom__c</columns>
+    <columns>rstk__poitemvend_vendlocid__c</columns>
+    <columns>rstk__poitemvend_vendpartno__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__poitemvend_primeind__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Primary Vendors</label>
+</ListView>

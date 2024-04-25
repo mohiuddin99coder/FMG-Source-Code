@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Forecast_Demand_Pilot_1</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__icfcstdmd_item__c</columns>
+    <columns>rstk__icfcstdmd_qtyreq__c</columns>
+    <columns>rstk__icfcstdmd_strtdte__c</columns>
+    <columns>rstk__icfcstdmd_enddte__c</columns>
+    <columns>rstk__icfcstdmd_dmdsts_pl__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__icfcstdmd_item__c</field>
+        <operation>contains</operation>
+        <value>1711</value>
+    </filters>
+    <label>Forecast Demand Pilot 1</label>
+</ListView>

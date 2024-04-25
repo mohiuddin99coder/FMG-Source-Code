@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>ORDER_TOT_ADJ_PRODAMT:SUM / PREVGROUPVAL(ORDER_TOT_ADJ_PRODAMT:SUM,ORDER_ORDERED_DATE,1) -1</calculatedFormula>
+        <datatype>percent</datatype>
+        <description>The difference between</description>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>ORDER_ORDERED_DATE</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Variance</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>RowCount / PREVGROUPVAL(RowCount, ORDER_ORDERED_DATE ,1) -1</calculatedFormula>
+        <datatype>percent</datatype>
+        <description>Year over Year variance in the count of orders MTD</description>
+        <developerName>FORMULA2</developerName>
+        <downGroupingContext>ORDER_ORDERED_DATE</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Order Variance</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>CDF1</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>ORDER_TOT_ADJ_PRODAMT</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>IF(YEAR(DATEVALUE(ORDER_ORDERED_DATE)) &lt; (Year(TODAY())), 1, 0)</calculatedFormula>
+        <dataType>Double</dataType>
+        <description>A formula to output CY or LY used for grouping</description>
+        <developerName>CDF1</developerName>
+        <label>Years Ago</label>
+        <scale>0</scale>
+    </customDetailFormulas>
+    <description>A backup to retain the original formulas, grouping, and filters prior to being modified.</description>
+    <filter>
+        <booleanFilter>((1 AND 4) OR (2 AND 3)) AND 5</booleanFilter>
+        <criteriaItems>
+            <column>ORDER_ORDERED_DATE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>THIS_YEAR</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ORDER_ORDERED_DATE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>LAST_YEAR</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ORDER_ORDERED_DATE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessOrEqual</operator>
+            <value>N_DAYS_AGO:365</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ORDER_ORDERED_DATE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessOrEqual</operator>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ORDER_TOT_ADJ_PRODAMT</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>0</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Year</dateGranularity>
+        <field>ORDER_ORDERED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Backup of Product Sales YTD TY vs LY</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OrderItemList</reportType>
+    <showDetails>false</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>ORDER_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>rstk__peitem__c.rstk__externalid__c</field>
+    </columns>
+    <columns>
+        <field>rstk__peitem__c.rstk__peitem_item__c</field>
+    </columns>
+    <columns>
+        <field>rstk__peitem__c.rstk__peitem_descr__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>rstk__peitem__c.rstk__peitem_iccomcod__c</field>
+    </columns>
+    <description>Lisa Engineering Item Master</description>
+    <format>Tabular</format>
+    <name>Engineering Item Master Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$rstk__peitem__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>rstk__peitem__c.rstk__peitem_activestsdate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

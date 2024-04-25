@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_PO_Lines</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__poline_item__c</columns>
+    <columns>rstk__poline_qtyreq__c</columns>
+    <columns>rstk__formula_qtyrcvd__c</columns>
+    <columns>rstk__poline_qtyoutstdg__c</columns>
+    <columns>rstk__poline_qtyoutstdginv__c</columns>
+    <columns>rstk__poline_qtyrtv__c</columns>
+    <columns>rstk__poline_ordsts__c</columns>
+    <columns>rstk__poline_duedte__c</columns>
+    <columns>rstk__poline_amtreq__c</columns>
+    <columns>rstk__poline_amtcomp__c</columns>
+    <columns>FMG_Amount_Remaining__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <label>All PO Lines</label>
+</ListView>

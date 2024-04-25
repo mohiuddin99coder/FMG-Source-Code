@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rel_1712301880656_end__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <isFilteringDisabled>false</isFilteringDisabled>
+    <isNameField>false</isNameField>
+    <isSortingDisabled>false</isSortingDisabled>
+    <label>ssot_Individual_ssot_Id_map_UnifiedL_rel</label>
+    <referenceTo>UnifiedLinkssotIndividualTun1__dlm</referenceTo>
+    <relationshipLabel>ssot_Individual_ssot_Id_map_UnifiedL_rel</relationshipLabel>
+    <relationshipName>rel_1712301880656_end</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

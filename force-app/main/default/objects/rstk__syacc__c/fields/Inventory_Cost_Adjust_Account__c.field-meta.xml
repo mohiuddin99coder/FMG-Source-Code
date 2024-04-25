@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inventory_Cost_Adjust_Account__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Identifies this account to be used for Inventory Cost Adjustments of FIFO Cost Records in conjunction with PO-AP Match processing.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Identifies this account to be used for Inventory Cost Adjustments of FIFO Cost Records in conjunction with PO-AP Match processing.</inlineHelpText>
+    <label>Inventory Cost Adjust Account</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

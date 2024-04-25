@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Carrier_Codes</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__sycarrier_id__c</columns>
+    <columns>rstk__sycarrier_descr__c</columns>
+    <columns>rstk__sycarrier_fedex__c</columns>
+    <columns>rstk__sycarrier_ups__c</columns>
+    <columns>rstk__sycarrier_usps__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Carrier Codes</label>
+</ListView>

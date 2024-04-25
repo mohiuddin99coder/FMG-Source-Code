@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>rstk__soinv__c.rstk__soinv_invoiceno__c</field>
+    </columns>
+    <description>Shipment Counts - provides the count of distinct shipments for prior day.</description>
+    <filter>
+        <criteriaItems>
+            <column>rstk__soinv__c.rstk__soinv_txntype__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Invoice</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <field>rstk__soinv__c.rstk__soinv_invdate__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Shipment Counts - Prior Day</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$rstk__soinv__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>rstk__soinv__c.rstk__soinv_invdate__c</dateColumn>
+        <interval>INTERVAL_YESTERDAY</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permissions for granting access to Accounts Payable</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Accounts Payable User</label>
+    <permissionSets>Accounts</permissionSets>
+    <permissionSets>B2C_CRM_JWT</permissionSets>
+    <permissionSets>B2C_CRM_SYNC</permissionSets>
+    <permissionSets>DOX__RootForms_user</permissionSets>
+    <permissionSets>Opportunites</permissionSets>
+    <permissionSets>Order_Summaries</permissionSets>
+    <permissionSets>RSF_Financial_System_Setup_Admin_Temp</permissionSets>
+    <permissionSets>RS_Printing_Rootforms</permissionSets>
+    <permissionSets>RS_System_Setup_Test_for_accounting</permissionSets>
+    <permissionSets>Reports_and_Dashboards</permissionSets>
+    <permissionSets>Run_Flows</permissionSets>
+    <permissionSets>rootstock__ERP_RootForm_User</permissionSets>
+    <permissionSets>rootstock__RS_Baseline_Lightning</permissionSets>
+    <permissionSets>rootstock__RS_Baseline_Permission_Set</permissionSets>
+    <permissionSets>rootstock__RS_Purchase_Order_Receipts_and_Authorization</permissionSets>
+    <permissionSets>rootstock__Rootstock_Custom_UI_Rules_and_Actions_Edit_V2</permissionSets>
+    <permissionSets>rootstock__Rootstock_Lightning_Toolkit_User</permissionSets>
+    <permissionSets>rstkf__ERP_Financials_Transactional_Access_1</permissionSets>
+    <permissionSets>rstkf__Financial_RootForm_User</permissionSets>
+    <permissionSets>rstkf__RSF_1099_s_1</permissionSets>
+    <permissionSets>rstkf__RSF_AP_Applications_1</permissionSets>
+    <permissionSets>rstkf__RSF_AP_Reporting_1</permissionSets>
+    <permissionSets>rstkf__RSF_AP_Withholding_Tax_1</permissionSets>
+    <permissionSets>rstkf__RSF_Accounts_Payable_1</permissionSets>
+    <permissionSets>rstkf__RSF_Bank_Account_1</permissionSets>
+    <permissionSets>rstkf__RSF_Bank_Process_1</permissionSets>
+    <permissionSets>rstkf__RSF_Baseline_Permission_Set_1</permissionSets>
+    <permissionSets>rstkf__RSF_Create_AP_transactions_1</permissionSets>
+    <permissionSets>rstkf__RSF_Review_Post_AP_transactions_1</permissionSets>
+    <permissionSets>rstkf__RSF_Vendor_Payments_1</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>
