@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Identity_Resolutions_Notifications</name>
+        <label>Identity Resolutions Failure Notifications</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <stringValue>servicedesk2@firemtn.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>it_helpdesk@firemtn.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Data Cloud Alert : Identity Resolutions {!$Record.Name} has Failed!</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>IdentityResolutionsFailure</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Identity Resolutions Notifications {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Identity Resolutions Notifications</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Identity_Resolutions_Notifications</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>LastRunStatus</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>FAIL</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>LastRunStatus</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>ERROR</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>ERROR</stringValue>
+            </value>
+        </filters>
+        <object>IdentityResolution</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>IdentityResolutionsFailure</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Identity Resolutions:  {!$Record.Name} has encountered a failure! 
+
+Possible Issues &amp; Solutions: 
+
+1. Issue: Duplicate Records Issue: Some contact point records were skipped due to identical ID, data source ID, object ID, and key 
+    qualifier. 
+  Solution: Groom data at the source to eliminate duplicates and ensure uniqueness during matching. 
+
+ 2. Issue: Unaccessible External Objects Issue: Match or reconciliation rules include external data lake objects that aren&apos;t accessible. 
+    Solution: Resolve accessibility issues or edit rulesets to exclude references to inaccessible external objects. 
+
+3. Issue: Missing Values in Contact Points Issue: Some contact points skipped during matching due to fields containing the string 
+   &quot;null.&quot; 
+  Solution: Remove &quot;null&quot; values in specific fields to prevent skipping. Groom data at the source to ensure data quality. 
+
+How to Analyze: Go to Data Explorer Tab &gt;&gt; Select Data Model Object &gt;&gt; Select Object Name as Individual &gt;&gt; Check the data&apos;s (Mapped from all the sources to one DMO) &gt;&gt; Analyze all the possible issues as mentioned above and adjust the Match Ruels.  
+
+Steps to Fix: Go to Identity Resolutions Tab &gt;&gt; Select Rule Set &gt;&gt; Match Rules &gt;&gt; Edit and Make changes &gt;&gt; Save it.  
+
+Data Source Prioritization: Adjust Reconciliation Rules &gt;&gt; Select Data Models &gt;&gt; Click Field &gt;&gt; Disable Reconciliation Rules &gt;&gt; Select priority. 
+
+Product-Level Concerns: There are ongoing issues being addressed by the Data Cloud Product Team. If you don&apos;t see a specific issue listed above, please visit the following link for more information: https://issues.salesforce.com/</text>
+    </textTemplates>
+</Flow>

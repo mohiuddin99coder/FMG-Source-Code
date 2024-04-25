@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Data_Stream_Failure_Notification</name>
+        <label>Data Stream Failure Notification</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <stringValue>servicedesk2@firemtn.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>it_helpdesk@firemtn.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Data Cloud Alert : Data Stream {!$Record.Name} has Failed!</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>DataStreamFailure</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Data Streams Status Failure Notifications {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Data Streams Status Failure Notifications</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Data_Stream_Failure_Notification</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ImportRunStatus</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>FAILURE</stringValue>
+            </value>
+        </filters>
+        <object>DataStream</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>DataStreamFailure</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Data Stream: {!$Record.Name} has encountered a failure!
+
+
+Possible Issues &amp; Solutions:
+
+    1. Issue: If Fields removed from the Source Object.
+        Solution: Disable the field under Data Stream.
+
+    2. Issue: If Fields Modified from Source Object.
+        Solution:  Permissions Should be enabled in respective Sources.
+
+    3. Issue: If Incorrect data format.
+       Solution: Adjust mapping or transform data as needed.
+
+Steps to Fix / Check Error Log - Data Stream &gt;&gt; Refresh History &gt;&gt; Download error log &gt;&gt; Find the field &gt;&gt; Check the fields whether removed or permissions not enabled. Below are the steps to disable fields or check and enable permissions at the object and field level.
+
+1. First check the Data Connector type for the data stream that encountered failure.
+
+2. If you found a particular field is removed from the Source Object, follow the below step: 
+
+   Example: Disable Fields - Account &gt;&gt; Field &gt;&gt; scroll to right &gt;&gt; click on the dropdown button and disable it.
+
+3. If you found fields modified in the Source object, Please follow the below steps based on Data Stream&apos;s Data connector type:
+
+   Permissions check - Login CRM &gt;&gt; Permission Sets &gt;&gt; Select Data Cloud Salesforce Connector &gt;&gt; Object Settings &gt;&gt; Select Object &gt;&gt; Edit &gt;&gt; Object Permissions as Read and View All &gt;&gt; Field Permissions &gt;&gt; Enable Read Access.
+  
+4. Mapping Adjust - Data Stream &gt;&gt; Click on Review button at Right Side &gt;&gt; Remove or Map the fields accordingly &gt;&gt; click save.
+
+Note: If the logs are empty kindly wait for the next refresh. If failed again, Please raise a support ticket with Salesforce.
+
+Product-Level Concerns: There are ongoing issues being addressed by the Data Cloud Product Team. If you don&apos;t see a specific issue listed above, please visit the following link for more information: https://issues.salesforce.com/</text>
+    </textTemplates>
+</Flow>

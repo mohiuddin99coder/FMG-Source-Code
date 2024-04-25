@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Update_to_InReview</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+Inventory_Confirmation_Task_Completed__c == False,
+ISPICKVAL(PRIORVALUE(StageName), &quot;Vendor Confirmation&quot;),
+ISPICKVAL(StageName,&quot;In Review&quot;)
+)</errorConditionFormula>
+    <errorMessage>Please complete the &quot;PM Vendor Confirmation Details&quot; task, before moving to &quot;In Review&quot; stage.</errorMessage>
+</ValidationRule>

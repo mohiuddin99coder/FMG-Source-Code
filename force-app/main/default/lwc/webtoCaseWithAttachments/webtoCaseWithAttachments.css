@@ -1,0 +1,134 @@
+.Body{
+  font-size: 14px;
+  width: 60%;
+  margin-left: 20%;
+}
+.card{
+  max-width: 800px;
+  text-align: left;
+  margin-top: 30px;
+}
+
+.slds-box{
+  border: none;
+}
+lightning-button.Send{
+  --sds-c-button-brand-color-background: red;
+  --sds-c-button-brand-color-border:#1dc6ad;
+  background-color: red;
+  float: right;
+}
+
+.success-message {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.files{
+  margin-left: 1rem;
+}
+
+.slds-form-element__help{
+  display: none;
+}
+
+:host ::slotted(.slds-form-element__help) {
+  display: none;
+}
+
+/* remove the "or drop files" label from the right of the lightning:input type file */
+.THIS .slds-file-selector__dropzone .slds-file-selector__text{
+display: none;
+}
+
+/* remove the "Upload Files" text from the button of the lightning:input type file */
+.THIS .slds-file-selector__dropzone .slds-file-selector__button{
+font-size: 0;
+}
+
+/* insert the text "New Exam" into the button of the lightning:input type file */
+.THIS .slds-file-selector__dropzone .slds-file-selector__button:after{
+content: 'New Exam';
+font-size: .8125rem;
+color: rgba(27, 82, 151, 1.0);
+}
+
+.stretchButton{
+  font-size: 0.875rem;
+  border: 1px solid #2f6c37;
+  font-weight: 700;
+  color: #333333;
+  background-image: linear-gradient(180deg, #9cd5a4, 0, #9cd5a4);
+  border-radius: 6px;
+  display:block;
+  text-shadow: 0px 1px 0.5px rgba(255,255,255,0.75);
+  box-shadow: 1px 1px 1.5px rgba(0, 0, 0, 0.16);
+  min-width: 6.75rem;
+  background-color: #82C88B;
+  height: 2.5rem;
+  border-color: #2f6c37;
+}
+.stretchButton:hover{
+  background-image: linear-gradient(180deg,#d0e3d0 0,#9fdea8 50%,#82c98b);
+  color: #333333;
+}
+
+
+.fieldvalues{
+  margin-top: 10px;
+  align-items:center;
+}
+
+
+.errorvalues{
+  margin-top: 0px;
+  align-items:center;
+}
+.leftvalues {
+  width: 25%;
+  text-align: right;
+  display: inline-block;
+  
+}
+
+.rightvalues {
+  width: 75%;
+  padding-right: 0px;
+  display: inline-block;
+}
+
+@media (max-width: 724px) {
+  .fieldvalues,
+  .errorvalues,
+  .BrowseforhotoLayout{
+      flex-wrap: wrap;
+  }
+  
+  .leftvalues {
+  flex: 0 0 100%; 
+  padding-left:10px;
+  padding-right: 10px;
+  text-align: left;
+  }
+  .rightvalues{
+      width: 100%;
+      padding-left:10px;
+      padding-right: 10px;
+  }
+  .browsePhoto  {
+    flex: 0 0 100%; 
+    text-align: left;
+    }.browsePhotoLabel {
+      width: 100%;
+      margin-top: 10px;
+  }
+  .BrowseforhotoLayout{
+    flex-wrap: wrap;
+}
+}

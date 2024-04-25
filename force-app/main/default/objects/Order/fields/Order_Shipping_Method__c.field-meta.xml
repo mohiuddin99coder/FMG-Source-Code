@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Shipping_Method__c</fullName>
+    <externalId>false</externalId>
+    <label>Order Shipping Method</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BW</fullName>
+                <default>false</default>
+                <label>Best Way</label>
+            </value>
+            <value>
+                <fullName>UPS</fullName>
+                <default>false</default>
+                <label>UPS Ground</label>
+            </value>
+            <value>
+                <fullName>FXG</fullName>
+                <default>false</default>
+                <label>FedEx Ground</label>
+            </value>
+            <value>
+                <fullName>USPSEM</fullName>
+                <default>false</default>
+                <label>USPS Express Mail</label>
+            </value>
+            <value>
+                <fullName>USPSPM</fullName>
+                <default>false</default>
+                <label>USPS Priority Mail</label>
+            </value>
+            <value>
+                <fullName>USPSFCM</fullName>
+                <default>false</default>
+                <label>USPS First Class</label>
+            </value>
+            <value>
+                <fullName>FXES</fullName>
+                <default>false</default>
+                <label>FedEx Express Saver</label>
+            </value>
+            <value>
+                <fullName>UP2</fullName>
+                <default>false</default>
+                <label>UPS 2nd Day Air</label>
+            </value>
+            <value>
+                <fullName>FEX</fullName>
+                <default>false</default>
+                <label>FedEx 2 Day Air</label>
+            </value>
+            <value>
+                <fullName>UPAS</fullName>
+                <default>false</default>
+                <label>UPS Next Day Air Saver</label>
+            </value>
+            <value>
+                <fullName>UPO</fullName>
+                <default>false</default>
+                <label>UPS Next Day Air</label>
+            </value>
+            <value>
+                <fullName>FXP</fullName>
+                <default>false</default>
+                <label>FedEx Priority Overnight</label>
+            </value>
+            <value>
+                <fullName>INBW</fullName>
+                <default>false</default>
+                <label>Best Way International</label>
+            </value>
+            <value>
+                <fullName>UPWEXS</fullName>
+                <default>false</default>
+                <label>UPS International</label>
+            </value>
+            <value>
+                <fullName>FXIE</fullName>
+                <default>false</default>
+                <label>FedEx International Economy</label>
+            </value>
+            <value>
+                <fullName>FXIP</fullName>
+                <default>false</default>
+                <label>FedEx International Priority</label>
+            </value>
+            <value>
+                <fullName>USPSGPM</fullName>
+                <default>false</default>
+                <label>USPS Global Priority Mail</label>
+            </value>
+            <value>
+                <fullName>PUD</fullName>
+                <default>false</default>
+                <label>Pick Up At Door</label>
+            </value>
+            <value>
+                <fullName>2-Day Express</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>2-Day Express</label>
+            </value>
+            <value>
+                <fullName>Express</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Express</label>
+            </value>
+            <value>
+                <fullName>EUR001</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ground</label>
+            </value>
+            <value>
+                <fullName>Store Pickup</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Store Pickup</label>
+            </value>
+            <value>
+                <fullName>Test Special Order shipping</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Test Special Order shipping</label>
+            </value>
+            <value>
+                <fullName>USPS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>USPS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

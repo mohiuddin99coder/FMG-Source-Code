@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Waiting_for_Customer_Status_In_Review</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(StageName,&quot;Awaiting for Customer Approval&quot;),
+ISPICKVAL(PRIORVALUE(StageName),&quot;Quote&quot;),
+ Needs_Review_of_Customer__c == False
+)</errorConditionFormula>
+    <errorMessage>&quot;Awaiting for Customer Approval&quot; will be Update through Quote.</errorMessage>
+</ValidationRule>

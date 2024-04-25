@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>FMG_OCAPI</label>
+    <protected>false</protected>
+    <values>
+        <field>Base_URL__c</field>
+        <value xsi:type="xsd:string">https://utsf.firemountain.org/s/-/dw/meta/rest/data/v23_2</value>
+    </values>
+    <values>
+        <field>Client_Secret__c</field>
+        <value xsi:type="xsd:string">Bx7$K49R&amp;INqHGh2ayLwD</value>
+    </values>
+    <values>
+        <field>Client_id__c</field>
+        <value xsi:type="xsd:string">9cc60d13-c781-471b-80b2-284e3c524151</value>
+    </values>
+    <values>
+        <field>Content_Type__c</field>
+        <value xsi:type="xsd:string">application/json</value>
+    </values>
+    <values>
+        <field>Product_Size__c</field>
+        <value xsi:type="xsd:string">75</value>
+    </values>
+    <values>
+        <field>Product_URL__c</field>
+        <value xsi:type="xsd:string">https://utsfc.firemountain.org/s/-/dw/data/v23_2/products</value>
+    </values>
+</CustomMetadata>

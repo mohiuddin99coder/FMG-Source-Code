@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cant_Move_to_Commit_Order</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(StageName,&quot;Commit Order&quot;),
+OR(
+AND(
+ISPICKVAL(PRIORVALUE(StageName),&quot;New&quot;),
+HasOpportunityLineItem
+),
+ISPICKVAL(PRIORVALUE(StageName),&quot;Vendor Confirmation&quot;),
+ISPICKVAL(PRIORVALUE(StageName),&quot;In Review&quot;),
+ISPICKVAL(PRIORVALUE(StageName),&quot;Quote&quot;),
+ISPICKVAL(PRIORVALUE(StageName),&quot;Awaiting for Customer Approval&quot;),
+AND(
+ISPICKVAL(PRIORVALUE(StageName),&quot;Place Order with Vendor&quot;),
+Is_Inventory_Available__c == False
+)
+)
+)</errorConditionFormula>
+    <errorMessage>You cannot move directly to &quot;Commit Order&quot;, Please follow the process.</errorMessage>
+</ValidationRule>

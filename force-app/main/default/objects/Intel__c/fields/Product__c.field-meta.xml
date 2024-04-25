@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product__c</fullName>
+    <externalId>false</externalId>
+    <label>Product</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Chain, Wire, Stringing Material</fullName>
+                <default>false</default>
+                <label>Chain, Wire, Stringing Material</label>
+            </value>
+            <value>
+                <fullName>Components and Findings</fullName>
+                <default>false</default>
+                <label>Components and Findings</label>
+            </value>
+            <value>
+                <fullName>Gemstones</fullName>
+                <default>false</default>
+                <label>Gemstones</label>
+            </value>
+            <value>
+                <fullName>Pearls</fullName>
+                <default>false</default>
+                <label>Pearls</label>
+            </value>
+            <value>
+                <fullName>Precious Metals</fullName>
+                <default>false</default>
+                <label>Precious Metals</label>
+            </value>
+            <value>
+                <fullName>Seed and Bugle Beads</fullName>
+                <default>false</default>
+                <label>Seed and Bugle Beads</label>
+            </value>
+            <value>
+                <fullName>Swarovski</fullName>
+                <default>false</default>
+                <label>Swarovski</label>
+            </value>
+            <value>
+                <fullName>Tools, Displays and Organizers</fullName>
+                <default>false</default>
+                <label>Tools, Displays and Organizers</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

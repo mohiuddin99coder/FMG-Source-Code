@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MktCalcInsightObjectDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <creationType>Custom</creationType>
+    <description>This query calculates the performance amounts for different periods (0-12, 13-24 &amp; 25-36 months) and categorizes them under &quot;AU.&quot; It aggregates sales data over these periods, deducting adjustments and GCC amounts.</description>
+    <expression>SELECT
+UnifiedssotIndividualTun1__dlm.ssot__Id__c as UnifiedIndividualID__c,
+SUM(CASE WHEN UnifiedLink.last0to12monthsAmount &gt; 0 THEN UnifiedLink.last0to12monthsAmount ELSE 0 END) as AU_0to12monthsPerfAmount__c,
+SUM(CASE WHEN UnifiedLink.last13to24monthsAmount &gt; 0 THEN UnifiedLink.last13to24monthsAmount ELSE 0 END) as AU_13to24monthsPerfAmount__c,
+SUM(CASE WHEN UnifiedLink.last25to36monthsAmount &gt; 0 THEN UnifiedLink.last25to36monthsAmount ELSE 0 END) as AU_25to36monthsPerfAmount__c,
+UnifiedLink.IndividualId AS IndividualId__c
+,&apos;AU&apos; AS WebCategoryName__c
+FROM UnifiedssotIndividualTun1__dlm 
+
+JOIN
+(SELECT UnifiedLinkssotIndividualTun1__dlm.UnifiedRecordId__c as UnifiedIndividualID,
+MAX(last0to12monthsAmount.last0to12monthsAmount) as last0to12monthsAmount,
+MAX(last13to24monthsAmount.last13to24monthsAmount) as last13to24monthsAmount,
+
+MAX(last25to36monthsAmount.last25to36monthsAmount) as last25to36monthsAmount,
+
+UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c AS IndividualId
+,last0to12monthsAmount.WebCategoryName AS WebCategoryName
+
+FROM UnifiedLinkssotIndividualTun1__dlm
+
+ LEFT JOIN (SELECT ssot__SalesOrder__dlm.ssot__BillToContactId__c as ContactId,
+(SUM (CASE WHEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c &gt;0 THEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c ELSE 0 END) - SUM (CASE WHEN GCCAmount.GCCTotalAmount &gt; 0 THEN GCCAmount.GCCTotalAmount ELSE 0 END) - SUM (CASE WHEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c &gt;0 THEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c ELSE 0 END)) as last0to12monthsAmount
+,GCCAmount.WebCategoryName AS WebCategoryName
+FROM ssot__SalesOrder__dlm
+ LEFT JOIN 
+(select ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c AS SalesOrderId
+,SUM (CASE WHEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c &gt;0 THEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c ELSE 0 END) as GCCTotalAmount,
+GoodsProduct_CustomAttributes__dlm.p_cat__c AS WebCategoryName
+FROM ssot__SalesOrderProduct__dlm
+
+INNER JOIN GoodsProduct_CustomAttributes__dlm ON GoodsProduct_CustomAttributes__dlm.ID__c = ssot__SalesOrderProduct__dlm.Product_Sku__c
+
+WHERE ssot__SalesOrderProduct__dlm.ssot__OrderProductNumber__c = &apos;eGiftCertificate&apos;
+AND  GoodsProduct_CustomAttributes__dlm.p_cat__c = &apos;AU&apos; 
+GROUP BY ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c,GoodsProduct_CustomAttributes__dlm.p_cat__c
+) AS GCCAmount ON GCCAmount.SalesOrderId = ssot__SalesOrder__dlm.ssot__Id__c 
+WHERE DATEDIFF(CURRENT_DATE(), ssot__SalesOrder__dlm.CheckoutDate__c) &lt;= 365
+GROUP BY ssot__SalesOrder__dlm.ssot__BillToContactId__c,GCCAmount.WebCategoryName) as last0to12monthsAmount ON UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c = last0to12monthsAmount.ContactId
+
+ LEFT JOIN (SELECT ssot__SalesOrder__dlm.ssot__BillToContactId__c as ContactId,
+(SUM (CASE WHEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c &gt;0 THEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c ELSE 0 END) - SUM (CASE WHEN GCCAmount.GCCTotalAmount &gt; 0 THEN GCCAmount.GCCTotalAmount ELSE 0 END) - SUM (CASE WHEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c &gt;0 THEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c ELSE 0 END)) as last13to24monthsAmount
+FROM ssot__SalesOrder__dlm
+LEFT JOIN 
+(select ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c AS SalesOrderId
+,SUM (CASE WHEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c &gt;0 THEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c ELSE 0 END) as GCCTotalAmount,
+GoodsProduct_CustomAttributes__dlm.p_cat__c AS WebCategoryName
+FROM ssot__SalesOrderProduct__dlm
+
+ INNER JOIN GoodsProduct_CustomAttributes__dlm ON GoodsProduct_CustomAttributes__dlm.ID__c = ssot__SalesOrderProduct__dlm.Product_Sku__c
+
+WHERE ssot__SalesOrderProduct__dlm.ssot__OrderProductNumber__c = &apos;eGiftCertificate&apos;
+AND  GoodsProduct_CustomAttributes__dlm.p_cat__c = &apos;AU&apos; 
+GROUP BY ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c,GoodsProduct_CustomAttributes__dlm.p_cat__c
+) AS GCCAmount ON GCCAmount.SalesOrderId = ssot__SalesOrder__dlm.ssot__Id__c 
+WHERE DATEDIFF(CURRENT_DATE(), ssot__SalesOrder__dlm.CheckoutDate__c) &gt; 365 AND DATEDIFF(CURRENT_DATE(), ssot__SalesOrder__dlm.CheckoutDate__c) &lt;= 730
+GROUP BY ssot__SalesOrder__dlm.ssot__BillToContactId__c) as last13to24monthsAmount ON UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c = last13to24monthsAmount.ContactId
+
+ LEFT JOIN (SELECT ssot__SalesOrder__dlm.ssot__BillToContactId__c as ContactId,
+(SUM (CASE WHEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c &gt;0 THEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c ELSE 0 END) - SUM (CASE WHEN GCCAmount.GCCTotalAmount &gt; 0 THEN GCCAmount.GCCTotalAmount ELSE 0 END) - SUM (CASE WHEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c &gt;0 THEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c ELSE 0 END)) as last25to36monthsAmount
+FROM ssot__SalesOrder__dlm
+ LEFT JOIN 
+(select ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c AS SalesOrderId
+,SUM (CASE WHEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c &gt;0 THEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c ELSE 0 END) as GCCTotalAmount,
+GoodsProduct_CustomAttributes__dlm.p_cat__c AS WebCategoryName
+FROM ssot__SalesOrderProduct__dlm
+
+INNER JOIN GoodsProduct_CustomAttributes__dlm ON GoodsProduct_CustomAttributes__dlm.ID__c = ssot__SalesOrderProduct__dlm.Product_Sku__c
+
+WHERE ssot__SalesOrderProduct__dlm.ssot__OrderProductNumber__c = &apos;eGiftCertificate&apos;
+AND  GoodsProduct_CustomAttributes__dlm.p_cat__c = &apos;AU&apos; 
+GROUP BY ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c,GoodsProduct_CustomAttributes__dlm.p_cat__c
+) AS GCCAmount ON GCCAmount.SalesOrderId = ssot__SalesOrder__dlm.ssot__Id__c 
+WHERE DATEDIFF(CURRENT_DATE(), ssot__SalesOrder__dlm.CheckoutDate__c) &gt; 730 AND DATEDIFF(CURRENT_DATE(), ssot__SalesOrder__dlm.CheckoutDate__c) &lt;= 1095
+GROUP BY ssot__SalesOrder__dlm.ssot__BillToContactId__c) as last25to36monthsAmount ON UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c = last25to36monthsAmount.ContactId
+
+
+GROUP BY UnifiedLinkssotIndividualTun1__dlm.UnifiedRecordId__c,UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c,last0to12monthsAmount.WebCategoryName) as UnifiedLink ON UnifiedssotIndividualTun1__dlm.ssot__Id__c = UnifiedLink.UnifiedIndividualID
+WHERE  UnifiedLink.last0to12monthsAmount != 0 OR  UnifiedLink.last0to12monthsAmount !=0 OR  UnifiedLink.last0to12monthsAmount !=0
+GROUP BY UnifiedssotIndividualTun1__dlm.ssot__Id__c,UnifiedLink.IndividualId,WebCategoryName__c</expression>
+    <masterLabel>AU - Performance Insights</masterLabel>
+</MktCalcInsightObjectDef>

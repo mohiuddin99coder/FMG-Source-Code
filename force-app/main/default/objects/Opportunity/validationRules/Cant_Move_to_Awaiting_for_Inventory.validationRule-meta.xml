@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cant_Move_to_Awaiting_for_Inventory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(StageName,&quot;Awaiting for Inventory&quot;),
+OR(
+AND(
+ISPICKVAL(PRIORVALUE(StageName),&quot;New&quot;),
+HasOpportunityLineItem = true
+), 
+ISPICKVAL(PRIORVALUE(StageName),&quot;Vendor Confirmation&quot;),
+ISPICKVAL(PRIORVALUE(StageName),&quot;In Review&quot;),
+ISPICKVAL(PRIORVALUE(StageName),&quot;Quote&quot;),
+ISPICKVAL(PRIORVALUE(StageName),&quot;Awaiting for Customer Approval&quot;)
+)
+)</errorConditionFormula>
+    <errorMessage>Can&apos;t go to &quot;Awaiting for Inventory&quot;, Please follow the process.</errorMessage>
+</ValidationRule>

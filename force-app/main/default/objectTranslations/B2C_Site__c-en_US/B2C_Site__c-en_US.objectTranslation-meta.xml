@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>B2C Site</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>B2C Sites</value>
+    </caseValues>
+    <layouts>
+        <layout>B2C Site Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Ensure_API_Url_has_Prefix</name>
+    </validationRules>
+</CustomObjectTranslation>

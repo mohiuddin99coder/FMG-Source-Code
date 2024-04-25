@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>P4 offer with questions</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>100+ offer with question</name>
+    <pageDevName>X100_offer_with_question</pageDevName>
+    <style>none</style>
+    <subject>Platinum Partners – XXXX at Fire Mountain Gems and Bead</subject>
+    <textOnly>Hello XXX,
+
+Thank you for your recent inquiry about our Fire Mountain Gems and Beads&apos; Platinum Partners Wholesale program. We would love to earn your business. 
+
+As you saw, there is a minimum purchase of $3,000 in the previous 365 days in order to participate in Platinum Partner Annual Program. Since you are interested in purchasing with Fire Mountain Gems, I could set up your account to receive 100+ pricing no matter the size of your order. You will be able to purchase items at the lowest advertised price until June 30th, XXXX. This opportunity should assist you in reaching the Platinum status which will allow you to receive additional discounts.
+
+We just need you to answer the following qualifying questions below and then we will set you up right away:
+
+• How did you first hear about Fire Mountain Gems?
+
+• What type of business do you have? (Shows/Craft Fairs, Storefront, Wholesaler, Non-Profit/Charity, Online/Website)
+
+• Do you feature your product or jewelry on Social Media sites? We would love to know which sites you utilize and the web addresses to your shop or page. 
+
+• Fire Mountain Gems strives to be your main resource for your jewelry and beading needs. Are you purchasing jewelry supplies from other vendors? If so, what type of product do you purchase, from whom, and why? (Better Pricing, Ease of Ordering, Fire Mountain doesn’t carry, etc.)
+
+• What is the biggest challenge your business faces these days?
+
+• Approximately how much do you spend on jewelry and beading supplies each year?
+
+Please respond to the above questions at your earliest convenience, so that I may update your profile information. Once I receive the answers, I will be able to have the 100+ pricing added to your account. 
+
+In addition, we have a third-party company called Avalara, that manages our tax exemption certificates. Please let us know if you have a tax exemption so we can email you the paperwork.
+
+OR
+
+In addition, we have a third-party company called Avalara, that manages our tax exemption certificates. I have emailed you the required information to become tax exempt with us. There is a link in the email for you to fill out the paperwork and send back to Avalara. Please be aware that it can take up to 7 business days to process the paperwork once received. 
+
+I look forward to hearing from you!
+
+Possible additional questions:
+
+• Is there a specific product line you are interested in?
+
+• When do you anticipate your Etsy shop will be up and running?
+
+• Do you have a separate business for your jewelry? If so, may I ask what brand name you are selling your jewelry line through?
+
+• Are the craft fairs you attend seasonal? If so, what season or seasons do you attend?
+
+• 2. How do you market your product or business? (classes, word of mouth, shows/fairs, consignment, wholesale etc.)
+
+• Do you currently have an active URL established for your online business? If so, please provide the web address.
+
+• The URL you provided for your business does not appear to be working. If you have an alternate URL available, please provide it.</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

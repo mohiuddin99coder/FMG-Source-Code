@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Commit_Order_Without_Inventory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+Is_Inventory_Available__c == FALSE, 
+ISPICKVAL(PRIORVALUE(StageName),&quot;Awaiting for Inventory&quot;),
+ISPICKVAL( StageName , &quot;Commit Order&quot; ))</errorConditionFormula>
+    <errorMessage>Inventory should be available before Committing the Order.</errorMessage>
+</ValidationRule>

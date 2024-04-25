@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gift_Certification_Applied__c</fullName>
+    <externalId>false</externalId>
+    <formula>OriginalOrder.Gift_Certification_Applied__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Gift Certification Applied</label>
+    <type>Checkbox</type>
+</CustomField>

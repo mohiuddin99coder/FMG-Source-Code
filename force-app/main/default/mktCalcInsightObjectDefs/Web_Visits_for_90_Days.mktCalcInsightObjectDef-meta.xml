@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MktCalcInsightObjectDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <creationType>Custom</creationType>
+    <description>This query retrieves the count of web visits for each individual, aggregated over the past 90 days. It&apos;s grouped by Unified Individual ID, providing insights into website engagement levels.</description>
+    <expression>SELECT
+UnifiedssotIndividualTun1__dlm.ssot__Id__c as UnifiedIndividualID__c,
+MAX(UnifiedLink.WebVisitsCount) as WebVisitsCount__c
+
+FROM UnifiedssotIndividualTun1__dlm 
+
+LEFT JOIN
+(SELECT UnifiedLinkssotIndividualTun1__dlm.UnifiedRecordId__c as UnifiedIndividualID,
+
+MAX(MonthWiseData.WebVisitsCount) as WebVisitsCount
+
+FROM UnifiedLinkssotIndividualTun1__dlm
+
+LEFT JOIN
+
+(SELECT ssot__WebsiteEngagement__dlm.ssot__IndividualId__c as IndividualId, 
+ COUNT (ssot__WebsiteEngagement__dlm.ssot__IndividualId__c) as WebVisitsCount,
+ ssot__WebsiteEngagement__dlm.ssot__EngagementChannelActionId__c as WebActions,
+DATE_TRUNC(&apos;day&apos;, ssot__WebsiteEngagement__dlm.ssot__EngagementDateTm__c) as EngagementDateTime
+
+FROM ssot__WebsiteEngagement__dlm
+
+WHERE DATEDIFF(CURRENT_DATE(), ssot__WebsiteEngagement__dlm.ssot__EngagementDateTm__c) &lt;= 90
+
+GROUP BY ssot__WebsiteEngagement__dlm.ssot__IndividualId__c, ssot__WebsiteEngagement__dlm.ssot__EngagementChannelActionId__c, DATE_TRUNC(&apos;day&apos;, ssot__WebsiteEngagement__dlm.ssot__EngagementDateTm__c)) as MonthWiseData
+
+ON UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c = MonthWiseData.IndividualId
+
+GROUP BY UnifiedLinkssotIndividualTun1__dlm.UnifiedRecordId__c) as UnifiedLink ON 
+
+UnifiedssotIndividualTun1__dlm.ssot__Id__c = UnifiedLink.UnifiedIndividualID
+
+GROUP BY UnifiedssotIndividualTun1__dlm.ssot__Id__c</expression>
+    <masterLabel>Web Visits for 90 Days</masterLabel>
+</MktCalcInsightObjectDef>

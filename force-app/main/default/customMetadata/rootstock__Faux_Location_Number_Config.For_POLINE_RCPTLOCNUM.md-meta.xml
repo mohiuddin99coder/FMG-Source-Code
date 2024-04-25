@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>For POLINE RCPTLOCNUM</label>
+    <protected>false</protected>
+    <values>
+        <field>rootstock__Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>rootstock__Location_Id_Field__c</field>
+        <value xsi:type="xsd:string">rstk__poline_rcptlocid__c</value>
+    </values>
+    <values>
+        <field>rootstock__Location_Number_Field__c</field>
+        <value xsi:type="xsd:string">rstk__poline_rcptlocnum__c</value>
+    </values>
+    <values>
+        <field>rootstock__Site_Field__c</field>
+        <value xsi:type="xsd:string">rstk__poline_receiptsite__c</value>
+    </values>
+    <values>
+        <field>rootstock__Source_Object__c</field>
+        <value xsi:type="xsd:string">rstk__poline__c</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Inventory Requisitions Detailed</layout>
+        <sections>
+            <label></label>
+            <section>Key Dates</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>PO Data</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Special Order</layout>
+        <sections>
+            <label></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Payment Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Shipping Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Special Order</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Tax Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label></label>
+        <name>Normal_Order</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Special_Order</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Order_Activated</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>AVA_SFCLOUD__Calculate_Tax</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>AVA_SFCLOUD__Order_Validate_Billing_Address</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>AVA_SFCLOUD__Order_Validate_Shipping_Address</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>AVA_SFCLOUD__Validate_Origin_Address</name>
+    </webLinks>
+</CustomObjectTranslation>

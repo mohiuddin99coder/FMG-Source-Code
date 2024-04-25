@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <description>if on update email or phone is cleared,  set the preferred contact method to null</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>NullString</name>
+        <dataType>String</dataType>
+        <expression>NULL</expression>
+    </formulas>
+    <interviewLabel>Clear Preferred Contact Method on Account {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Clear Preferred Contact Method on Account</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>if phone number is erased, set preferred contact method to null</description>
+        <name>Set_Preferred_Contact_Method</name>
+        <label>Set Preferred Contact Method</label>
+        <locationX>466</locationX>
+        <locationY>346</locationY>
+        <inputAssignments>
+            <field>PrefContactMethod__c</field>
+            <value>
+                <elementReference>NullString</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>330</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Set_Preferred_Contact_Method</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>(1 AND 2 )OR ( 3 AND 4)</filterLogic>
+        <filters>
+            <field>PrefContactMethod__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Phone</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Phone</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>PrefContactMethod__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Email</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>PersonEmail</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

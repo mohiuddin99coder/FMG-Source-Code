@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>gopireddy.a@etg.digital</contactEmail>
+    <label>CDP API</label>
+    <oauthConfig>
+        <callbackUrl>https://oauth.pstmn.io/v1/callback</callbackUrl>
+        <certificate>MIIDazCCAlOgAwIBAgIUJmSM6QfkUH+hLqxKA/I4zhEfPoEwDQYJKoZIhvcNAQELBQAwRTELMAkGA1UEBhMCQVUxEzARBgNVBAgMClNvbWUtU3RhdGUxITAfBgNVBAoMGEludGVybmV0IFdpZGdpdHMgUHR5IEx0ZDAeFw0yMzAzMjQxMDQ4MDBaFw0yNDAzMjMxMDQ4MDBaMEUxCzAJBgNVBAYTAkFVMRMwEQYDVQQIDApTb21lLVN0YXRlMSEwHwYDVQQKDBhJbnRlcm5ldCBXaWRnaXRzIFB0eSBMdGQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC35q22xWR86dn+yqH8jOImtXOkIYCNaVKk1Bo+WFHDkcUpKN+ZKWIZMt0nup5gufoz+jUrZYBRdeu29/IIk/TgmhNmBvKttP3nr1PjgXAhE4lnolZ4mjKyZ6QQbNY2nW25oANg3MXGlOureWBDK3FHKv0ze49UQe1TjQWgu6ZZqo/5YC5tv5DCXd9dLXXPaR54C4hbAj0CyEiLgSqIROmfP1efRD20I9kY8DScb4qQHZHj2d5PQ/vNUSgzAYsT+Txd9PGywgdiB/473ptCggtwxMxN+paLgZ1fGuGluRPb5m4YZOE50QAyaWF88Ek9l1+mW4dRO2CsaoCb7+VFLyy3AgMBAAGjUzBRMB0GA1UdDgQWBBQzB3FQF+xG58AcZZ2hHUTF89Ef9TAfBgNVHSMEGDAWgBQzB3FQF+xG58AcZZ2hHUTF89Ef9TAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBjA87FFd5JSBFHpFwQ7sdOXmghqkNs0sCKiM7J4LGmA/OkA12jbgyvXozQviyjTQikLVkeN0tKajYK3uF19kLKvo2FrBdsw2JywycDsreco7Rb77B+P2z/g01nZgCwW0BNcTvGz4+ii/omnq5PWhsKayiMQHwmMGefsMJs3V7MXQL3zKWeySKma4Pq9vyp38JxumpvYI4ACN2k+6iYs5A4x7WRLsGABLkFSZZKfJXbQje5xUxyqcWqQW4EWrYASDPEifZJpho3iGc08Cj9DZ2QggHmp2SPoLnC/t7spa7kMgAAESZ78tIPTihEKFeSZer8YseEY5m1IWBESaRd4jAo</certificate>
+        <consumerKey>3MVG9ux34Ig8G5eqqjS54JCqcKDq8KcnQOFucsmLt245U5AYzqM8E5dfS_fi2psC0HGbDcfRIp5W5S6WisuJ6</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isNamedUserJwtEnabled>false</isNamedUserJwtEnabled>
+        <isPkceRequired>false</isPkceRequired>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <scopes>Api</scopes>
+        <scopes>RefreshToken</scopes>
+        <scopes>CDPIngest</scopes>
+        <scopes>CDPProfile</scopes>
+        <scopes>CDPQuery</scopes>
+        <scopes>CDPSegment</scopes>
+        <scopes>CDPIdentityResolution</scopes>
+        <scopes>CDPCalculatedInsight</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

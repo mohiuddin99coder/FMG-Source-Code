@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inventory_Available__c</fullName>
+    <externalId>false</externalId>
+    <formula>if( Inventory_Checked__c = TRUE ||  PricebookEntry.Product2.ProductCode = &apos;Shipping&apos;, TRUE, FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Inventory Available ?</label>
+    <type>Checkbox</type>
+</CustomField>

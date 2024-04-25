@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <description>Export UI Rule/Action records selected from list view</description>
+    <label>Export UI Rule/Action Records</label>
+    <processMetadataValues>
+        <name>AssociatedRecord</name>
+        <value/>
+    </processMetadataValues>
+    <processType>Flow</processType>
+</Flow>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cant_ChangeStage_without_Completing_Task</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(StageName,&quot;Awaiting for Inventory&quot;),
+ISPICKVAL(PRIORVALUE(StageName),&quot;Place Order with Vendor&quot;),
+PM_Place_Order_Task_Completed__c == False
+)</errorConditionFormula>
+    <errorMessage>Please Complete the &quot;PM Place Order with Vendor&quot; Task.</errorMessage>
+</ValidationRule>

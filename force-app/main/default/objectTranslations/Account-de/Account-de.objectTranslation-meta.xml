@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label></label>
+        <name>AVA_SFCLOUD__Account_Exemption_Fields</name>
+    </fieldSets>
+    <layouts>
+        <layout>Account Layout</layout>
+        <sections>
+            <label></label>
+            <section>Account Summary</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Account Layout - Customer</layout>
+        <sections>
+            <label></label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Avalara tax</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Catalog Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Customer Additional Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Customer Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Description Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Performance Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Platinum Program</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Platinum inquiry information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Temporary Section</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Person Account Layout</layout>
+        <layoutType>PersonAccount</layoutType>
+        <sections>
+            <label></label>
+            <section>Avalara tax</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Catalog Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Customer Additional Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Customer Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Description Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Performance Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Platinum Program</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Platinum inquiry information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Temporary Section</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Account_Update</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Child_Account</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Order_on_Behalf_Of</name>
+    </quickActions>
+    <recordTypes>
+        <label></label>
+        <name>B2CBusinessAccount</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Business_Account</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Person_Account</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>AVA_SFCLOUD__Validate_AvaTax_Exemption_Customer_ID</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Invalid_Star_Level_Downgrade</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Validating_Birthday</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>cant_change_star_without_changing_365</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>AVA_SFCLOUD__Add_Customer_s_to_AvaTax_Exemption</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>AVA_SFCLOUD__AvaTax_Validate_Billing_Address</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>AVA_SFCLOUD__AvaTax_Validate_Shipping_Address</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>AVA_SFCLOUD__Save_to_AvaTax</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>AVA_SFCLOUD__Save_to_Avalara</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>AVA_SFCLOUD__Validate_Billing_Address</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>AVA_SFCLOUD__Validate_Shipping_Address</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>DOX__Print</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>DOX__Print_Multiple</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Fire_Mountain_Gems</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>contivio_link_to_call</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>et4ae5__ExactTarget_Resubscribe</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>et4ae5__ExactTarget_Unsubscribe</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>et4ae5__Send_ExactTarget_Email</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>et4ae5__View_ExactTarget_Analytics</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>rstk__Billing</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>rstk__Create_Sales_Order</name>
+    </webLinks>
+</CustomObjectTranslation>

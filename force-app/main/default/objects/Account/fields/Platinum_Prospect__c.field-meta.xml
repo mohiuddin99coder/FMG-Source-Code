@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Platinum_Prospect__c</fullName>
+    <externalId>false</externalId>
+    <label>Platinum Prospect</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>General</fullName>
+                <default>false</default>
+                <label>General</label>
+            </value>
+            <value>
+                <fullName>Online Form - Vetted</fullName>
+                <default>false</default>
+                <label>Online Form - Vetted</label>
+            </value>
+            <value>
+                <fullName>Avalara Lead</fullName>
+                <default>false</default>
+                <label>Avalara Lead</label>
+            </value>
+            <value>
+                <fullName>Online Form - Unvetted</fullName>
+                <default>false</default>
+                <label>Online Form - Unvetted</label>
+            </value>
+            <value>
+                <fullName>Reached $2000</fullName>
+                <default>false</default>
+                <label>Reached $2000</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

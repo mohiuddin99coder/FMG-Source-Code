@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cant_Change_Address_at_this_Stage</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+ISPICKVAL(StageName, &apos;Vendor Confirmation&apos;),
+ISPICKVAL(StageName, &apos;In Review&apos;),
+ISPICKVAL(StageName, &apos;Approval&apos;),
+ISPICKVAL(StageName, &apos;Place Order with Vendor&apos;),
+ISPICKVAL(StageName , &quot;Commit Order&quot;)
+),
+OR(
+ISCHANGED(Shipping_Address__Street__s),
+ISCHANGED(Shipping_Address__City__s),
+ISCHANGED(Shipping_Address__StateCode__s),
+ISCHANGED(Shipping_Address__PostalCode__s),
+ISCHANGED(Shipping_Address__CountryCode__s)
+)
+)</errorConditionFormula>
+    <errorMessage>You can&apos;t change Address at this Stage.</errorMessage>
+</ValidationRule>

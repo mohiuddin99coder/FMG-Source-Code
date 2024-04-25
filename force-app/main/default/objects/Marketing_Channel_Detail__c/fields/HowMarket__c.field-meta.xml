@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HowMarket__c</fullName>
+    <externalId>false</externalId>
+    <label>HowMarket</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bead Buying Group</fullName>
+                <default>false</default>
+                <label>Bead Buying Group</label>
+            </value>
+            <value>
+                <fullName>Booth &amp; Tables</fullName>
+                <default>false</default>
+                <label>Booth &amp; Tables</label>
+            </value>
+            <value>
+                <fullName>Brick &amp; Mortar</fullName>
+                <default>false</default>
+                <label>Brick &amp; Mortar</label>
+            </value>
+            <value>
+                <fullName>B to B</fullName>
+                <default>false</default>
+                <label>B to B</label>
+            </value>
+            <value>
+                <fullName>Non-Selling</fullName>
+                <default>false</default>
+                <label>Non-Selling</label>
+            </value>
+            <value>
+                <fullName>Online/Website</fullName>
+                <default>false</default>
+                <label>Online/Website</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

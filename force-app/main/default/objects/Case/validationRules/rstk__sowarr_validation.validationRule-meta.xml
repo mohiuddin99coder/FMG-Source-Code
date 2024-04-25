@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rstk__sowarr_validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>!ISBLANK( rstk__case_sowarr__c ) &amp;&amp;
+!ISBLANK( rstk__case_socontract__c ) &amp;&amp; 
+(( rstk__case_sowarr__r.rstk__sowarr_socontract__c &lt;&gt; rstk__case_socontract__c ) || ( rstk__case_sowarr__r.rstk__sowarr_endusercust__c &lt;&gt;  rstk__case_socontract__r.rstk__socontract_socust__c ))</errorConditionFormula>
+    <errorMessage>Contract for the Covered Item must match the Sales Contract and the End User Customer for the Covered Item must match the Customer for the Sales Contract.</errorMessage>
+</ValidationRule>

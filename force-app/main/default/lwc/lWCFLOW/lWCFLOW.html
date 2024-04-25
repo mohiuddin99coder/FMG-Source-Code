@@ -1,0 +1,145 @@
+<template>
+        <lightning-card title="Inventory Transfer" icon-name="custom:custom85">
+            <template if:true={singleButton}>
+                <div align = "Right" if:true={singleButton}>
+                    <div class="slds-align_absolute-right slds-p-top_x-small slds-p-bottom_x-small spinner-container-outer slds-is-relative">
+                            <lightning-button variant="Brand" label='Finish Processing' title="Save" 
+                            onclick={handleContinueProcessing} class="slds-m-left_x-small"></lightning-button>
+                    </div>
+                </div>
+                <template if:true={isSpinner}>
+                    <div class="slds-spinner_container">
+                        <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" >
+                          <span class="slds-assistive-text">Loading</span>
+                          <div class="slds-spinner__dot-a"></div>
+                          <div class="slds-spinner__dot-b"></div>
+                          <!-- additional element to show the text under the spinner -->
+                          <p class="slds-spinner-text">Please wait</p>
+                        </div>
+                      </div>
+                </template>
+            </template>
+            <template if:false={singleButton}>
+                <div align = "Right" if:true = {checkAuto}>
+                    <lightning-input type="checkbox" label="Autoclicking" class="myTestInput" checked={checkAuto} disabled = true>
+                    </lightning-input>
+                </div>
+                
+            <div class = "slds-grid" > 
+                <div class = "slds-col slds-size_1-of-2 slds-p-right_xx-large" if:true={showItem}>
+                    <lightning-input class="validate myinput" name="item" label="Item Number" required autofocus style = "margin-left: 2rem"
+                        value={itemNumberValue}
+                        onchange={handleItemNumberChanged}>
+                    </lightning-input>
+                </div>
+                <div class = "slds-col slds-size_1-of-2 slds-p-right_xx-large" if:true={showQty}>
+                    <lightning-input required class="validate" name="quantity" label="Quantity"  type="number"
+                        value={quantityValue}
+                        onchange={handleQuantity}>
+                    </lightning-input>
+                </div>
+            </div>
+            <div class = "slds-grid" if:true={fromDetails} >
+                <div class = "slds-col slds-size_1-of-2 slds-p-right_xx-large">
+                    <lightning-input required class="validate" name="fromLocID" label="From Location ID" style = "margin-left: 2rem" 
+                        value={FromLocationIDValue}
+                        onchange={handleFromLocationID}>
+                    </lightning-input>
+                </div>
+                <div class = "slds-col slds-size_1-of-2 slds-p-right_xx-large">
+                    
+                    <lightning-input required class="validate" name="fromLocNo" label="From Location No" 
+                        value={FromLocationNoValue} onchange={handleFromLocationNo}>
+                    </lightning-input>
+                </div>
+            </div>
+            <div class = "slds-grid" if:true={toDetails}>
+                <div class = "slds-col slds-size_1-of-2 slds-p-right_xx-large">
+                    <lightning-input required class="validate" name="toLocID"  value={ToLocationIDValue} label="To Location ID" style = "margin-left: 2rem" 
+                        onchange={handleToLocationID}>
+                    </lightning-input>
+                </div>
+                <div class = "slds-col slds-size_1-of-2 slds-p-right_xx-large">
+                    <lightning-input data-id="to-loc-no" data-index = 6 required class="validate" name="toLocNo" label="To Location No" 
+                         value={ToLocationNoValue}  onkeydown={handleKeyDown} onchange={handleToLocationNo}>
+                    </lightning-input>
+                </div>
+            </div>
+            
+            <div align = "Right" if:true={showButtons}>
+                <div class="slds-align_absolute-right slds-p-top_x-small slds-p-bottom_x-small">
+                    <lightning-button variant="brand" label="Add Inventory Detail" title="Save" onclick= {handleAddInventoryDetail}
+                        class="slds-m-left_x-small"></lightning-button>
+                        <lightning-button variant="Destructive" label="Finish Transfer" title="Save" 
+                        onclick={handleCustomClick} class="slds-m-left_x-small"></lightning-button>
+                </div>
+            </div>
+            <div align = "Right" if:true={showFetchButton}>
+                <div class="slds-align_absolute-right slds-p-top_x-small slds-p-bottom_x-small">
+                        <lightning-button variant="Destructive" label="Fetch Inventory Details" title="Save" 
+                        onclick={handleFetch} class="slds-m-left_x-small"></lightning-button>
+                </div>
+            </div>
+            <div align = "Right" if:true={showTransferAllItemButton}>
+                <div class="slds-align_absolute-right slds-p-top_x-small slds-p-bottom_x-small">
+                        <lightning-button variant="Destructive" label="Transfer All Items" title="Save" 
+                        onclick={handleTransferAllItems} class="slds-m-left_x-small"></lightning-button>
+                </div>
+            </div>
+            <div class = "slds-grid" if:true={showCheckbox}>
+                <div class = "slds-col slds-size_1-of-2" align = "Left">
+                    <lightning-input label="Move all items" type="checkbox" class="myTestInput" onchange={handleCheckChange}  unchecked >
+                    </lightning-input>
+                </div>
+            </div>
+        </template>
+
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading...  Please wait" variant="brand" size="large">
+            </lightning-spinner>
+        </template>
+
+        </lightning-card>
+    
+
+    
+
+    <!--<template if:true={type}>
+        <lightning-card>
+            <div class = "slds-grid">
+                <div class = "slds-col slds-size_1-of-2 slds-p-right_xx-large">
+                    <lightning-input required class="validate" name="fromLocID" label="From Location ID" style = "margin-left: 2rem" 
+                        value={FromLocationIDValue}
+                        onchange={handleFromLocationID}>
+                    </lightning-input>
+                </div>
+                <div class = "slds-col slds-size_1-of-2 slds-p-right_xx-large">
+                    
+                    <lightning-input required class="validate" name="fromLocNo" label="From Location No" 
+                        value={FromLocationNoValue} onchange={handleFromLocationNo}>
+                    </lightning-input>
+                </div>
+            </div>
+            <div class = "slds-grid">
+                <div class = "slds-col slds-size_1-of-2 slds-p-right_xx-large">
+                    <lightning-input class="validate" name="item" label="Item Number" style = "margin-left: 2rem" required
+                        value={itemNumberValue}
+                        onchange={handleItemNumberChanged}>
+                    </lightning-input>
+                </div>
+                <div class = "slds-col slds-size_1-of-2 slds-p-right_xx-large">
+                    <lightning-input required class="validate" name="quantity" label="Quantity"  type="number"
+                        value={quantityValue}
+                        onchange={handleQuantity}>
+                    </lightning-input>
+                </div>
+            </div>
+            <div align = "Right">
+                <div class="slds-align_absolute-right slds-p-top_x-small slds-p-bottom_x-small"></div>
+                    <lightning-button variant="brand" label="Add Inventory Detail" title="Save" onclick= {handleNext}
+                    class="slds-m-left_x-small"></lightning-button>
+                </div>
+            </div>
+        </lightning-card>
+    </template>-->
+</template>

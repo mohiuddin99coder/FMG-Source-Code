@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Tax_Cant_be_Empty</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(PRIORVALUE(StageName),&apos;In Review&apos;),
+ISCHANGED(StageName),
+OR(
+ISBLANK(  AVA_SFCLOUD__Sales_Tax__c ),
+AVA_SFCLOUD__AvaTax_Message__c != &apos;Sales Tax Current&apos;
+),
+Reviewed_By_Both_Pricing_Product_Group__c,
+NOT(ISBLANK(TEXT(Shipping_Method__c))),
+OR(
+ISPICKVAL(StageName,&apos;Approval&apos;),
+ISPICKVAL(StageName,&apos;Quote&apos;)
+)
+)</errorConditionFormula>
+    <errorMessage>Please Calculate tax before moving further.</errorMessage>
+</ValidationRule>

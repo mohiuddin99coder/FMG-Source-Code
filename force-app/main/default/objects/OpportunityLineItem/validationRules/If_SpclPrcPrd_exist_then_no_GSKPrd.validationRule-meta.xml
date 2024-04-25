@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_SpclPrcPrd_exist_then_no_GSKPrd</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+AND(
+Opportunity.GSK_Customer__c,
+Opportunity.Special_Price_Order__c,
+Product2.GSK_Product__c
+),
+AND(
+Opportunity.GSK_Customer__c,
+Opportunity.GSK_Product_Available__c,
+Special_Price_Request__c  
+)
+)</errorConditionFormula>
+    <errorMessage>You can&apos;t have both products, either GSK or Non-GSK with Special Price.</errorMessage>
+</ValidationRule>

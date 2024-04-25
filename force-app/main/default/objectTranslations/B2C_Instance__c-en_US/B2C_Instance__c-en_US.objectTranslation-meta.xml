@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>B2C Instance</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>B2C Instances</value>
+    </caseValues>
+    <layouts>
+        <layout>B2C Instance Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Activate_B2C_CustomerLists</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Activate_B2C_Sites</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Deactivate_B2C_CustomerLists</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Deactivate_B2C_Sites</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Seed_CustomerLists_and_Sites</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Update_Site_Counts</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Ensure_API_Url_has_Prefix</name>
+    </validationRules>
+</CustomObjectTranslation>

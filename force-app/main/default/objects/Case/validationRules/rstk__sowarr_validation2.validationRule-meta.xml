@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rstk__sowarr_validation2</fullName>
+    <active>true</active>
+    <errorConditionFormula>!ISBLANK(rstk__case_sowarr__c) &amp;&amp; !ISBLANK(AccountId) &amp;&amp; (rstk__case_sowarr__r.rstk__sowarr_endusercust__r.rstk__socust_sf_account__c &lt;&gt; AccountId) &amp;&amp; (rstk__case_sowarr__r.rstk__sowarr_soldtocust__r.rstk__socust_sf_account__c &lt;&gt; AccountId)</errorConditionFormula>
+    <errorMessage>The Case account must match either the Covered Item&apos;s End User Customer or Sold-To Customer</errorMessage>
+</ValidationRule>

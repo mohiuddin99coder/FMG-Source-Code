@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSrcTrgtRelationship xmlns="http://soap.sforce.com/2006/04/metadata">
+    <definitionCreationType>Calculated_Insight</definitionCreationType>
+    <masterLabel>Re_Engagement_Data_Last_30_Days_UnifiedIndividualId_map_UnifiedssotIndividualTun1_ssot_Id_1712314898135</masterLabel>
+    <relationshipCardinality>ManyToOne</relationshipCardinality>
+    <sourceFieldName>Re_Engagement_Data_Last_30_Days__cio.UnifiedIndividualId__c</sourceFieldName>
+    <targetFieldName>UnifiedssotIndividualTun1__dlm.ssot__Id__c</targetFieldName>
+</FieldSrcTrgtRelationship>

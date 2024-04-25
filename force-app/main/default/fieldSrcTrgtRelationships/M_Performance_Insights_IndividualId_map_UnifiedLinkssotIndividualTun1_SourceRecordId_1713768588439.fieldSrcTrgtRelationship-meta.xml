@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSrcTrgtRelationship xmlns="http://soap.sforce.com/2006/04/metadata">
+    <definitionCreationType>Calculated_Insight</definitionCreationType>
+    <masterLabel>M_Performance_Insights_IndividualId_map_UnifiedLinkssotIndividualTun1_SourceRecordId_1713768588439</masterLabel>
+    <relationshipCardinality>ManyToOne</relationshipCardinality>
+    <sourceFieldName>M_Performance_Insights__cio.IndividualId__c</sourceFieldName>
+    <targetFieldName>UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c</targetFieldName>
+</FieldSrcTrgtRelationship>

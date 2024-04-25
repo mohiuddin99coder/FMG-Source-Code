@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>test_star__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(OMS_Short_Name__c, &quot;75 PLAT 5 STAR&quot;),
+
+
+ISPICKVAL(OMS_Short_Name__c, &quot;76 PLAT 4 STAR&quot;),
+
+ISPICKVAL(OMS_Short_Name__c, &quot;85 PLAT 3 STAR&quot;)
+)</formula>
+    <label>test star</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GSK_Product_for_Only_GSK_Customer</fullName>
+    <active>true</active>
+    <errorConditionFormula>Opportunity.GSK_Customer__c = FALSE &amp;&amp;  Product2.GSK_Product__c = TRUE</errorConditionFormula>
+    <errorMessage>GSK Product is applicable for GSK Customer</errorMessage>
+</ValidationRule>

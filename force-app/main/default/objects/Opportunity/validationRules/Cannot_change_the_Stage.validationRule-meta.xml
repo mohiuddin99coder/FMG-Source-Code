@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_change_the_Stage</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+AND(
+ISPICKVAL(PRIORVALUE(StageName),&quot;Vendor Confirmation&quot;),
+ISPICKVAL(StageName,&quot;New&quot;)
+),
+AND(
+ISPICKVAL(PRIORVALUE(StageName),&quot;In Review&quot;),
+ISPICKVAL(StageName,&quot;Vendor Confirmation&quot;)
+),
+AND(
+ISPICKVAL(PRIORVALUE(StageName),&quot;Quote&quot;),
+OR(
+ISPICKVAL(StageName,&quot;New&quot;),
+ISPICKVAL(StageName,&quot;Vendor Confirmation&quot;),
+ISPICKVAL(StageName,&quot;In Review&quot;),
+ISPICKVAL(StageName,&quot;Approval&quot;))
+),
+AND(
+ISPICKVAL(PRIORVALUE(StageName),&quot;Awaiting for Customer Approval&quot;),
+OR(
+ISPICKVAL(StageName,&quot;New&quot;),
+ISPICKVAL(StageName,&quot;Vendor Confirmation&quot;),
+ISPICKVAL(StageName,&quot;In Review&quot;),
+ISPICKVAL(StageName,&quot;Approval&quot;),
+ISPICKVAL(StageName,&quot;Quote&quot;))
+),
+AND(
+ISPICKVAL(PRIORVALUE(StageName),&quot;Place Order with Vendor&quot;),
+OR(
+ISPICKVAL(StageName,&quot;New&quot;),
+ISPICKVAL(StageName,&quot;Vendor Confirmation&quot;),
+ISPICKVAL(StageName,&quot;In Review&quot;),
+ISPICKVAL(StageName,&quot;Approval&quot;),
+ISPICKVAL(StageName,&quot;Quote&quot;),
+ISPICKVAL(StageName,&quot;Awaiting for Customer Approval&quot;))
+),
+AND(
+ISPICKVAL(PRIORVALUE(StageName),&quot;Awaiting for Inventory&quot;),
+OR(
+ISPICKVAL(StageName,&quot;New&quot;),
+ISPICKVAL(StageName,&quot;Vendor Confirmation&quot;),
+ISPICKVAL(StageName,&quot;In Review&quot;),
+ISPICKVAL(StageName,&quot;Approval&quot;),
+ISPICKVAL(StageName,&quot;Quote&quot;),
+ISPICKVAL(StageName,&quot;Awaiting for Customer Approval&quot;),
+ISPICKVAL(StageName,&quot;Place Order with Vendor&quot;))
+),
+AND(
+OR(
+ISPICKVAL(PRIORVALUE(StageName),&quot;Commit Order&quot;),
+ISPICKVAL(PRIORVALUE(StageName),&quot;Closed Lost&quot;)
+),
+OR(
+ISPICKVAL(StageName,&quot;New&quot;),
+ISPICKVAL(StageName,&quot;Vendor Confirmation&quot;),
+ISPICKVAL(StageName,&quot;In Review&quot;),
+ISPICKVAL(StageName,&quot;Approval&quot;),
+ISPICKVAL(StageName,&quot;Quote&quot;),
+ISPICKVAL(StageName,&quot;Awaiting for Customer Approval&quot;),
+ISPICKVAL(StageName,&quot;Place Order with Vendor&quot;),
+ISPICKVAL(StageName,&quot;Awaiting for Inventory&quot;))
+)
+)</errorConditionFormula>
+    <errorMessage>Can&apos;t go back, Please follow the Sales Process .</errorMessage>
+</ValidationRule>

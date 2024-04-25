@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Task_Names__c</fullName>
+    <externalId>false</externalId>
+    <label>Task Names</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Prospect Near $</fullName>
+                <default>false</default>
+                <label>Prospect Near $</label>
+            </value>
+            <value>
+                <fullName>Platinum Prospect Near $</fullName>
+                <default>false</default>
+                <label>Platinum Prospect Near $</label>
+            </value>
+            <value>
+                <fullName>New Prospect Contact</fullName>
+                <default>false</default>
+                <label>New Prospect Contact</label>
+            </value>
+            <value>
+                <fullName>Prospect Follow-Up Contact</fullName>
+                <default>false</default>
+                <label>Prospect Follow-Up Contact</label>
+            </value>
+            <value>
+                <fullName>New Platinum Introduction</fullName>
+                <default>false</default>
+                <label>New Platinum Introduction</label>
+            </value>
+            <value>
+                <fullName>Regular Customer Contact</fullName>
+                <default>false</default>
+                <label>Regular Customer Contact</label>
+            </value>
+            <value>
+                <fullName>PM Vendor Confirmation Details</fullName>
+                <default>false</default>
+                <label>PM Vendor Confirmation Details</label>
+            </value>
+            <value>
+                <fullName>PM Place Order with Vendor</fullName>
+                <default>false</default>
+                <label>PM Place Order with Vendor</label>
+            </value>
+            <value>
+                <fullName>New Discount Level</fullName>
+                <default>false</default>
+                <label>New Discount Level</label>
+            </value>
+            <value>
+                <fullName>Special Order Review by Platinum Team</fullName>
+                <default>false</default>
+                <label>Special Order Review by Platinum Team</label>
+            </value>
+            <value>
+                <fullName>Special Order Review by CS Team</fullName>
+                <default>false</default>
+                <label>Special Order Review by CS Team</label>
+            </value>
+            <value>
+                <fullName>GSK Order Review by CS Team</fullName>
+                <default>false</default>
+                <label>GSK Order Review by CS Team</label>
+            </value>
+            <value>
+                <fullName>Product Availability Alert</fullName>
+                <default>false</default>
+                <label>Product Availability Alert</label>
+            </value>
+            <value>
+                <fullName>Follow up the Quote Estimation</fullName>
+                <default>false</default>
+                <label>Follow up the Quote Estimation</label>
+            </value>
+            <value>
+                <fullName>Upgraded from Non-Platinum To Platinum</fullName>
+                <default>false</default>
+                <label>Upgraded from Non-Platinum To Platinum</label>
+            </value>
+            <value>
+                <fullName>84 day test task</fullName>
+                <default>false</default>
+                <label>84 day test task</label>
+            </value>
+            <value>
+                <fullName>Special Price Approval Request</fullName>
+                <default>false</default>
+                <label>Special Price Approval Request</label>
+            </value>
+            <value>
+                <fullName>Customer Reached 1000$</fullName>
+                <default>false</default>
+                <label>Customer Reached 1000$</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

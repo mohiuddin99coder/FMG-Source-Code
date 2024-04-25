@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Platinum_Catalog_Requested__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Receive a FREE  Platinum Catalog Requested</description>
+    <externalId>false</externalId>
+    <label>Platinum Catalog Requested</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

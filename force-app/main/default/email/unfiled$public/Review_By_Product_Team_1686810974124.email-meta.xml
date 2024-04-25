@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Review By CS Team for Special Order</name>
+    <relatedEntityType>Opportunity</relatedEntityType>
+    <style>none</style>
+    <subject>Require Review by CS Team for Special Order</subject>
+    <textOnly>[Image alt text: Logo]
+
+America&apos;s Favorite Beading and Jewelry Supply Company®Hi Team,
+
+Please review the requested Opportunity for Special Order and complete the assigned Task..
+
+Special Order Name:{{{Opportunity.Name}}} &lt; https://firemountaingems--rspilot.sandbox.lightning.force.com/lightning/r/Opportunity/{{{Opportunity.Id}}}/view &gt; 
+
+Customer Name: {{{Opportunity.Customers_Name__c}}}
+
+Regards,
+
+FMG Team
+
+Connect with Us
+
+[Image alt text:  FACEBOOK ] &lt; https://bit.ly/FMG-FaceBook &gt;  [Image alt text:  YOUTUBE ]  &lt; https://bit.ly/Youtube-FMG &gt;  [Image alt text:  TWITTER ]  &lt; https://bit.ly/Twitter-FMG &gt;  [Image alt text:  PINTEREST ]  &lt; https://bit.ly/FMG-Pinterest &gt;  [Image alt text:  INSTAGRAM ]  &lt; https://bit.ly/FMG-Instagram &gt; Fire Mountain Gems and Beads, Inc.
+
+One Fire Mountain Way,Grants Pass, OR 97526-2373 USA
+
+US and Canada Customer Service: (800) 423-2319
+
+International Customer Service: (541) 956-7890
+
+Copyright 2023 All Rights Reserved
+
+Prices subject to change without prior notice. 
+
+Not responsible for typographical, descriptive or technical errors for products listed.</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

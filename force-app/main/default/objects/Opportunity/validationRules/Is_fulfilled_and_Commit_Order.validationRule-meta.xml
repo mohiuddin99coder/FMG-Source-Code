@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_fulfilled_and_Commit_Order</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+IsClosed,
+ISPICKVAL(StageName, &quot;Commit Order&quot;),
+Cannot_be_fulfilled__c= TRUE
+)</errorConditionFormula>
+    <errorMessage>If cannot be fulfilled is checked, you cannot Commit Order</errorMessage>
+</ValidationRule>

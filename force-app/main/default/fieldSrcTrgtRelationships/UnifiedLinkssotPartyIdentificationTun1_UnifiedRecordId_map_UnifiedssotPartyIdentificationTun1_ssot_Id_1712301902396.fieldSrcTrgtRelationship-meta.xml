@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSrcTrgtRelationship xmlns="http://soap.sforce.com/2006/04/metadata">
+    <definitionCreationType>System</definitionCreationType>
+    <lookupFieldName>UnifiedLinkssotPartyIdentificationTun1__dlm.rel_1712301902396_end__c</lookupFieldName>
+    <masterLabel>UnifiedLinkssotPartyIdentificationTun1_UnifiedRecordId_map_UnifiedssotPartyIdentificationTun1_ssot_Id_1712301902396</masterLabel>
+    <relationshipCardinality>ManyToOne</relationshipCardinality>
+    <sourceFieldName>UnifiedLinkssotPartyIdentificationTun1__dlm.UnifiedRecordId__c</sourceFieldName>
+    <targetFieldName>UnifiedssotPartyIdentificationTun1__dlm.ssot__Id__c</targetFieldName>
+</FieldSrcTrgtRelationship>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MktCalcInsightObjectDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <creationType>Custom</creationType>
+    <description>This query gathers recent engagement metrics (opens, clicks, sends, bounces) for each individual, calculated over the past 30 days and grouped by Unified Individual ID.</description>
+    <expression>SELECT UnifiedssotIndividualTun1__dlm.ssot__Id__c as UnifiedIndividualId__c, 
+MAX (EngagementData.OpenCount) As OpenCount__c,
+MAX (EngagementData.ClickCount) As ClickCount__c,
+MAX (EngagementData.SendCount) As SendCount__c,
+MAX (EngagementData.BounceCount) As BounceCount__c
+ 
+FROM UnifiedssotIndividualTun1__dlm LEFT JOIN (SELECT SUM( DISTINCT (CASE WHEN OpenEngagement.OpenCount &gt;=1 THEN OpenEngagement.OpenCount WHEN ISNULL (OpenEngagement.OpenCount) THEN 0 END)) As OpenCount,
+
+SUM(DISTINCT (CASE WHEN ClickEngagement.ClickCount &gt;=1 THEN ClickEngagement.ClickCount WHEN ISNULL (ClickEngagement.ClickCount) THEN 0 END)) As ClickCount,
+
+SUM(DISTINCT (CASE WHEN SendEngagement.SendCount &gt;=1 THEN SendEngagement.SendCount WHEN ISNULL (SendEngagement.SendCount) THEN 0 END)) As SendCount,
+
+SUM(DISTINCT(CASE WHEN BounceEngagement.BounceCount &gt;=1 THEN BounceEngagement.BounceCount WHEN ISNULL (BounceEngagement.BounceCount) THEN 0 END)) As BounceCount,
+
+UnifiedLinkssotIndividualTun1__dlm.UnifiedRecordId__c AS UnifiedIndividualId
+
+FROM UnifiedLinkssotIndividualTun1__dlm 
+
+LEFT JOIN  (SELECT ssot__EmailEngagement__dlm.ssot__IndividualId__c as IndividualId, COUNT (*) as OpenCount
+FROM ssot__EmailEngagement__dlm 
+WHERE ssot__EmailEngagement__dlm.ssot__EngagementChannelActionId__c = &apos;Open&apos;
+AND DATEDIFF(CURRENT_DATE(), ssot__EmailEngagement__dlm.ssot__EngagementDateTm__c) &lt;= 30 GROUP BY ssot__EmailEngagement__dlm.ssot__IndividualId__c) as OpenEngagement
+ON UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c = OpenEngagement.IndividualId
+
+LEFT JOIN  (SELECT ssot__EmailEngagement__dlm.ssot__IndividualId__c as IndividualId, COUNT (*) as ClickCount
+FROM ssot__EmailEngagement__dlm 
+WHERE ssot__EmailEngagement__dlm.ssot__EngagementChannelActionId__c = &apos;Click&apos;
+AND DATEDIFF(CURRENT_DATE(), ssot__EmailEngagement__dlm.ssot__EngagementDateTm__c) &lt;= 30 GROUP BY ssot__EmailEngagement__dlm.ssot__IndividualId__c) as ClickEngagement
+ON UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c = ClickEngagement.IndividualId
+
+LEFT JOIN  (SELECT ssot__EmailEngagement__dlm.ssot__IndividualId__c as IndividualId, COUNT (*) as SendCount
+FROM ssot__EmailEngagement__dlm 
+WHERE ssot__EmailEngagement__dlm.ssot__EngagementChannelActionId__c = &apos;Send&apos;
+AND DATEDIFF(CURRENT_DATE(), ssot__EmailEngagement__dlm.ssot__EngagementDateTm__c) &lt;= 30 GROUP BY ssot__EmailEngagement__dlm.ssot__IndividualId__c) as SendEngagement
+ON UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c = SendEngagement.IndividualId
+
+LEFT JOIN  (SELECT ssot__EmailEngagement__dlm.ssot__IndividualId__c as IndividualId, COUNT (*) as BounceCount
+FROM ssot__EmailEngagement__dlm 
+WHERE ssot__EmailEngagement__dlm.ssot__EngagementChannelActionId__c = &apos;Bounce&apos;
+AND DATEDIFF(CURRENT_DATE(), ssot__EmailEngagement__dlm.ssot__EngagementDateTm__c) &lt;= 30 GROUP BY ssot__EmailEngagement__dlm.ssot__IndividualId__c) as BounceEngagement
+ON UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c = BounceEngagement.IndividualId
+
+GROUP BY UnifiedLinkssotIndividualTun1__dlm.UnifiedRecordId__c) As EngagementData
+
+ON UnifiedssotIndividualTun1__dlm.ssot__Id__c = EngagementData.UnifiedIndividualId GROUP BY UnifiedssotIndividualTun1__dlm.ssot__Id__c</expression>
+    <masterLabel>Re-Engagement Data - Last 30 Days</masterLabel>
+</MktCalcInsightObjectDef>

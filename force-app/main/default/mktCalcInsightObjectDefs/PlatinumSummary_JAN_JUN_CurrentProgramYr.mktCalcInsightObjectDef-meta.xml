@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MktCalcInsightObjectDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <creationType>Custom</creationType>
+    <description>This SQL query computes net and total purchase amounts monthly. It&apos;s part of a MC automation updated annually, activated each JAN (Next Yr) for the Current program period (1st JAN&apos;24, to 30th JUN&apos;24) when we&apos;re in JULY-DEC, sending monthly summary emails.</description>
+    <expression>SELECT
+UnifiedssotIndividualTun1__dlm.ssot__Id__c as UnifiedIndividualID__c,
+
+MAX(0) as JanPERFamt__c,
+MAX(0) as FebPERFamt__c,
+MAX(0) as MarPERFamt__c,
+MAX(0) as AprPERFamt__c,
+MAX(0) as MayPERFamt__c,
+MAX(0) as JunPERFamt__c,
+
+MAX(0) as JanTOTALamt__c,
+MAX(0) as FebTOTALamt__c,
+MAX(0) as MarTOTALamt__c,
+MAX(0) as AprTOTALamt__c,
+MAX(0) as MayTOTALamt__c,
+MAX(0) as JunTOTALamt__c,
+
+MAX( YEAR (CURRENT_DATE()) +1) as NextYear__c
+
+FROM UnifiedssotIndividualTun1__dlm 
+
+LEFT JOIN
+(SELECT UnifiedLinkssotIndividualTun1__dlm.UnifiedRecordId__c as UnifiedIndividualID
+
+FROM UnifiedLinkssotIndividualTun1__dlm
+
+LEFT JOIN
+
+(SELECT ssot__SalesOrder__dlm.ssot__BillToContactId__c as IndividualId 
+ 
+FROM ssot__SalesOrder__dlm 
+
+GROUP BY ssot__SalesOrder__dlm.ssot__BillToContactId__c) as PlatinumProgramOne
+
+ON UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c = PlatinumProgramOne.IndividualId
+
+GROUP BY UnifiedLinkssotIndividualTun1__dlm.UnifiedRecordId__c) as UnifiedLink ON UnifiedssotIndividualTun1__dlm.ssot__Id__c = UnifiedLink.UnifiedIndividualID
+GROUP BY UnifiedssotIndividualTun1__dlm.ssot__Id__c</expression>
+    <masterLabel>PlatinumSummary JAN-JUN CurrentProgramYr</masterLabel>
+</MktCalcInsightObjectDef>

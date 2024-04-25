@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_GSK__c</fullName>
+    <externalId>false</externalId>
+    <formula>OriginalOrder.Opportunity.GSK_Customer__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is GSK</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,837 @@
+<template>
+
+		<div class="success-message" if:true={showSuccessMessage}>
+		Success! The Case created successfully.
+	  </div>
+	  <div style="border: none;">
+		        <div class="slds-box slds-theme_default" style="font-size: 1rem;
+				font-weight: 400;
+				font-family: Open Sans,Helvetica,sans-serif;">
+					<template if:true={displayDiv}>
+					<div class="col text-center required-alert-div" style="background-color: #F9DFDF;border: 1px solid #CC0F08;
+					border-radius: 5px;
+					color: #000000;
+					font-size: 17px;
+					font-weight: bold;
+					text-align: center;
+					margin: 0 16px;
+					padding: 0.5em;">
+						Please correct the information highlighted red.
+					</div></template>
+                    <lightning-layout>
+                                    <lightning-layout-item style="padding-left: 0px;">
+                                    <span style="font-size: 20px;">Contact Information</span>
+                                    </lightning-layout-item>
+                                </lightning-layout>
+
+                                <lightning-layout>
+                                    <lightning-layout-item class="label" style="margin: auto;margin-bottom:5px;width:100%;text-align:right;">
+                                            <lightning-formatted-text value="* Required" style="color: #CC0F08"></lightning-formatted-text>
+                                        </lightning-layout-item>
+                            </lightning-layout>
+
+                                <lightning-layout class="fieldvalues">
+                                    <lightning-layout-item class="leftvalues">
+                                            <span style="color: #CC0F08;">* </span><lightning-formatted-text value="First Name" ></lightning-formatted-text>
+                                        </lightning-layout-item>
+                                        <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                            <lightning-input 
+                                                        type="text" 
+                                                        class="fname"
+                                                        label="First Name" 
+                                                        value={firstnamevalue}
+                                                        variant="label-hidden"
+                                                        onchange={handlefirstNameChange}
+                                                        required message-when-value-missing=" ">
+                                                </lightning-input>
+                                        </lightning-layout-item>
+                                    </lightning-layout>
+                                    <lightning-layout class="errorvalues" >
+                                        <lightning-layout-item class="leftvalues">
+                                                        </span><lightning-formatted-text value="" ></lightning-formatted-text>
+                                                    </lightning-layout-item>
+                                                    <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                    <div class="error" style="font-weight: 400;color: #CC0F08;">{firstNameErrorMessage}</div>
+                                                    </lightning-layout-item>
+                                                </lightning-layout>
+
+                                                <lightning-layout class="fieldvalues">
+                                                    <lightning-layout-item class="leftvalues">
+                                                            <span style="color: #CC0F08;">* </span><lightning-formatted-text value="Last Name" ></lightning-formatted-text>
+                                                        </lightning-layout-item>
+                                                        <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                            <lightning-input 
+                                                                        type="text" 
+                                                                        class="lname"
+                                                                        label="Last Name" 
+                                                                        value={lastnamevalue}
+                                                                        variant="label-hidden"
+                                                                        onchange={handlelastNameChange}
+                                                                        required message-when-value-missing=" ">
+                                                                </lightning-input>
+                                                        </lightning-layout-item>
+                                                    </lightning-layout>
+                                                    <lightning-layout class="errorvalues">
+                                                        <lightning-layout-item class="leftvalues">
+                                                                        </span><lightning-formatted-text value="" ></lightning-formatted-text>
+                                                                    </lightning-layout-item>
+                                                                    <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                    <div class="error" style="font-weight: 400;color: #CC0F08;">{lastNameErrorMessage}</div>
+                                                                    </lightning-layout-item>
+                                                                </lightning-layout>
+
+                                                                <lightning-layout class="fieldvalues">
+                                                                    <lightning-layout-item class="leftvalues">
+                                                                            </span><lightning-formatted-text value="Company Name" ></lightning-formatted-text>
+                                                                        </lightning-layout-item>
+                                                                        <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                            <lightning-input 
+                                                                                        type="text" 
+                                                                                        name="Company Name" 
+                                                                                        label="Company Name" 
+                                                                                        variant="label-hidden"
+                                                                                        value={companynamevalue}
+                                                                                        onchange={handleCompanyNameChange}>
+                                                                                </lightning-input>
+                                                                        </lightning-layout-item>
+                                                                    </lightning-layout>
+
+                                                                    <lightning-layout class="fieldvalues">
+                                                                        <lightning-layout-item class="leftvalues">
+                                                                                </span><lightning-formatted-text value="Website URL" ></lightning-formatted-text>
+                                                                            </lightning-layout-item>
+                                                                            <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                                <lightning-input 
+                                                                                            type="text" 
+                                                                                            name="Website URL" 
+                                                                                            class="website"
+                                                                                            label="Website URL" 
+                                                                                            variant="label-hidden"
+                                                                                            value={websiteurlvalue}
+                                                                                            placeholder="https://myawesomesite.com"
+                                                                                            onchange={handleWebsiteUrlChange}>
+                                                                                    </lightning-input>
+                                                                            </lightning-layout-item>
+                                                                        </lightning-layout>
+                                                                        <lightning-layout class="errorvalues">
+                                                                            <lightning-layout-item class="leftvalues">
+                                                                                            </span><lightning-formatted-text value="" ></lightning-formatted-text>
+                                                                                        </lightning-layout-item>
+                                                                                        <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                                        <div class="error" style="font-weight: 400;color: #CC0F08;">{WebsiteErrorMessage}</div>
+                                                                                        </lightning-layout-item>
+                                                                                    </lightning-layout>
+
+                                  <lightning-layout class="fieldvalues">
+                                        <lightning-layout-item class="leftvalues">
+                                                <span style="color: #CC0F08;">*</span><lightning-formatted-text value="Street" ></lightning-formatted-text>
+                                            </lightning-layout-item>
+                                            <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                <lightning-input 
+                                                            type="text" 
+                                                            class="searchAddress street" name="searchAddress"
+                                                            placeholder="Street"
+                                                            label="Street" 
+                                                            value={streetvalue}
+                                                            variant="label-hidden"
+                                                            onchange={handlestreetChange}
+                                                            required message-when-value-missing=" ">
+                                                    </lightning-input>
+                                            </lightning-layout-item>
+                                        </lightning-layout>
+                                        <lightning-layout class="errorvalues">
+                                            <lightning-layout-item class="leftvalues">
+                                                            </span><lightning-formatted-text value="" ></lightning-formatted-text>
+                                                        </lightning-layout-item>
+                                                        <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                        <div class="error" style="font-weight: 400;color: #CC0F08;">{streetErrorMessage}</div>
+                                                        </lightning-layout-item>
+                                                    </lightning-layout>
+
+                                                    <div if:true={hasRecommendations}>
+                                                                                                    <div class="address-recommendations" role="listbox">
+                                                                                                        <ul if:true={isDropdownOpen} class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid autosuggestlistul"
+                                                                                                            role="presentation">
+                                                                                                            <template for:each={addressRecommendations} for:item="addressRecommendation">
+                                                                                                                <li key={addressRecommendation} role="presentation"
+                                                                                                                    onclick={handleAddressRecommendationSelect}
+                                                                                                                    data-value={addressRecommendation.place_id} class="slds-listbox__item">
+                                                                                                                    <span
+                                                                                                                        class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                                                                                                                        role="option">
+                                                                                                                        <span class="slds-media__body slds-m-left_xx-small slds-m-bottom_xx-small">
+                                                                                                                            <div class="slds-grid slds-m-bottom_small">
+                                                                                                                                <div class="slds-col slds-size_1-of-10 autosuggestbuttonIcon">
+                                                                                                                                    <lightning-button-icon size="medium" icon-name="utility:checkin"
+                                                                                                                                        class="slds-input__icon" variant="bare" onclick={resetAddress}>
+                                                                                                                                    </lightning-button-icon>
+                                                                                                                                </div>
+                                                                                                                                <div class="slds-m-left_medium slds-col slds-size_8-of-10">
+                                                                                                                                    <span
+                                                                                                                                        class="slds-listbox__option-text slds-listbox__option-text_entity"><b>{addressRecommendation.main_text}</b></span>
+                                                                                                                                </div>
+                                                                                                                                <div class="slds-col slds-size_1-of-10"></div>
+                                                                                                                            </div>
+                                                                                                                        </span>
+                                                                                                                    </span>
+                                                                                                                </li>
+                                                                                                            </template>
+                                                                                                        </ul>
+                                                                                                    </div>
+                                                                                                </div>
+
+                                                        <lightning-layout class="fieldvalues">
+                                                            <lightning-layout-item class="leftvalues">
+                                                                    <span style="color: #CC0F08;">* </span><lightning-formatted-text value="City" ></lightning-formatted-text>
+                                                                </lightning-layout-item>
+                                                                <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                    <lightning-input 
+                                                                                type="text" 
+                                                                                name="city"
+                                                                                label="City" 
+                                                                                placeholder="City"
+                                                                                class="fieldvalidate city"
+                                                                                value={cityvalue}
+                                                                                variant="label-hidden"
+                                                                                onchange={handlecityChange}
+                                                                                required message-when-value-missing=" ">
+                                                                        </lightning-input>
+                                                                </lightning-layout-item>
+                                                            </lightning-layout>
+                                                            <lightning-layout class="errorvalues">
+                                                                <lightning-layout-item class="leftvalues">
+                                                                                </span><lightning-formatted-text value="" ></lightning-formatted-text>
+                                                                            </lightning-layout-item>
+                                                                            <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                            <div class="error" style="font-weight: 400;color: #CC0F08;">{cityErrorMessage}</div>
+                                                                            </lightning-layout-item>
+                                                                        </lightning-layout>
+
+                                                                        <lightning-layout class="fieldvalues">
+                                                                            <lightning-layout-item class="leftvalues">
+                                                                                    <span style="color: #CC0F08;">* </span><lightning-formatted-text value="Country" ></lightning-formatted-text>
+                                                                                </lightning-layout-item>
+                                                                                <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                                        <lightning-combobox
+                                                                                                name="Country"
+                                                                                                class="country"
+                                                                                                label="Country"
+                                                                                                value={countryvalue1}
+                                                                                                variant="label-hidden"
+                                                                                                placeholder="Please select a Country"
+                                                                                                options={countryoptions}
+                                                                                                onchange={handlecountryChange} required message-when-value-missing=" ">
+                                                                                        </lightning-combobox>
+                                                                                </lightning-layout-item>
+                                                                            </lightning-layout>
+                                                                            <lightning-layout class="errorvalues">
+                                                                                <lightning-layout-item class="leftvalues">
+                                                                                                </span><lightning-formatted-text value="" ></lightning-formatted-text>
+                                                                                            </lightning-layout-item>
+                                                                                            <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                                            <div class="error" style="font-weight: 400;color: #CC0F08;">{countryErrorMessage}</div>
+                                                                                            </lightning-layout-item>
+                                                                                        </lightning-layout>
+
+                                                                        <lightning-layout class="fieldvalues">
+                                                                            <lightning-layout-item class="leftvalues">
+                                                                                    <lightning-formatted-text value="State/Province" ></lightning-formatted-text>
+                                                                                </lightning-layout-item>
+                                                                                <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                                        <lightning-combobox
+                                                                                                name="State"
+                                                                                                label="State/Province"
+                                                                                                class="state"
+                                                                                                value={statevalue1}
+                                                                                                variant="label-hidden"
+                                                                                                placeholder="Please select a State/Province"
+                                                                                                options={stateoptions}
+                                                                                                onchange={handlestateChange}>
+                                                                                        </lightning-combobox>
+                                                                                </lightning-layout-item>
+                                                                            </lightning-layout>
+                                                                            <lightning-layout class="errorvalues">
+                                                                                <lightning-layout-item class="leftvalues">
+                                                                                                </span><lightning-formatted-text value="" ></lightning-formatted-text>
+                                                                                            </lightning-layout-item>
+                                                                                            <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                                            <div class="error" style="font-weight: 400;color: #CC0F08;">{stateErrorMessage}</div>
+                                                                                            </lightning-layout-item>
+                                                                                        </lightning-layout>
+
+                                                                                        <lightning-layout class="fieldvalues">
+                                                                                            <lightning-layout-item class="leftvalues">
+                                                                                                    <span style="color: #CC0F08;">* </span><lightning-formatted-text value="Zip/Postal" ></lightning-formatted-text>
+                                                                                                </lightning-layout-item>
+                                                                                                <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                                                    <lightning-input 
+                                                                                                                type="text" 
+                                                                                                                name="pincode" 
+                                                                                                                class="fieldvalidate zipcode"
+                                                                                                                placeholder="Postal Code"
+                                                                                                                label="Zip/Postal" 
+                                                                                                                value={zippostalvalue}
+                                                                                                                variant="label-hidden"
+                                                                                                                onchange={handleZipPostalChange}
+                                                                                                                required message-when-value-missing=" ">
+                                                                                                        </lightning-input>
+                                                                                                </lightning-layout-item>
+                                                                                            </lightning-layout>
+                                                                                            <lightning-layout class="errorvalues">
+                                                                                                <lightning-layout-item class="leftvalues">
+                                                                                                                </span><lightning-formatted-text value="" ></lightning-formatted-text>
+                                                                                                            </lightning-layout-item>
+                                                                                                            <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                                                            <div class="error" style="font-weight: 400;color: #CC0F08;">{zipPostalErrorMessage}</div>
+                                                                                                            </lightning-layout-item>
+                                                                                                        </lightning-layout>
+
+                                                                                        <lightning-layout class="fieldvalues">
+                                                                                            <lightning-layout-item class="leftvalues">
+                                                                                                    <span style="color: #CC0F08;">* </span><lightning-formatted-text value="Phone"></lightning-formatted-text>
+                                                                                                </lightning-layout-item>
+                                                                                                <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                                                    <lightning-input 
+                                                                                                                type="tel" 
+                                                                                                                label="Phone"
+                                                                                                                class="phone"
+                                                                                                                placeholder="Phone"
+                                                                                                                variant="label-hidden"
+                                                                                                                value={phonevalue}
+                                                                                                                onchange={handlePhoneChange}
+                                                                                                                required message-when-value-missing=" "
+                                                                                                                >
+                                                                                                        </lightning-input>
+                                                                                                </lightning-layout-item>
+                                                                                            </lightning-layout>
+                                                                                            <lightning-layout class="errorvalues">
+                                                                                                <lightning-layout-item class="leftvalues">
+                                                                                                            </lightning-layout-item>
+                                                                                                            <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                                                            <div class="error" style="font-weight: 400;color: #CC0F08;">{phoneErrorMessage}</div>
+                                                                                                            </lightning-layout-item>
+                                                                                                        </lightning-layout>
+
+                                                                                                        <lightning-layout class="fieldvalues">
+                                                                                                            <lightning-layout-item class="leftvalues">
+                                                                                                                    <span style="color: #CC0F08;">* </span><lightning-formatted-text value="E-Mail"></lightning-formatted-text>
+                                                                                                                </lightning-layout-item>
+                                                                                                                <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                                                                    <lightning-input 
+                                                                                                                                type="email" 
+                                                                                                                                label="E-Mail"
+                                                                                                                                placeholder="Email"
+                                                                                                                                variant="label-hidden"
+                                                                                                                                value={emailvalue}
+                                                                                                                                class="emailValidate"
+                                                                                                                                onchange={handleEmailChange}
+                                                                                                                                message-when-type-mismatch=" "
+                                                                                                                                required message-when-value-missing=" "
+                                                                                                                                >
+                                                                                                                        </lightning-input>
+                                                                                                                </lightning-layout-item>
+                                                                                                            </lightning-layout>
+                                                                                                            <lightning-layout class="errorvalues">
+                                                                                                                <lightning-layout-item class="leftvalues">
+                                                                                                                            </lightning-layout-item>
+                                                                                                                            <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                                                                            <div class="error" style="font-weight: 400;color: #CC0F08;">{emailErrorMessage}</div>
+                                                                                                                            </lightning-layout-item>
+                                                                                                                        </lightning-layout>
+
+                                                                                                                        <lightning-layout class="fieldvalues">
+                                                                                                                            <lightning-layout-item class="leftvalues">
+                                                                                                                                    </span><lightning-formatted-text value="Twitter Profile" ></lightning-formatted-text>
+                                                                                                                                </lightning-layout-item>
+                                                                                                                                <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                                                                                    <lightning-input 
+                                                                                                                                                type="text" 
+                                                                                                                                                name="Twitter Profile" 
+                                                                                                                                                label="Twitter Profile" 
+                                                                                                                                                variant="label-hidden"
+                                                                                                                                                value={twitterprofilevalue}
+                                                                                                                                                onchange={handleTwitterprofileChange}>
+                                                                                                                                        </lightning-input>
+                                                                                                                                </lightning-layout-item>
+                                                                                                                            </lightning-layout>
+
+                                                                                                                            <lightning-layout class="fieldvalues">
+                                                                                                                                <lightning-layout-item class="leftvalues">
+                                                                                                                                        </span><lightning-formatted-text value="Pinterest Profile" ></lightning-formatted-text>
+                                                                                                                                    </lightning-layout-item>
+                                                                                                                                    <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                                                                                        <lightning-input 
+                                                                                                                                                    type="text" 
+                                                                                                                                                    name="Pinterest Profile" 
+                                                                                                                                                    label="Pinterest Profile" 
+                                                                                                                                                    variant="label-hidden"
+                                                                                                                                                    value={pinterestprofilevalue}
+                                                                                                                                                    onchange={handlePinterestProfileChange}>
+                                                                                                                                            </lightning-input>
+                                                                                                                                    </lightning-layout-item>
+                                                                                                                                </lightning-layout>
+
+                                                                                                    <lightning-layout class="fieldvalues">
+                                                                                                            <lightning-layout-item class="leftvalues">
+                                                                                                                </span><lightning-formatted-text value="Instagram Profile" ></lightning-formatted-text>
+                                                                                                            </lightning-layout-item>
+                                                                                                            <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                                                            <lightning-input 
+                                                                                                                    type="text" 
+                                                                                                                    name="Instagram Profile" 
+                                                                                                                    label="Instagram Profile" 
+                                                                                                                    variant="label-hidden"
+                                                                                                                    value={instagramprofilevalue}
+                                                                                                                    onchange={handleInstagramProfileChange}>
+                                                                                                            </lightning-input>
+                                                                                                            </lightning-layout-item>
+                                                                                                    </lightning-layout>
+
+                                                                                                                                    <lightning-layout class="fieldvalues">
+                                                                                                                                        <lightning-layout-item class="leftvalues">
+                                                                                                                                                </span><lightning-formatted-text value="Facebook Profile" ></lightning-formatted-text>
+                                                                                                                                            </lightning-layout-item>
+                                                                                                                                            <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                                                                                                <lightning-input 
+                                                                                                                                                            type="text" 
+                                                                                                                                                            name="Facebook Profile" 
+                                                                                                                                                            label="Facebook Profile" 
+                                                                                                                                                            variant="label-hidden"
+                                                                                                                                                            value={facebookprofilevalue}
+                                                                                                                                                            onchange={handleFacebookProfileChange}>
+                                                                                                                                                    </lightning-input>
+                                                                                                                                            </lightning-layout-item>
+                                                                                                                                        </lightning-layout>
+
+                                                                                                                                        <lightning-layout class="fieldvalues">
+                                                                                                                                            <lightning-layout-item class="leftvalues">
+                                                                                                                                                    <span style="color: #CC0F08;">* </span><lightning-formatted-text value="Name of piece being submitted" ></lightning-formatted-text>
+                                                                                                                                                </lightning-layout-item>
+                                                                                                                                                <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                                                                                                    <lightning-input 
+                                                                                                                                                                type="text" 
+                                                                                                                                                                class="nameofpiecevalue"
+                                                                                                                                                                label="Name of piece being submitted" 
+                                                                                                                                                                value={nameofpiecevalue}
+                                                                                                                                                                variant="label-hidden"
+                                                                                                                                                                onchange={handleNameofPieceChange}
+                                                                                                                                                                required message-when-value-missing=" ">
+                                                                                                                                                        </lightning-input>
+                                                                                                                                                </lightning-layout-item>
+                                                                                                                                            </lightning-layout>
+                                                                                                                                            <lightning-layout class="errorvalues">
+                                                                                                                                                <lightning-layout-item class="leftvalues">
+                                                                                                                                                                </span><lightning-formatted-text value="" ></lightning-formatted-text>
+                                                                                                                                                            </lightning-layout-item>
+                                                                                                                                                            <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                                                                                                            <div class="error" style="font-weight: 400;color: #CC0F08;">{nameofPieceErrorMessage}</div>
+                                                                                                                                                            </lightning-layout-item>
+                                                                                                                                                        </lightning-layout>
+
+                                                                                                                      
+		            <lightning-layout class="fieldvalues">
+						<lightning-layout-item class="leftvalues">
+								<span style="color: #CC0F08;">* </span><lightning-formatted-text value="Contest Category" ></lightning-formatted-text>
+							</lightning-layout-item>
+							<lightning-layout-item padding="horizontal-large" class="rightvalues">
+									<lightning-combobox
+											name="Contest Category"
+											label="Contest Category"
+                                            class="category"
+											value={categoryvalue}
+											variant="label-hidden"
+											placeholder="Please select a Category"
+											options={categoryOptions}
+											onchange={handleChange} required message-when-value-missing=" ">
+									</lightning-combobox>
+							</lightning-layout-item>
+						</lightning-layout>
+						<lightning-layout class="errorvalues">
+							<lightning-layout-item class="leftvalues">
+											</span><lightning-formatted-text value="" ></lightning-formatted-text>
+										</lightning-layout-item>
+										<lightning-layout-item padding="horizontal-large" class="rightvalues">
+										<div class="error" style="font-weight: 400;color: #CC0F08;">{categoryErrorMessage}</div>
+										</lightning-layout-item>
+									</lightning-layout>
+
+                                    <lightning-layout>
+                                        <lightning-layout-item>
+                                        <span style="font-size: 20px;">Questions</span>
+                                        </lightning-layout-item>
+                                    </lightning-layout>
+
+                                    <lightning-layout class="fieldvalues">
+                                        <lightning-layout-item class="leftvalues">
+                                            </span><lightning-formatted-text value="What Jewelry Making Techniques were used that you would like noted?" ></lightning-formatted-text>
+                                        </lightning-layout-item>
+                                        <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                        <lightning-input 
+                                                type="text" 
+                                                name="What Jewelry Making Techniques were used that you would like noted?" 
+                                                label="What Jewelry Making Techniques were used that you would like noted?" 
+                                                variant="label-hidden"
+                                                max-length="255"
+                                                value={likenotedvalue}
+                                                onchange={handlelikeNotedChange}>
+                                        </lightning-input>
+                                        </lightning-layout-item>
+                                </lightning-layout>
+
+                                <lightning-layout class="fieldvalues">
+                                    <lightning-layout-item class="leftvalues">
+                                        </span><lightning-formatted-text value="Is there any additional interesting information you would like to share about this design?" ></lightning-formatted-text>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                    <lightning-input 
+                                            type="text"
+                                            multiline="true"
+                                            rows="2" 
+                                            name="Is there any additional interesting information you would like to share about this design?" 
+                                            label="Is there any additional interesting information you would like to share about this design?" 
+                                            variant="label-hidden"
+                                            max-length="255"
+                                            value={interestinginfovalue}
+                                            onchange={handleinterestingInfoChange}>
+                                    </lightning-input>
+                                    </lightning-layout-item>
+                            </lightning-layout>
+
+                            <lightning-layout class="fieldvalues">
+                                <lightning-layout-item class="leftvalues">
+                                    </span><lightning-formatted-text value="Value of the piece (USD $)" ></lightning-formatted-text>
+                                </lightning-layout-item>
+                                <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                <lightning-input 
+                                        type="number"
+                                        step="0.01"
+                                        class="valueofpiecevalue"
+                                        maxlength="16"
+                                        name="Value of the piece (USD $)" 
+                                        label="Value of the piece (USD $)" 
+                                        variant="label-hidden"
+                                        value={valueofpiecevalue}
+                                        onkeydown={handleKeyDown}
+                                        onchange={handlevalueOfPieceChange}
+                                        pattern="^[0-9]*(\.[0-9]{0,2})?$"
+                                        message-when-pattern-mismatch=" ">
+                                </lightning-input>
+                                </lightning-layout-item>
+                        </lightning-layout>
+                        <lightning-layout class="errorvalues">
+                            <lightning-layout-item class="leftvalues">
+                                            <lightning-formatted-text value="" ></lightning-formatted-text>
+                                        </lightning-layout-item>
+                                        <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                        <div class="error" style="font-weight: 400;color: #CC0F08;">{pieceValueErrorMessage}</div>
+                                        </lightning-layout-item>
+                                    </lightning-layout>
+
+                        <lightning-layout class="fieldvalues">
+                            <lightning-layout-item class="leftvalues">
+                                </span><lightning-formatted-text value="What was the inspiration for your design?" ></lightning-formatted-text>
+                            </lightning-layout-item>
+                            <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                            <lightning-input 
+                                    type="text" 
+                                    name="What was the inspiration for your design?" 
+                                    label="What was the inspiration for your design?" 
+                                    variant="label-hidden"
+                                    max-length="255"
+                                    value={inspirationdesignvalue}
+                                    onchange={handleInspirationDesignChange}>
+                            </lightning-input>
+                            </lightning-layout-item>
+                    </lightning-layout>
+                    
+                    <lightning-layout class="fieldvalues">
+                        <lightning-layout-item class="leftvalues">
+                            </span><lightning-formatted-text value="Are there any original pieces from another artist, patterns used, or other artistic property from another that need to be noted?" ></lightning-formatted-text>
+                        </lightning-layout-item>
+                        <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                            <lightning-radio-group
+                                name="Are there any original pieces from another artist, patterns used, or other artistic property from another that need to be noted?" 
+                                label="Are there any original pieces from another artist, patterns used, or other artistic property from another that need to be noted?" 
+                                variant="label-hidden"
+                                class="customRadioCls checkboxnotedvalue"
+                                options={CheckboxOptions}
+                                value={checkboxnotedvalue}
+                                onchange={handlenotedCheckboxChange}>
+                            </lightning-radio-group>
+                       
+                        </lightning-layout-item>
+                </lightning-layout>
+
+                <span if:true={checkboxYes}>
+                <lightning-layout class="fieldvalues">
+                    <lightning-layout-item class="leftvalues">
+                            <lightning-formatted-text value="" ></lightning-formatted-text>
+                        </lightning-layout-item>
+                        <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                        <lightning-formatted-text value="If yes, identify any purchased patterns or products of another artist? Provide source, artist name, or additional information pertaining to non-original portion of the design." ></lightning-formatted-text>
+                        </lightning-layout-item>
+                    </lightning-layout>
+
+                    <lightning-layout class="fieldvalues">
+                        <lightning-layout-item class="leftvalues">
+                                <span style="color: #CC0F08;">* </span><lightning-formatted-text value="References" ></lightning-formatted-text>
+                            </lightning-layout-item>
+                            <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                <lightning-input 
+                                            type="text" 
+                                            class="references"
+                                            label="References" 
+                                            value={referencevalue}
+                                            variant="label-hidden"
+                                            onchange={handleReferencesChange}
+                                            required message-when-value-missing=" ">
+                                    </lightning-input>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                        <lightning-layout class="errorvalues">
+                            <lightning-layout-item class="leftvalues">
+                                            <lightning-formatted-text value="" ></lightning-formatted-text>
+                                        </lightning-layout-item>
+                                        <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                        <div class="error" style="font-weight: 400;color: #CC0F08;">{ReferencesErrorMessage}</div>
+                                        </lightning-layout-item>
+                                    </lightning-layout>
+                                </span>
+
+                                    <lightning-layout class="fieldvalues">
+                                        <lightning-layout-item class="leftvalues">
+                                            <span style="color: #CC0F08;">* </span> </span><lightning-formatted-text value="A list of materials" ></lightning-formatted-text>
+                                        </lightning-layout-item>
+                                        <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                        <lightning-input 
+                                                type="text" 
+                                                class="materiallistvalue"
+                                                name="A list of materials" 
+                                                label="A list of materials" 
+                                                variant="label-hidden"
+                                                max-length="255"
+                                                value={materiallistvalue}
+                                                onchange={handleMaterialListChange}
+                                                required message-when-value-missing=" ">
+                                        </lightning-input>
+                                        </lightning-layout-item>
+                                </lightning-layout>
+                                <lightning-layout class="errorvalues">
+                                    <lightning-layout-item class="leftvalues">
+                                                    <lightning-formatted-text value="" ></lightning-formatted-text>
+                                                </lightning-layout-item>
+                                                <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                <div class="error" style="font-weight: 400;color: #CC0F08;">{ListOfMaterialErrorMessage}</div>
+                                                </lightning-layout-item>
+                                            </lightning-layout>
+				
+						<lightning-layout class="fieldvalues">
+						<lightning-layout-item>
+                            <span style="color: #CC0F08;padding-left:10px">* </span><lightning-formatted-text value="Upload up to three(3) photographs of your design. Each file size should be 4MB or smaller, in jpeg, png, tiff or bmp format." ></lightning-formatted-text>
+							</lightning-layout-item>
+						</lightning-layout>
+
+						<lightning-layout class="fieldvalues" style="
+                        margin-top: 15px;
+                    ">
+							<lightning-layout-item class="leftvalues">
+									</span><lightning-formatted-text value="" ></lightning-formatted-text>
+								</lightning-layout-item>
+								<lightning-layout-item padding="horizontal-large" class="rightvalues">
+									<lightning-layout class="BrowseforhotoLayout">
+                                        <lightning-layout-item style="width: 155px;">
+								<label style="display: inline-block;position: relative;height: 30px;width: 150px;" for="inputFile">
+									<div style="background-color: #e9e9e9;
+                                    width: 100%;
+                                    color: #171717;
+                                    border: none;
+                                    border-radius: 0.3125rem;
+                                    box-shadow: 1px 1px 3px #00000054;
+                                    font-size: 14px;
+                                    text-transform: capitalize;
+                                    display: inline-block;
+                                    font-weight: 400;
+                                    text-align: center;
+                                    vertical-align: middle;
+                                    user-select: none;
+                                    padding: 0.375rem 0.75rem;
+                                    line-height: 1.5;
+                                    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;" >
+									Browse for Photo
+									</div>        
+										  <lightning-input 
+										  variant="label-hidden" accept=".jpeg, .png, .tiff, .bmp" record-id={relatedRecordId} style="position: absolute;left: 0;opacity: 0;top: 0;bottom: 0;width: 100%;"
+														   name="file1" type="file" label="Attachment" class="browsePhoto1"
+														   onchange={openfileUpload} file-field-name="Guest_Record_fileupload__c"
+												file-field-value={relatedRecordId}></lightning-input>
+								  </label>
+                                </lightning-layout-item>
+                                <lightning-layout-item class="browsePhotoLabel" style="vertical-align: -webkit-baseline-middle;">
+									<span if:false={fileData} style="padding-left: 5px;vertical-align: -webkit-baseline-middle;">
+										<span style="color: #CC0F08;">This field is required and cannot be empty </span>
+									</span>
+								<span if:true={fileData} style="padding-left: 5px;vertical-align: -webkit-baseline-middle;">
+									<span style="vertical-align: -webkit-baseline-middle;">{fileData.filename}</span>
+								</span>
+							</lightning-layout-item>
+                        </lightning-layout>
+								</lightning-layout-item>
+							</lightning-layout>
+
+							<lightning-layout class="errorvalues">
+								<lightning-layout-item class="leftvalues">
+												</span><lightning-formatted-text value="" ></lightning-formatted-text>
+											</lightning-layout-item>
+											<lightning-layout-item padding="horizontal-large" class="rightvalues">
+											<div class="error" style="font-weight: 400;color: #CC0F08;">{FilesizeErrorMessage}</div>
+											</lightning-layout-item>
+										</lightning-layout>
+
+										<lightning-layout class="fieldvalues" style="
+                                        margin-top: 15px;
+                                    ">
+											<lightning-layout-item class="leftvalues">
+													</span><lightning-formatted-text value="" ></lightning-formatted-text>
+												</lightning-layout-item>
+												<lightning-layout-item padding="horizontal-large" class="rightvalues">
+													<lightning-layout class="BrowseforhotoLayout">
+                                                        <lightning-layout-item style="width: 155px;" class="browsePhoto">
+												<label style="display: inline-block;position: relative;height: 30px;width: 150px;" for="inputFile">
+													<div style="background-color: #e9e9e9;
+                                                    width: 100%;
+                                                    color: #171717;
+                                                    border: none;
+                                                    border-radius: 0.3125rem;
+                                                    box-shadow: 1px 1px 3px #00000054;
+                                                    font-size: 14px;
+                                                    text-transform: capitalize;
+                                                    display: inline-block;
+                                                    font-weight: 400;
+                                                    text-align: center;
+                                                    vertical-align: middle;
+                                                    user-select: none;
+                                                    padding: 0.375rem 0.75rem;
+                                                    line-height: 1.5;
+                                                    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;" >
+													Browse for Photo
+													</div>        
+														  <lightning-input 
+														  variant="label-hidden" accept=".jpeg, .png, .tiff, .bmp" record-id={relatedRecordId} style="position: absolute;left: 0;opacity: 0;top: 0;bottom: 0;width: 100%;"
+																		   name="file1" type="file" label="Attachment" class="browsePhoto2"
+																		   onchange={openfileUpload1} file-field-name="Guest_Record_fileupload__c"
+																file-field-value={relatedRecordId}></lightning-input>
+												  </label>
+                                                </lightning-layout-item>
+                                                <lightning-layout-item class="browsePhotoLabel" style="vertical-align: -webkit-baseline-middle;">
+													<span if:false={fileData1} style="padding-left: 5px;vertical-align: -webkit-baseline-middle;">
+														No file chosen
+													</span>
+												<span if:true={fileData1} style="padding-left: 5px;vertical-align: -webkit-baseline-middle;">
+													<span style="vertical-align: -webkit-baseline-middle;">{fileData1.filename}</span>
+												</span>
+											</lightning-layout-item>
+                                        </lightning-layout>
+												</lightning-layout-item>
+											</lightning-layout>
+				
+											<lightning-layout class="errorvalues">
+												<lightning-layout-item class="leftvalues">
+																</span><lightning-formatted-text value="" ></lightning-formatted-text>
+															</lightning-layout-item>
+															<lightning-layout-item padding="horizontal-large" class="rightvalues">
+															<div class="error" style="font-weight: 400;color: #CC0F08;">{FilesizeErrorMessage1}</div>
+															</lightning-layout-item>
+														</lightning-layout>
+
+                                                        <lightning-layout class="fieldvalues" style="
+                                                        margin-top: 15px;
+                                                    ">
+                                                            <lightning-layout-item class="leftvalues">
+                                                                    </span><lightning-formatted-text value="" ></lightning-formatted-text>
+                                                                </lightning-layout-item>
+                                                                <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                    <lightning-layout class="BrowseforhotoLayout">
+                                                                        <lightning-layout-item style="width: 155px;" class="browsePhoto">
+                                                                <label style="display: inline-block;position: relative;height: 30px;width: 150px;" for="inputFile">
+                                                                    <div style="background-color: #e9e9e9;
+                                                                    width: 100%;
+                                                                    color: #171717;
+                                                                    border: none;
+                                                                    border-radius: 0.3125rem;
+                                                                    box-shadow: 1px 1px 3px #00000054;
+                                                                    font-size: 14px;
+                                                                    text-transform: capitalize;
+                                                                    display: inline-block;
+                                                                    font-weight: 400;
+                                                                    text-align: center;
+                                                                    vertical-align: middle;
+                                                                    user-select: none;
+                                                                    padding: 0.375rem 0.75rem;
+                                                                    line-height: 1.5;
+                                                                    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;" >
+                                                                    Browse for Photo
+                                                                    </div>        
+                                                                          <lightning-input 
+                                                                          variant="label-hidden" accept=".jpeg, .png, .tiff, .bmp" record-id={relatedRecordId} style="position: absolute;left: 0;opacity: 0;top: 0;bottom: 0;width: 100%;"
+                                                                                           name="file2" type="file" label="Attachment" class="browsePhoto3"
+                                                                                           onchange={openfileUpload2} file-field-name="Guest_Record_fileupload__c"
+                                                                                file-field-value={relatedRecordId}></lightning-input>
+                                                                  </label>
+                                                                </lightning-layout-item>
+                                                                <lightning-layout-item class="browsePhotoLabel" style="vertical-align: -webkit-baseline-middle;">
+                                                                    <span if:false={fileData2} style="padding-left: 5px;vertical-align: -webkit-baseline-middle;">
+                                                                        No file chosen
+                                                                    </span>
+                                                                <span if:true={fileData2} style="padding-left: 5px;vertical-align: -webkit-baseline-middle;">
+                                                                    <span style="vertical-align: -webkit-baseline-middle;">{fileData2.filename}</span>
+                                                                </span>
+                                                            </lightning-layout-item>
+                                                        </lightning-layout>
+                                                                </lightning-layout-item>
+                                                            </lightning-layout>
+                                
+                                                            <lightning-layout class="errorvalues">
+                                                                <lightning-layout-item class="leftvalues">
+                                                                                </span><lightning-formatted-text value="" ></lightning-formatted-text>
+                                                                            </lightning-layout-item>
+                                                                            <lightning-layout-item padding="horizontal-large" class="rightvalues">
+                                                                            <div class="error" style="font-weight: 400;color: #CC0F08;">{FilesizeErrorMessage2}</div>
+                                                                            </lightning-layout-item>
+                                                                        </lightning-layout>
+
+                            
+                                <div style="border: none;margin-top: 20px;">
+                                    <span style="font-size: 20px;">Release Form </span><span style="font-style: italic;">(Required)</span>
+                                    <div style="margin-top:10px;background-color:#e2e2e2;padding:10px">
+                                    <lightning-layout>
+                                        <lightning-layout-item class="label">
+                                            <p>In consideration of the use of my design described above, I hereby grant Fire Mountain Gems and Beads, Inc., their legal representatives and assigns, those for whom they are acting, and those acting with their authority and permission, the absolute right and permission to copyright and use, reuse and publish, and republish photographic portraits or pictures of said item(s), in whole or in part, or composite or distorted in character or form, without restriction as to changes or alterations from time to time, in conjunction with my own or a fictitious name, or reproductions thereof, in color or otherwise made through any media at their studio or elsewhere for art, advertising, trade or any other purpose whatsoever. I understand and agree that all photographs of my piece created by Fire Mountain Gems and Beads, Inc. are sole property of Fire Mountain Gems and Beads, Inc. and release to Fire Mountain Gems and Beads, Inc. any claim I may have to these photographs.</p>
+                                            <p style="margin-top:10px;">I also consent to the use of any printed matter in conjunction therewith. I understand that my name, my company name if applicable (if agreed) will be used each time my design is used.</p>
+                                            <p style="margin-top:10px;">I hereby waive any right that I may have to inspect or approve the finished product or products, or the advertising copy or printed matter that may be used in connection therewith or the use to which it may be applied.</p>
+                                            <p style="margin-top:10px;">I hereby release, discharge and agree to save harmless Fire Mountain Gems and Beads, Inc., their legal representatives or assigns, and all persons acting under their permission or authority or those for whom they are acting, from any liability by virtue of any blurring, distortion, alteration, optical illusion, or use in composite form, whether intentional or otherwise, that may occur or be produced in the taking of said picture or in any subsequent processing thereof, as well as any publication thereof, including without limitation any claims for libel or invasion of privacy.</p>
+                                            <p style="margin-top:10px;">I state that I have read the above authorization, release and agreement prior to its execution, that I am of the age of majority and that I am fully familiar with the contents thereof.</p>
+                                            <div class="container" style="display: flex;margin-top:10px;
+                                            align-items: center;"><lightning-input type="checkbox" checked={check} label="" class="releaseFormMessage" name="checkboxInput" onchange={handleChangeCheckbox}></lightning-input><span style="margin-right: 10px;">I agree to the terms and conditions of submission.</span></div>
+                                               
+                                            </lightning-layout-item>
+                                        </lightning-layout>
+                                            <lightning-layout><div class="error" style="font-weight: 400;color: #CC0F08;">{releaseFormMessage}</div>
+                                            </lightning-layout>
+                                        </div>
+                            </div>  
+
+
+
+							<lightning-layout class="fieldvalues">
+								<lightning-layout-item class="leftvalues">
+										</span><lightning-formatted-text value="" ></lightning-formatted-text>
+									</lightning-layout-item>
+									<lightning-layout-item padding="horizontal-large" class="rightvalues">
+										<button type="button" name="Submit Entry" value="Submit Entry" style="float:right;justify-content: flex-end;width:100px;" class="stretchButton slds-button" onclick={handleClick} >Submit Entry</button>
+							</lightning-layout-item>
+
+								</lightning-layout>                               
+		        </div>
+				
+</div>
+</template>

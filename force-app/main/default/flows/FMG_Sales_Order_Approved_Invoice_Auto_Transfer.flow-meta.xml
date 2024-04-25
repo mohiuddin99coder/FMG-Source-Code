@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <name>Ignore_Order_Decision</name>
+        <label>Ignore Order</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>sydata_creation</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Ignore_Order</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.rstk__soinv_order__r.Name</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>RS</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Ignore Order</label>
+        </rules>
+    </decisions>
+    <description>Transfers a sales order invoice to A/R when approved. Will be a background process</description>
+    <environments>Default</environments>
+    <interviewLabel>FMG Auto Transfer Sales Order Invoice {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>FMG Sales Order Approved Invoice Auto Transfer</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>sydata_creation</name>
+        <label>sydata creation</label>
+        <locationX>308</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>rstk__sydata_backgroundprocessing__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>rstk__sydata_process__c</field>
+            <value>
+                <stringValue>Ready</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>rstk__sydata_soinv__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>rstk__sydata_txntype__c</field>
+            <value>
+                <stringValue>Transfer Sales Invoice</stringValue>
+            </value>
+        </inputAssignments>
+        <object>rstk__sydata__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Ignore_Order_Decision</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>rstk__soinv_approved__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>rstk__soinv_transferred__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>rstk__soinv__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>transferobject</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>rstk__sydata__c</objectType>
+    </variables>
+</Flow>

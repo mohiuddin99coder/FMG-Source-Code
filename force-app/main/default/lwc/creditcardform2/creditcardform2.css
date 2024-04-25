@@ -1,0 +1,32 @@
+lightning-button.Submit{
+    --sds-c-button-brand-color-background: #0068b3;
+    --sds-c-button-brand-color-border:#0068b3;
+}
+lightning-button.Cancel{
+    --sds-c-button-brand-color-background: #0068b3;
+    --sds-c-button-brand-color-border:#0068b3;
+}
+
+header{
+    color: #030303;
+    font-size: 20px;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+}
+.LeftFields{
+    width: 48%; 
+    float:left;
+}
+.RightFields{
+    width: 48%; 
+    float:right; 
+}
+
+/*.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    Add any additional styling as needed 
+  }*/

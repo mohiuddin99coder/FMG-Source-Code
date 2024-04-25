@@ -1,0 +1,262 @@
+<template>
+	<lightning-spinner if:true={isLoading} style="width: 100%;height:100%"></lightning-spinner>
+	  <div style="border: none;">
+		        <div class="slds-box slds-theme_default" style="font-size: 1rem;
+				font-weight: 400;
+				font-family: Open Sans,Helvetica,sans-serif;">
+					<template if:true={displayDiv}>
+					<div class="col text-center required-alert-div" style="background-color: #F9DFDF;border: 1px solid #CC0F08;
+					border-radius: 5px;
+					color: #000000;
+					font-size: 17px;
+					font-weight: bold;
+					text-align: center;
+					margin: 0 16px;
+					padding: 0.5em;">
+						Please correct the information highlighted red.
+					</div></template>
+
+					<lightning-layout>
+						<lightning-layout-item class="label" style="margin: auto;margin-bottom:5px;width:100%;text-align:right;">
+								<lightning-formatted-text value="* Required" style="color: #CC0F08"></lightning-formatted-text>
+							</lightning-layout-item>
+				</lightning-layout>
+		            <lightning-layout class="fieldvalues">
+						<lightning-layout-item  class="leftvalues">
+								<span style="color: #CC0F08;">* </span><lightning-formatted-text value="Category" ></lightning-formatted-text>
+							</lightning-layout-item>
+							<lightning-layout-item padding="horizontal-large" class="rightvalues">
+									<lightning-combobox
+											name="Category"
+											label="Category"
+											value={categoryvalue}
+											variant="label-hidden"
+											style="backgrond-color:white;"
+											placeholder="Please select a Category"
+											options={categoryoptions}
+											onchange={handleChange} required message-when-value-missing=" ">
+									</lightning-combobox>
+							</lightning-layout-item>
+						</lightning-layout>
+						<lightning-layout class="errorvalues">
+							<lightning-layout-item class="leftvalues">
+											</span><lightning-formatted-text value="" ></lightning-formatted-text>
+										</lightning-layout-item>
+										<lightning-layout-item padding="horizontal-large" class="rightvalues">
+										<div class="error" style="font-weight: 400;color: #CC0F08;">{categoryErrorMessage}</div>
+										</lightning-layout-item>
+									</lightning-layout>
+				
+						<lightning-layout class="fieldvalues">
+						<lightning-layout-item class="leftvalues">
+								<span style="color: #CC0F08;">* </span><lightning-formatted-text value="E-Mail"></lightning-formatted-text>
+							</lightning-layout-item>
+							<lightning-layout-item padding="horizontal-large" class="rightvalues">
+								<lightning-input 
+											type="email" 
+											label="E-Mail"
+											variant="label-hidden"
+											value={emailvalue}
+											class="emailValidate"
+											onchange={handleEmailChange}
+											message-when-type-mismatch=" "
+											required message-when-value-missing=" "
+											>
+									</lightning-input>
+							</lightning-layout-item>
+						</lightning-layout>
+						<lightning-layout class="errorvalues">
+							<lightning-layout-item class="leftvalues">
+											</span><lightning-formatted-text value="" ></lightning-formatted-text>
+										</lightning-layout-item>
+										<lightning-layout-item padding="horizontal-large" class="rightvalues">
+										<div class="error" style="font-weight: 400;color: #CC0F08;">{emailErrorMessage}</div>
+										</lightning-layout-item>
+									</lightning-layout>
+				
+						<lightning-layout class="fieldvalues">
+						<lightning-layout-item class="leftvalues">
+								</span><lightning-formatted-text value="Order #" ></lightning-formatted-text>
+							</lightning-layout-item>
+							<lightning-layout-item padding="horizontal-large" class="rightvalues">
+								<lightning-input 
+											type="text" 
+											name="input1" 
+											label="Account or Order #" 
+											variant="label-hidden"
+											value={accountvalue}
+											onchange={handleAccountChange}>
+									</lightning-input>
+							</lightning-layout-item>
+						</lightning-layout>
+						
+				
+						<lightning-layout class="fieldvalues">
+						<lightning-layout-item class="leftvalues" >
+								<span style="color: #CC0F08;">* </span><lightning-formatted-text value="Name" ></lightning-formatted-text>
+							</lightning-layout-item>
+							<lightning-layout-item padding="horizontal-large" class="rightvalues">
+								<lightning-input 
+											type="text" 
+											label="Name" 
+											value={namevalue}
+											variant="label-hidden"
+											onchange={handleNameChange}
+											required message-when-value-missing=" ">
+									</lightning-input>
+							</lightning-layout-item>
+						</lightning-layout>
+						<lightning-layout class="errorvalues">
+							<lightning-layout-item class="leftvalues">
+											</span><lightning-formatted-text value="" ></lightning-formatted-text>
+										</lightning-layout-item>
+										<lightning-layout-item padding="horizontal-large" class="rightvalues">
+										<div class="error" style="font-weight: 400;color: #CC0F08;">{nameErrorMessage}</div>
+										</lightning-layout-item>
+									</lightning-layout>
+				
+						<lightning-layout class="fieldvalues">
+						<lightning-layout-item class="leftvalues">
+								<span style="color: #CC0F08;">* </span><lightning-formatted-text value="Question / Comments" ></lightning-formatted-text>
+							</lightning-layout-item>
+							<lightning-layout-item padding="horizontal-large" class="rightvalues">
+								<lightning-textarea 
+										name="input3" 
+										label="Question / Comments"
+										variant="label-hidden"
+										placeholder="Add your question/comment here"
+										value={commentvalue} 
+										onchange={handleCommentChange} required message-when-value-missing=" ">
+									</lightning-textarea>
+							</lightning-layout-item>
+						</lightning-layout>
+						<lightning-layout class="errorvalues">
+							<lightning-layout-item class="leftvalues">
+											</span><lightning-formatted-text value="" ></lightning-formatted-text>
+										</lightning-layout-item>
+										<lightning-layout-item padding="horizontal-large" class="rightvalues">
+										<div class="error" style="font-weight: 400;color: #CC0F08;">{QuestionErrorMessage}</div>
+										</lightning-layout-item>
+									</lightning-layout>
+				
+						<lightning-layout class="fieldvalues">
+						<lightning-layout-item class="leftvalues">
+								</span><lightning-formatted-text value="Attachments" ></lightning-formatted-text>
+							</lightning-layout-item>
+							<lightning-layout-item padding="horizontal-large" class="rightvalues">
+								<lightning-formatted-text value="File sizes should be 2MB or smaller." ></lightning-formatted-text><br />
+							</lightning-layout-item>
+						</lightning-layout>
+
+						<lightning-layout class="fieldvalues">
+							<lightning-layout-item class="leftvalues">
+									</span><lightning-formatted-text value="" ></lightning-formatted-text>
+								</lightning-layout-item>
+								<lightning-layout-item padding="horizontal-large" class="rightvalues">
+									<table><tr><td style="width: 105px;">
+								<label style="display: inline-block;position: relative;height: 30px;width: 100px;border:1px solid rgb(65, 65, 65)">
+									<div style="position: absolute;left: 0;top: 0;bottom: 0;border-radius: 5%;
+												width: 100%;display: flex;
+												align-items: center;justify-content: center;background: rgb(244, 242, 242);
+												border: #bebebe;" >
+									Choose File
+									</div>        
+										  <lightning-input 
+										  variant="label-hidden" accept=".xlsx, .xls, .csv, .png, .doc, .docx, .pdf, .jpg, .jpeg" record-id={relatedRecordId} style="position: absolute;left: 0;opacity: 0;top: 0;bottom: 0;width: 100%;"
+														   name="file1" type="file" label="Attachment" 
+														   onchange={openfileUpload} file-field-name="Guest_Record_fileupload__c"
+												file-field-value={relatedRecordId}></lightning-input>
+								  </label></td><td>
+									<span if:false={fileData}>
+										No file chosen
+									</span>
+								<span if:true={fileData}>
+									{fileData.filename}
+								</span>
+							</td></tr></table>
+								</lightning-layout-item>
+							</lightning-layout>
+
+							<lightning-layout class="fieldvalues">
+								<lightning-layout-item class="leftvalues">
+												</span><lightning-formatted-text value="" ></lightning-formatted-text>
+											</lightning-layout-item>
+											<lightning-layout-item padding="horizontal-large" class="rightvalues">
+											<div class="error" style="font-weight: 400;color: #CC0F08;">{FilesizeErrorMessage}</div>
+											</lightning-layout-item>
+										</lightning-layout>
+
+										<lightning-layout class="fieldvalues">
+											<lightning-layout-item class="leftvalues">
+													</span><lightning-formatted-text value="" ></lightning-formatted-text>
+												</lightning-layout-item>
+												<lightning-layout-item padding="horizontal-large" class="rightvalues">
+													<table><tr><td style="width: 105px;">
+												<label style="display: inline-block;position: relative;height: 30px;width: 100px;border:1px solid rgb(65, 65, 65)">
+													<div style="position: absolute;left: 0;top: 0;bottom: 0;border-radius: 5%;
+																width: 100%;display: flex;
+																align-items: center;justify-content: center;background: rgb(244, 242, 242);
+																border: #bebebe;" >
+													Choose File
+													</div>        
+														  <lightning-input 
+														  variant="label-hidden" accept=".xlsx, .xls, .csv, .png, .doc, .docx, .pdf, .jpg, .jpeg" record-id={relatedRecordId} style="position: absolute;left: 0;opacity: 0;top: 0;bottom: 0;width: 100%;"
+																		   name="file1" type="file" label="Attachment" 
+																		   onchange={openfileUpload1} file-field-name="Guest_Record_fileupload__c"
+																file-field-value={relatedRecordId}></lightning-input>
+												  </label></td><td>
+													<span if:false={fileData1}>
+														No file chosen
+													</span>
+												<span if:true={fileData1}>
+													{fileData1.filename}
+												</span>
+											</td></tr></table>
+												</lightning-layout-item>
+											</lightning-layout>
+				
+											<lightning-layout class="fieldvalues">
+												<lightning-layout-item  class="leftvalues">
+																</span><lightning-formatted-text value="" ></lightning-formatted-text>
+															</lightning-layout-item>
+															<lightning-layout-item padding="horizontal-large" class="rightvalues">
+															<div class="error" style="font-weight: 400;color: #CC0F08;">{FilesizeErrorMessage1}</div>
+															</lightning-layout-item>
+														</lightning-layout>
+
+														<lightning-layout class="fieldvalues">
+															<lightning-layout-item  class="leftvalues">
+																			</span><lightning-formatted-text value="" ></lightning-formatted-text>
+																		</lightning-layout-item>
+																		<lightning-layout-item padding="horizontal-large" class="rightvalues">
+																		<div style="font-weight: 400;"><span style="color: #CC0F08;">Please Note - </span>Customers requesting account or billing information will need to include their billing address in order for us to locate their account. Please do not include Credit Card information in your submission.</div>
+																		</lightning-layout-item>
+																	</lightning-layout>
+																	
+																	<lightning-layout class="fieldvalues">
+																		<lightning-layout-item  class="leftvalues">
+																						</span><lightning-formatted-text value="" ></lightning-formatted-text>
+																					</lightning-layout-item>
+																					<lightning-layout-item padding="horizontal-large" class="rightvalues">
+																	<div class="success" data-id="successMessageRef" style="font-size: 1rem;
+																	font-weight: 400;
+																	font-family: Open Sans,Helvetica,sans-serif;">
+																	<div class="success-message" if:true={showSuccessMessage} >
+																	Your request has been submitted successfully!
+																  </div>
+																</div>
+															</lightning-layout-item>
+														</lightning-layout>
+
+							<lightning-layout style="margin-top:10px;">
+								<lightning-layout-item class="label" style="margin: auto;width:25%;text-align:right;">
+										</span><lightning-formatted-text value="" ></lightning-formatted-text>
+									</lightning-layout-item>
+									<lightning-layout-item padding="horizontal-large" style="width:75%; padding-right:0px">
+										<button type="button" name="Send" value="Send" style="float:right;justify-content: flex-end;width:100px;" class="stretchButton slds-button" onclick={handleClick} >Send</button>
+							</lightning-layout-item>
+
+								</lightning-layout>
+		        </div>
+</div>
+</template>

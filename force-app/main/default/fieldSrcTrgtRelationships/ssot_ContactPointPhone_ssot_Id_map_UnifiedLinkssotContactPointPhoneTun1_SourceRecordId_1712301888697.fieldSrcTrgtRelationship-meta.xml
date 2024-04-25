@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSrcTrgtRelationship xmlns="http://soap.sforce.com/2006/04/metadata">
+    <definitionCreationType>System</definitionCreationType>
+    <lookupFieldName>ssot__ContactPointPhone__dlm.rel_1712301888697_end__c</lookupFieldName>
+    <masterLabel>ssot_ContactPointPhone_ssot_Id_map_UnifiedLinkssotContactPointPhoneTun1_SourceRecordId_1712301888697</masterLabel>
+    <relationshipCardinality>OneToOne</relationshipCardinality>
+    <sourceFieldName>ssot__ContactPointPhone__dlm.ssot__Id__c</sourceFieldName>
+    <targetFieldName>UnifiedLinkssotContactPointPhoneTun1__dlm.SourceRecordId__c</targetFieldName>
+</FieldSrcTrgtRelationship>

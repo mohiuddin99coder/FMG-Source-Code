@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Persona_Code__c</fullName>
+    <externalId>false</externalId>
+    <label>Persona Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Persona__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Make Jewelry</fullName>
+                <default>false</default>
+                <label>Make Jewelry</label>
+            </value>
+            <value>
+                <fullName>Sells Product</fullName>
+                <default>false</default>
+                <label>Sells Product</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Make Jewelry</controllingFieldValue>
+            <valueName>Make Jewelry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sells Product</controllingFieldValue>
+            <valueName>Sells Product</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

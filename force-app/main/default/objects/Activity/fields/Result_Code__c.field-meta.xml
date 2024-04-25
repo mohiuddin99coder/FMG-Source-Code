@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Result_Code__c</fullName>
+    <externalId>false</externalId>
+    <label>Result Code</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Task_Names__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Completed with Contact</fullName>
+                <default>false</default>
+                <label>Completed with Contact</label>
+            </value>
+            <value>
+                <fullName>Left Message</fullName>
+                <default>false</default>
+                <label>Left Message</label>
+            </value>
+            <value>
+                <fullName>Inbound - Customer Returned Call</fullName>
+                <default>false</default>
+                <label>Inbound - Customer Returned Call</label>
+            </value>
+            <value>
+                <fullName>No Contact Made</fullName>
+                <default>false</default>
+                <label>No Contact Made</label>
+            </value>
+            <value>
+                <fullName>Approved Regular Contact Email Sent</fullName>
+                <default>false</default>
+                <label>Approved Regular Contact Email Sent</label>
+            </value>
+            <value>
+                <fullName>Vendor confirmed</fullName>
+                <default>false</default>
+                <label>Vendor confirmed</label>
+            </value>
+            <value>
+                <fullName>Vendor cannot provide</fullName>
+                <default>false</default>
+                <label>Vendor cannot provide</label>
+            </value>
+            <value>
+                <fullName>PO Placed</fullName>
+                <default>false</default>
+                <label>PO Placed</label>
+            </value>
+            <value>
+                <fullName>PO Not Placed</fullName>
+                <default>false</default>
+                <label>PO Not Placed</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>Email received with information</fullName>
+                <default>false</default>
+                <label>Email received with information</label>
+            </value>
+            <value>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+                <label>Accepted</label>
+            </value>
+            <value>
+                <fullName>Declined or Cancelled</fullName>
+                <default>false</default>
+                <label>Declined or Cancelled</label>
+            </value>
+            <value>
+                <fullName>Customer Accepted</fullName>
+                <default>false</default>
+                <label>Customer Accepted</label>
+            </value>
+            <value>
+                <fullName>Customer Rejected</fullName>
+                <default>false</default>
+                <label>Customer Rejected</label>
+            </value>
+            <value>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+                <label>Cancelled</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Special Order Review by CS Team</controllingFieldValue>
+            <controllingFieldValue>GSK Order Review by CS Team</controllingFieldValue>
+            <valueName>Accepted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Special Order Review by CS Team</controllingFieldValue>
+            <controllingFieldValue>GSK Order Review by CS Team</controllingFieldValue>
+            <valueName>Declined or Cancelled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Upgraded from Non-Platinum To Platinum</controllingFieldValue>
+            <controllingFieldValue>84 day test task</controllingFieldValue>
+            <controllingFieldValue>Customer Reached 1000$</controllingFieldValue>
+            <controllingFieldValue>Prospect Near $</controllingFieldValue>
+            <controllingFieldValue>Platinum Prospect Near $</controllingFieldValue>
+            <controllingFieldValue>New Prospect Contact</controllingFieldValue>
+            <controllingFieldValue>Prospect Follow-Up Contact</controllingFieldValue>
+            <controllingFieldValue>Regular Customer Contact</controllingFieldValue>
+            <valueName>Completed with Contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Upgraded from Non-Platinum To Platinum</controllingFieldValue>
+            <controllingFieldValue>84 day test task</controllingFieldValue>
+            <controllingFieldValue>Customer Reached 1000$</controllingFieldValue>
+            <controllingFieldValue>Prospect Near $</controllingFieldValue>
+            <controllingFieldValue>Platinum Prospect Near $</controllingFieldValue>
+            <controllingFieldValue>New Prospect Contact</controllingFieldValue>
+            <controllingFieldValue>Prospect Follow-Up Contact</controllingFieldValue>
+            <controllingFieldValue>New Platinum Introduction</controllingFieldValue>
+            <controllingFieldValue>Regular Customer Contact</controllingFieldValue>
+            <controllingFieldValue>New Discount Level</controllingFieldValue>
+            <valueName>Left Message</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Upgraded from Non-Platinum To Platinum</controllingFieldValue>
+            <controllingFieldValue>84 day test task</controllingFieldValue>
+            <controllingFieldValue>Customer Reached 1000$</controllingFieldValue>
+            <controllingFieldValue>Prospect Near $</controllingFieldValue>
+            <controllingFieldValue>Platinum Prospect Near $</controllingFieldValue>
+            <controllingFieldValue>New Prospect Contact</controllingFieldValue>
+            <controllingFieldValue>Prospect Follow-Up Contact</controllingFieldValue>
+            <controllingFieldValue>New Platinum Introduction</controllingFieldValue>
+            <controllingFieldValue>Regular Customer Contact</controllingFieldValue>
+            <controllingFieldValue>New Discount Level</controllingFieldValue>
+            <valueName>No Contact Made</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Upgraded from Non-Platinum To Platinum</controllingFieldValue>
+            <controllingFieldValue>84 day test task</controllingFieldValue>
+            <controllingFieldValue>Customer Reached 1000$</controllingFieldValue>
+            <controllingFieldValue>Prospect Near $</controllingFieldValue>
+            <controllingFieldValue>Platinum Prospect Near $</controllingFieldValue>
+            <controllingFieldValue>New Prospect Contact</controllingFieldValue>
+            <controllingFieldValue>Prospect Follow-Up Contact</controllingFieldValue>
+            <controllingFieldValue>Regular Customer Contact</controllingFieldValue>
+            <valueName>Approved Regular Contact Email Sent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Upgraded from Non-Platinum To Platinum</controllingFieldValue>
+            <controllingFieldValue>84 day test task</controllingFieldValue>
+            <controllingFieldValue>Customer Reached 1000$</controllingFieldValue>
+            <valueName>Email received with information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Upgraded from Non-Platinum To Platinum</controllingFieldValue>
+            <controllingFieldValue>Special Order Review by Platinum Team</controllingFieldValue>
+            <controllingFieldValue>84 day test task</controllingFieldValue>
+            <controllingFieldValue>Customer Reached 1000$</controllingFieldValue>
+            <controllingFieldValue>PM Vendor Confirmation Details</controllingFieldValue>
+            <valueName>Cancelled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Special Order Review by Platinum Team</controllingFieldValue>
+            <valueName>Customer Accepted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Special Order Review by Platinum Team</controllingFieldValue>
+            <valueName>Customer Rejected</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Prospect Near $</controllingFieldValue>
+            <controllingFieldValue>Platinum Prospect Near $</controllingFieldValue>
+            <valueName>Inbound - Customer Returned Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Platinum Introduction</controllingFieldValue>
+            <controllingFieldValue>New Discount Level</controllingFieldValue>
+            <valueName>Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PM Vendor Confirmation Details</controllingFieldValue>
+            <valueName>Vendor confirmed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PM Vendor Confirmation Details</controllingFieldValue>
+            <valueName>Vendor cannot provide</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PM Place Order with Vendor</controllingFieldValue>
+            <valueName>PO Placed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PM Place Order with Vendor</controllingFieldValue>
+            <valueName>PO Not Placed</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,26 @@
+.slds-spinner-text {
+    width: 320px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+  }
+.slds-spinner--small .slds-spinner-text {
+    transform: translate(-36%, -50%) rotate(-90deg);
+}
+.slds-spinner--medium .slds-spinner-text {
+    transform: translate(-32%, -50%) rotate(-90deg);
+}
+.slds-spinner--large .slds-spinner-text {
+    transform: translate(-26%, -50%) rotate(-90deg);
+}
+.slds-spinner_container{
+    background-color: rgba(255, 255, 255, 1);
+ }
+.THIS .spins::after {
+    position: absolute;
+    content: 'Please wait while loading';
+    width: 100%;
+    text-align: center;
+    top: calc(50% + 3em);
+    font-weight: bold;
+}

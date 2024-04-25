@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+                <label>Pricing</label>
+            </value>
+            <value>
+                <fullName>Shipping</fullName>
+                <default>false</default>
+                <label>Shipping</label>
+            </value>
+            <value>
+                <fullName>Unique of One of a Kind</fullName>
+                <default>false</default>
+                <label>Unique of One of a Kind</label>
+            </value>
+            <value>
+                <fullName>Quality or Grade</fullName>
+                <default>false</default>
+                <label>Quality or Grade</label>
+            </value>
+            <value>
+                <fullName>Out of Stock</fullName>
+                <default>false</default>
+                <label>Out of Stock</label>
+            </value>
+            <value>
+                <fullName>Items Not Branded</fullName>
+                <default>false</default>
+                <label>Items Not Branded</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Selection or Product Requests</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Selection or Product Requests</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

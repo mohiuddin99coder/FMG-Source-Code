@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html style="overflow-y: hidden;">
+<head>
+	<title></title>
+	<meta content="text/html; charset=UTF-8"><meta content="width=device-width, initialscale=1.0" name="viewport"><meta content="IE=edge">
+	<style type="text/css">@media screen and (max-width: 480px) {slot[style] {margin-right: 0 !important;}.columnDiv {margin-right: 0 !important;}}@media screen and (min-width: 480px) {slot[style] {margin-bottom: 0 !important;}.columnDiv {margin-bottom: 0 !important;}}
+	</style>
+	<style type="text/css">@media screen and (max-width: 480px) {.contentbuilderBaseColumnRow .columnCell {display:inline-block;width:100%}}
+	</style>
+	<style type="text/css">.contentpageDefaultEmailTemplatePageTemplate .contentRoot {width: 600px;}@media only screen and (max-width: 480px) {.contentpageDefaultEmailTemplatePageTemplate .contentRoot {width: 320px;}}
+	</style>
+</head>
+<body style="height: auto; min-height: auto;">
+<table cellpadding="0" cellspacing="0" class="contentpageDefaultEmailTemplatePageTemplate" id="contentpage_emailTemplateBodyContent" style="background-color: #E9EAEC;" width="100%">
+	<tbody>
+		<tr>
+			<td align="center" width="100%">
+			<table cellpadding="0" cellspacing="0" class="contentRoot" style="background-color: #FFFFFF;" width="600">
+				<tbody>
+					<tr>
+						<td style="padding-top: 10px; padding-bottom: 10px; padding-left: 10px; padding-right: 10px;">
+						<table cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" width="100%">
+							<tbody>
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align: top;display: inline-block; float:left" width="100%">
+									<table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+										<tbody>
+											<tr>
+												<td>
+												<table cellpadding="0" cellspacing="0" id="contentregion" style="font-size:14px; width: 100%; border-collapse: collapse; word-break: break-word;">
+													<tbody>
+														<tr>
+															<td class="contentbuilder-html" style="padding: 0;">
+															<p style="text-align:center;"><img alt="Logo" src="https://etgdigital-6b-dev-ed.develop.file.force.com/file-asset-public/MicrosoftTeamsimage_1?oid=00D2w00000FcvTr" /></p>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<table cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" width="100%">
+							<tbody>
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align: top;display: inline-block; float:left" width="100%">
+									<table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+										<tbody>
+											<tr>
+												<td>
+												<table cellpadding="0" cellspacing="0" id="contentregion" style="font-size:14px; width: 100%; border-collapse: collapse; word-break: break-word;">
+													<tbody>
+														<tr>
+															<td class="contentbuilder-html" style="padding: 0;">
+															<table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width: 640px; padding-bottom: 10px;" width="100%">
+																<tbody>
+																	<tr class="hide-mobile">
+																		<td align="center" class="body-text" style="text-align: center;  padding-bottom: 10px; text-align:center; font-style:italic;"><em style="font-family:Arial, Helvetica, sans-serif; color:#012c81; font-size:16px;">America&#39;s Favorite Beading and <span class="break">Jewelry Supply Company<sup>&reg;</sup></span></em></td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<table cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" width="100%">
+							<tbody>
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align: top;display: inline-block; float:left" width="100%">
+									<table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+										<tbody>
+											<tr>
+												<td>
+												<table cellpadding="0" cellspacing="0" id="contentRegion" style="width: 100%; border-collapse: collapse; word-break: break-word; font-size: 14px">
+													<tbody>
+														<tr>
+															<td style="font-family: Arial, Helvetica, sans-serif;"><span style="font-size:16px;"><span style="font-family:Helvetica,Arial,Helvetica,sans-serif;"><font style="color:#000000; font-size:16px; font-style:normal; font-variant-ligatures:normal; font-weight:400; text-align:start; white-space:normal; text-decoration-thickness:initial; text-decoration-style:initial; text-decoration-color:initial">Hi&nbsp;<b>Team</b>,</font></span><br />
+															<br />
+															Please review the requested Opportunity for Special Order and complete the assigned Task.</span>
+
+															<div style="text-align:start">&nbsp;</div>
+
+															<div style="text-align:start"><span style="font-size:16px;"><span style="font-family:Helvetica,Arial,Helvetica,sans-serif;"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-ligatures:normal"><span style="font-weight:400"><span style="white-space:normal"><span style="text-decoration-thickness:initial"><span style="text-decoration-style:initial"><span style="text-decoration-color:initial">Special Order Name:&nbsp;</span></span></span></span></span></span></span></span></span></span><a href="https://firemountaingems.lightning.force.com/lightning/r/Opportunity/{{{Opportunity.Id}}}/view"><span style="font-size:16px;"><span style="font-family:Helvetica,Arial,Helvetica,sans-serif;"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-ligatures:normal"><span style="font-weight:400"><span style="white-space:normal"><span style="text-decoration-thickness:initial"><span style="text-decoration-style:initial"><span style="text-decoration-color:initial">{{{Opportunity.Name}}}</span></span></span></span></span></span></span></span></span></span></a></div>
+
+															<div style="text-align:start"><span style="font-size:16px;"><span style="font-family:Helvetica,Arial,Helvetica,sans-serif;"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-ligatures:normal"><span style="font-weight:400"><span style="white-space:normal"><span style="text-decoration-thickness:initial"><span style="text-decoration-style:initial"><span style="text-decoration-color:initial">Customer Name: {{{Opportunity.Customers_Name__c}}}</span></span></span></span></span></span></span></span></span></span></div>
+
+															<div style="text-align:start">&nbsp;</div>
+
+															<div style="text-align:start">
+															<div><br />
+															<span style="font-size:16px;"><span style="font-family:Helvetica,Arial,Helvetica,sans-serif;"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-ligatures:normal"><span style="font-weight:400"><span style="white-space:normal"><span style="text-decoration-thickness:initial"><span style="text-decoration-style:initial"><span style="text-decoration-color:initial">Regards<br />
+															<b>FMG Team</b></span></span></span></span></span></span></span></span></span></span></div>
+															</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<table cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" width="100%">
+							<tbody>
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align: top;display: inline-block; float:left" width="100%">
+									<table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+										<tbody>
+											<tr>
+												<td>
+												<table cellpadding="0" cellspacing="0" id="contentregion" style="font-size:14px; width: 100%; border-collapse: collapse; word-break: break-word;">
+													<tbody>
+														<tr>
+															<td class="contentbuilder-html" style="padding: 0;">
+															<table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; background-color: #f1f1f1;" width="100%">
+																<tbody>
+																	<tr>
+																		<td align="center" style="font-family: Arial, Helvetica, sans-serif; font-size: 20px; font-weight: bold" valign="middle"><br />
+																		Connect with Us<br />
+																		&nbsp;</td>
+																	</tr>
+																</tbody>
+															</table>
+
+															<table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; background-color: #f1f1f1; text-align: center; padding-bottom: 10px;" width="100%">
+																<tbody>
+																	<tr>
+																		<td width="16%"><a href="https://bit.ly/FMG-FaceBook"><img alt="FACEBOOK" border="0" src="https://image1.fmgstatic.com/grafx/emailcampaigns/icons/facebook_46x46.png" style="display: inline-block; width:50%; max-width: 36px;" /></a></td>
+																		<td width="16%"><a href="https://bit.ly/Youtube-FMG"><img alt="YOUTUBE" border="0" src="https://image1.fmgstatic.com/grafx/emailcampaigns/icons/youtube_46x46.png" style="display: inline-block; width:50%; max-width: 36px;" /></a></td>
+																		<td width="16%"><a href="https://bit.ly/Twitter-FMG"><img alt="TWITTER" border="0" src="https://image1.fmgstatic.com/grafx/emailcampaigns/icons/twitter_46x46.png" style="display: inline-block; width:50%; max-width: 36px;" /></a></td>
+																		<td width="16%"><a href="https://bit.ly/FMG-Pinterest"><img alt="PINTEREST" border="0" src="https://image1.fmgstatic.com/grafx/emailcampaigns/icons/pinterest_46x46.png" style="display: inline-block; width:50%; max-width: 36px;" /></a></td>
+																		<td width="16%"><a href="https://bit.ly/FMG-Instagram"><img alt="INSTAGRAM" border="0" src="https://image1.fmgstatic.com/grafx/emailcampaigns/icons/instagram_46x46.png" style="display: inline-block; width:50%; max-width: 36px;" /></a></td>
+																	</tr>
+																</tbody>
+															</table>
+
+															<table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; background-color: #f1f1f1; text-align: center; padding-bottom: 10px;" width="100%">
+																<tbody>
+																	<tr>
+																		<td style="padding: 20px 10px 5px 10px; font-size: 14px; font-family: Arial, Helvetica, sans-serif; mso-height-rule: exactly; line-height: 18px; text-align: center; color: #222222;"><strong>Fire Mountain Gems and Beads, Inc.</strong><br />
+																		<span class="break">One Fire Mountain Way,</span><span class="break"> Grants Pass, OR </span><span class="break">97526-2373 USA</span><br />
+																		US and Canada Customer Service: <span class="break">(800) 423-2319</span><br />
+																		International Customer Service: <span class="break">(541) 956-7890</span><br />
+																		&nbsp;</td>
+																	</tr>
+																	<tr>
+																		<td style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; mso-height-rule: exactly; line-height:18px; text-align: center; color: #222222; padding-bottom: 20px;">Copyright 2023 All Rights Reserved<br />
+																		<br />
+																		<em>Prices subject to change without prior notice.<br />
+																		Not responsible for typographical, descriptive or technical errors for products listed.</em><br />
+																		&nbsp;</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

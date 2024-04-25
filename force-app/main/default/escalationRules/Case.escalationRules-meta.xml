@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EscalationRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <escalationRule>
+        <fullName>Case Escalation Rules</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Chat</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>etg.firemtn@etg.digital</assignedTo>
+                <assignedToTemplate>unfiled$public/SUPPORTCaseescalationnotificationSAMPLE</assignedToTemplate>
+                <assignedToType>User</assignedToType>
+                <minutesToEscalation>360</minutesToEscalation>
+                <notifyCaseOwner>true</notifyCaseOwner>
+                <notifyToTemplate>unfiled$public/SUPPORTCaseescalationnotificationSAMPLE</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHours>Default</businessHours>
+            <businessHoursSource>Static</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>High</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>On Hold,New</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>Escalation_Queue</assignedTo>
+                <assignedToTemplate>unfiled$public/SUPPORTCaseescalationnotificationSAMPLE</assignedToTemplate>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>960</minutesToEscalation>
+                <notifyCaseOwner>true</notifyCaseOwner>
+                <notifyToTemplate>unfiled$public/SUPPORTCaseescalationnotificationSAMPLE</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+        </ruleEntry>
+    </escalationRule>
+</EscalationRules>

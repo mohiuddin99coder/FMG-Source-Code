@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer__c</fullName>
+    <externalId>false</externalId>
+    <label>Customer Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>INMATES INACTIVE</fullName>
+                <default>false</default>
+                <label>INMATES INACTIVE</label>
+            </value>
+            <value>
+                <fullName>CUSTOMERS</fullName>
+                <default>false</default>
+                <label>CUSTOMERS</label>
+            </value>
+            <value>
+                <fullName>DECEASED</fullName>
+                <default>false</default>
+                <label>DECEASED</label>
+            </value>
+            <value>
+                <fullName>EX-PLATINUM</fullName>
+                <default>false</default>
+                <label>EX-PLATINUM</label>
+            </value>
+            <value>
+                <fullName>PLAT 4 STAR</fullName>
+                <default>false</default>
+                <label>PLAT 4 STAR</label>
+            </value>
+            <value>
+                <fullName>T PLATINUM P4</fullName>
+                <default>false</default>
+                <label>T PLATINUM P4</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

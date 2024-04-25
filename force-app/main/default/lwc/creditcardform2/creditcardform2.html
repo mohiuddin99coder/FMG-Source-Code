@@ -1,0 +1,38 @@
+<!-- sldsValidatorIgnore -->
+
+<template>
+<div style="font-weight:bold;"> 
+    <lightning-spinner if:true={isLoading} class="slds-modal__content" style="display: block;position: absolute;top: 185px;bottom: 254px;left: 0px;right: 0px;"></lightning-spinner>
+<header>Credit Card</header>
+<lightning-quick-action-panel>
+<div>  
+<label>Payment Method</label><br>
+<img class="credit-card-option" style="height: 45px;margin-top:10px;"  src="https://firemountaingems--rspilot.sandbox.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068DK0000020upP&operationContext=DELIVERY&contentId=05TDK000006ThzJ&page=0&d=/a/DK000000GrkA/CK0XkXeloaa3HwuGyv25wKgbzZfUB.lsT5peEflkkVU&oid=00DDK000000HPcQ&dpt=null&viewId=" alt="Credit Card" title="Credit Card">
+</div>
+
+<div style="margin-top: 10px;">
+<lightning-input label="Cardholder Name" value={cardholderName} onchange={handleCardNameChange} placeholder="Card holder name" required="True"></lightning-input>
+<lightning-input label="Card Number" value={cardNumber} onchange={handleCardNumberChange} placeholder="XXXX XXXX XXXX XXXX" pattern="\d{4}-?\d{4}-?\d{4}-?\d{4}" message-when-pattern-mismatch="Please enter a valid credit card number" required="True"></lightning-input>
+</div>
+
+<div>
+<lightning-input label="CVV" value={cvv} class="LeftFields" onchange={handleCvvChange} pattern="\d{3,4}" maxlength="4" placeholder="CVV" message-when-pattern-mismatch="Please enter a valid CVV number" required="True"></lightning-input>
+<lightning-input label="Expiration Date" class="RightFields" name="expirationDate" value={expirationDate} maxlength="5"  placeholder="MM/YY" required="True" pattern="^(0[1-9]|1[0-2])\/?([0-9]{2})$" message-when-pattern-mismatch="Please enter a valid expiration Date" onchange={handleExpirationChange}></lightning-input>
+</div>
+
+<div style="margin-top: 72px;">
+    <b><lightning-input label="Amount Due" value={amountDue} class="LeftFields" read-only="True" ></lightning-input></b>
+    <lightning-input type="Decimal" label="Amount" class="RightFields advanceAmount" value={advanceAmount} required="True" onchange={handleAdvanceAmount}></lightning-input>
+</div>
+<!--<lightning-input label="Amount" class="LeftFields" value={amount}></lightning-input>-->
+
+
+</lightning-quick-action-panel>
+
+    
+<div align="Center" style="background-color: #f3f3f3; padding-bottom: 20px; padding-top: 10px;">
+<lightning-button label="Cancel" disabled={isDisable} variant="brand" onclick={closeAction} class="Cancel"></lightning-button>
+<lightning-button label="Proceed" disabled={isDisable} variant="brand" onclick={handleSubmit} class="Submit" style="margin-left: 15px;"></lightning-button>
+</div>
+</div>
+</template>

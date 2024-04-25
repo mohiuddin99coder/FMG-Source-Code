@@ -1,0 +1,75 @@
+/*.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+ 
+  .profile-container {
+    display: flex;
+  }
+   */
+
+  .slds-avatar{
+    margin-top: 55px;
+    margin-left: 5%;
+    width: 25%;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 50px;
+    float: left;
+  }
+  .details{
+    float: right;
+    margin-top: 90px;
+    width: 67%;
+    margin-left: 3%;
+  }
+  .container{
+    background-color: white;
+    border-radius: 0.25rem;
+  }
+  .accountName{
+    font-weight: bold;
+    margin-top: 30px;
+    font-size: 15px;
+  }
+ 
+.Background{
+  background-image: url(https://etg-c-dev-ed.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Jpg&versionId=0685j00000I2dQp&operationContext=DELIVERY&contentId=05T5j00000gSFdH&page=0&d=/a/5j000002NTfz/Wt8w2wzYEkM8iSO9XPWbKZr4EhhQEoUcwd9FZfDkrMk&oid=00D5j00000BWnkp&dpt=null&viewId=);
+  height: 85px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+.Background2{
+  background-color: white;
+  height: 90px;
+}
+.Background3{
+  background-color: white;
+  height: 50px;
+  
+}
+.cart{
+  width: 50%;
+  height: 50px;
+  float: right;
+  padding-left: 30px;
+}
+.trophy{
+  width: 50%;
+  height: 50px;
+  float: left;
+  padding-left: 6%;
+}
+.icon{
+  width: 25%;
+    float: left;
+}
+.icon1{
+  width: 20%;
+    float: left;
+}

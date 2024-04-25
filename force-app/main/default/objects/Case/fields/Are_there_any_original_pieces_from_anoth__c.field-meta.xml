@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Are_there_any_original_pieces_from_anoth__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Are there any original pieces from another artist, patterns used, or other artistic property from another that need to be noted?</inlineHelpText>
+    <label>Are there any original pieces from anoth</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>True</fullName>
+                <default>false</default>
+                <label>True</label>
+            </value>
+            <value>
+                <fullName>False</fullName>
+                <default>false</default>
+                <label>False</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

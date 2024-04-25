@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendor__c</fullName>
+    <externalId>false</externalId>
+    <label>Vendor</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Amazon</fullName>
+                <default>false</default>
+                <label>Amazon</label>
+            </value>
+            <value>
+                <fullName>Art Beads</fullName>
+                <default>false</default>
+                <label>Art Beads</label>
+            </value>
+            <value>
+                <fullName>Beadsmith/Helby</fullName>
+                <default>false</default>
+                <label>Beadsmith/Helby</label>
+            </value>
+            <value>
+                <fullName>Chain Store</fullName>
+                <default>false</default>
+                <label>Chain Store</label>
+            </value>
+            <value>
+                <fullName>Lima Beads</fullName>
+                <default>false</default>
+                <label>Lima Beads</label>
+            </value>
+            <value>
+                <fullName>Rio Grande</fullName>
+                <default>false</default>
+                <label>Rio Grande</label>
+            </value>
+            <value>
+                <fullName>ShipWreck</fullName>
+                <default>false</default>
+                <label>ShipWreck</label>
+            </value>
+            <value>
+                <fullName>Importing</fullName>
+                <default>false</default>
+                <label>Importing</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Beadalon/Artistic Wire</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Beadalon/Artistic Wire</label>
+            </value>
+            <value>
+                <fullName>Fusion</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fusion</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

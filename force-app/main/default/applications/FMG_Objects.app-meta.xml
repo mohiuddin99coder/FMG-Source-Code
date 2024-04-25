@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>true</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>FMG Objects</label>
+    <navType>Standard</navType>
+    <tabs>FMG_Configuration__c</tabs>
+    <tabs>fmgincrement__c</tabs>
+    <tabs>fmginvmove__c</tabs>
+    <tabs>fmgsohdrext__c</tabs>
+    <tabs>fmgwoorddmdcst__c</tabs>
+    <tabs>AVA_SFCLOUD__AvaTax_Mapping__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>FMG_Objects_UtilityBar</utilityBar>
+</CustomApplication>

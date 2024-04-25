@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cant_change_star_without_changing_365</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISCHANGED( Perf365Days__c )== false , ISCHANGED( Discount_Level__c )== true , Deceased__c == true, Exclude_From_Platinum__c == true ,Facility__c == TRUE,Inmate__c == TRUE,Employee__c == TRUE ,Bad_Credit_Returned_Check__c == TRUE )</errorConditionFormula>
+    <errorMessage>You cannot change Star Level without changing 365 $</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Annual_Spend_not_allow_negative_values</fullName>
+    <active>true</active>
+    <errorConditionFormula>Annual_Spend_on_jewelry_supplies__c &lt; 0</errorConditionFormula>
+    <errorDisplayField>Annual_Spend_on_jewelry_supplies__c</errorDisplayField>
+    <errorMessage>Annual Spend on jewelry supplies should be greater than or equal to 0 only.</errorMessage>
+</ValidationRule>
