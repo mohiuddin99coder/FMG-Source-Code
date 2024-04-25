@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Orders_Pilot</fullName>
+    <columns>NAME</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>rstk__sohdr_custno__c</columns>
+    <columns>rstk__sohdr_order__c</columns>
+    <columns>rstk__sohdr_custpo__c</columns>
+    <columns>rstk__sohdr_otype__c</columns>
+    <columns>rootstock__Order_Total__c</columns>
+    <columns>rstk__sohdr_totamt__c</columns>
+    <columns>rootstock__Pre_Tax_Order_Total__c</columns>
+    <columns>rstk__sohdr_freightamt__c</columns>
+    <columns>rstk__sohdr_terms__c</columns>
+    <columns>rstk__sohdr_closed__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__sohdr_custref__c</field>
+        <operation>equals</operation>
+        <value>Pilot</value>
+    </filters>
+    <label>Sales Orders Pilot</label>
+</ListView>

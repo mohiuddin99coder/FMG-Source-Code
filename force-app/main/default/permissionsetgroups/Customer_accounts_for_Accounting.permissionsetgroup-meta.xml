@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Customer accounts for Accounting</label>
+    <permissionSets>rootstock__RS_SO_Entry_Data_Input</permissionSets>
+    <permissionSets>rootstock__RS_SO_Entry_Invoicing</permissionSets>
+    <permissionSets>rootstock__RS_SO_Entry_Visibility</permissionSets>
+    <permissionSets>rootstock__RS_SO_RMA</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

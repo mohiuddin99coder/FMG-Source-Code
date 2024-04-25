@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prepayment_Invoices</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__soppy_amtappl__c</columns>
+    <columns>rstk__soppy_order__c</columns>
+    <columns>rstk__soppy_ppynumber__c</columns>
+    <columns>rstk__soppy_custno__c</columns>
+    <columns>rstk__soppy_applytoinv__c</columns>
+    <columns>rstk__soppy_invoice__c</columns>
+    <columns>rstk__soppy_invcustovr__c</columns>
+    <columns>rstk__soppy_crmemo__c</columns>
+    <columns>rstk__soppy_completed__c</columns>
+    <columns>rstk__soppy_amount__c</columns>
+    <columns>rstk__soppy_released__c</columns>
+    <columns>rstk__soppy_extcomment__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__soppy_order__c</field>
+        <operation>contains</operation>
+        <value>R000001442</value>
+    </filters>
+    <label>Prepayment Invoices - Filtered</label>
+</ListView>

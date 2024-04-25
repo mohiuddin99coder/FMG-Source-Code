@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>rstkf__arinvh__c$Name</field>
+    </columns>
+    <columns>
+        <field>rstkf__arinvh__c.rstkf__arinvtxns__r$Name</field>
+    </columns>
+    <columns>
+        <field>rstkf__arinvh__c$rstkf__arinvh_trandate__c</field>
+    </columns>
+    <columns>
+        <field>rstkf__arinvh__c.rstkf__arinvtxns__r$rstkf__arinvtxn_docno__c</field>
+    </columns>
+    <columns>
+        <field>rstkf__arinvh__c.rstkf__arinvtxns__r$rstkf__arinvtxn_socust__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>rstkf__arinvh__c.rstkf__arinvtxns__r$rstkf__arinvtxn_summaintvalue__c</field>
+    </columns>
+    <description>Invoice Register</description>
+    <filter>
+        <criteriaItems>
+            <column>rstkf__arinvh__c.rstkf__arinvtxns__r$rstkf__arinvtxn_summaintvalue__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>0</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Invoice Register</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>rstkf__AR_Aging_NOW__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>rstkf__arinvh__c.rstkf__arinvtxns__r$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>rstkf__arinvh__c$rstkf__arinvh_accountingdate__c</dateColumn>
+        <interval>INTERVAL_YESTERDAY</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <decisions>
+        <description>Does a FIFO Cost Record exist for this PO Receipt?</description>
+        <name>FIFO_Cost_Record_Exist</name>
+        <label>FIFO Cost Record Exist</label>
+        <locationX>182</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>No FIFO Record</defaultConnectorLabel>
+        <rules>
+            <name>FIFO_Record_Exists</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_FIFO_Cost_Record.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Inv_Cost_Adjust_Account</targetReference>
+            </connector>
+            <label>FIFO Record Exists</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check to see if PO Receipt Unit Price matches the AP Unit Price and whether this is an Inventory Item.  Should not process records if the Unit Prices match OR if this is a Non-Inventory Item.</description>
+        <name>Unit_Prices_Match_Inventory_Item</name>
+        <label>Unit Prices Match &amp; Inventory Item</label>
+        <locationX>380</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Do Not Process</defaultConnectorLabel>
+        <rules>
+            <name>Diff_Prices_Inv_Item</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.rstk__porcptap_upricercpt__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.rstk__porcptap_upriceapinv__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.rstk__porcptap_poitem__r.rstk__poitem_item__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_FIFO_Cost_Record</targetReference>
+            </connector>
+            <label>Diff Prices &amp;&amp; Inv Item</label>
+        </rules>
+    </decisions>
+    <description>Creates an Inventory Cost Adjustment (SYDATA - Inventory Cost Adjust) when the PO Receipt Unit Price does not match the AP Unit Price for an Inventory Item.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Calculated Inventory Unit Cost</description>
+        <name>Calculated_Inventory_Unit_Cost</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.rstk__porcptap_upriceapinv__c} / {!$Record.rstk__porcptap_poline__r.rstk__poline_poumcf__c}</expression>
+        <scale>6</scale>
+    </formulas>
+    <interviewLabel>RS - PO-AP Match - Inventory Cost Adjustment {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>RS - PO-AP Match - Inventory Cost Adjustment</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Create an Inventory Cost Adjustment record</description>
+        <name>Create_Inventory_Cost_Adjust</name>
+        <label>Create Inventory Cost Adjust</label>
+        <locationX>50</locationX>
+        <locationY>755</locationY>
+        <inputAssignments>
+            <field>rstk__sydata_actucstmtl__c</field>
+            <value>
+                <elementReference>Calculated_Inventory_Unit_Cost</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>rstk__sydata_adjclracct__c</field>
+            <value>
+                <elementReference>Get_Inv_Cost_Adjust_Account.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>rstk__sydata_backgroundprocessing__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>rstk__sydata_icitem__c</field>
+            <value>
+                <elementReference>$Record.rstk__porcptap_poitem__r.rstk__poitem_item__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>rstk__sydata_icitemfifoseqid__c</field>
+            <value>
+                <elementReference>Get_FIFO_Cost_Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>rstk__sydata_txntype__c</field>
+            <value>
+                <stringValue>Inventory Cost Adjust</stringValue>
+            </value>
+        </inputAssignments>
+        <object>rstk__sydata__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_FIFO_Cost_Record</name>
+        <label>Get FIFO Cost Record</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>FIFO_Cost_Record_Exist</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>rstk__icitemfifoseq_rcptno__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.rstk__porcptap_rcptno__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>rstk__icitemfifoseq_txnid__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>PORCPT</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>rstk__icitemfifoseq__c</object>
+        <sortField>Id</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get the Sub-Ledger Account that is designated for Inventory Cost Adjustments associated with PO-AP Match processing.</description>
+        <name>Get_Inv_Cost_Adjust_Account</name>
+        <label>Get Inv Cost Adjust Account</label>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Create_Inventory_Cost_Adjust</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Inventory_Cost_Adjust_Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>rstk__syacc__c</object>
+        <sortField>Id</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Unit_Prices_Match_Inventory_Item</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>rstk__porcptap_upriceapinv__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>rstk__porcptap__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

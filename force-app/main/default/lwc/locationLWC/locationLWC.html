@@ -1,0 +1,27 @@
+<template>
+    <lightning-card>
+    <lightning-layout horizontal-align = {horizontalAlign}>
+        <lightning-layout-item flexibility = "auto" padding = "around-small">
+            <lightning-button-icon
+                icon-name = "utility:refresh"
+                variant = "border-filled"
+                title = "Refresh"
+                alternative-text = "Refresh"
+                onclick = {handleClick}
+                icon-class = "slds-m-around-medium">
+            </lightning-button-icon>
+        </lightning-layout-item>
+    </lightning-layout>
+    <template if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+        </lightning-spinner>
+    </template>
+    <lightning-card title='Inventory Items by Location Details' icon-name="product_service_campaign_item">
+        <lightning-datatable data = {consData} columns = {column} key-field = "Id" onrowaction={handleRowAction} show-row-number-column="true" hide-checkbox-column> 
+        </lightning-datatable>
+    </lightning-card>
+    <template if:true={error}>
+        Some error occured.
+       </template>
+    </lightning-card>
+</template>

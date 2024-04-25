@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Decision_Not_Received_Yet</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(StageName,&quot;Place Order with Vendor&quot;),
+ISPICKVAL(PRIORVALUE(StageName),&quot;Awaiting for Customer Approval&quot;),
+Customer_Decision_From_Quote__c == False
+)</errorConditionFormula>
+    <errorMessage>Customer Decision not Received yet.</errorMessage>
+</ValidationRule>

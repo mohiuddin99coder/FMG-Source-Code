@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AVA_SFCLOUD_Is_Seller_Importer_Of_Record__c</fullName>
+    <externalId>false</externalId>
+    <isFilteringDisabled>false</isFilteringDisabled>
+    <isNameField>false</isNameField>
+    <isSortingDisabled>false</isSortingDisabled>
+    <label>Is Seller Importer Of Record</label>
+    <length>60</length>
+    <mktDataLakeFieldAttributes>
+        <definitionCreationType>Custom</definitionCreationType>
+        <externalName>AVA_SFCLOUD_Is_Seller_Importer_Of_Record</externalName>
+        <isEventDate>false</isEventDate>
+        <isInternalOrganization>false</isInternalOrganization>
+        <isRecordModified>false</isRecordModified>
+        <usageTag>NONE</usageTag>
+    </mktDataLakeFieldAttributes>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Receivable_Transactions_Pending_Post</fullName>
+    <columns>OBJECT_ID</columns>
+    <columns>NAME</columns>
+    <columns>rstkf__arinvtxn_socustcmpno__c</columns>
+    <columns>rstkf__arinvtxn_socust__c</columns>
+    <columns>rstkf__arinvtxn_arinvh__c</columns>
+    <columns>rstkf__arinvtxn_trantype__c</columns>
+    <columns>rstkf__arinvtxn_soinv__c</columns>
+    <columns>rstkf__arinvtxn_docno__c</columns>
+    <columns>rstkf__arinvtxn_trandate__c</columns>
+    <columns>rstkf__arinvtxn_tranid__c</columns>
+    <columns>rstkf__arinvtxn_sumhomeamt__c</columns>
+    <columns>rstkf__arinvtxn_homedr__c</columns>
+    <columns>rstkf__arinvtxn_homecr__c</columns>
+    <columns>rstkf__arinvtxn_gldiv__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstkf__arinvtxn_session_status__c</field>
+        <operation>notEqual</operation>
+        <value>Posted</value>
+    </filters>
+    <label>Receivable Transactions - Pending Post</label>
+</ListView>

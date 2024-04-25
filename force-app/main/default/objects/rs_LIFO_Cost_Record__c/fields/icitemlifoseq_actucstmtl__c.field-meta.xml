@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>icitemlifoseq_actucstmtl__c</fullName>
+    <description>This is the actual cost when the record was created
+
+On a purchase receipt, this is the PO Price (adjusted by the Purchasing to Inventory Unit of Measure conversion factor). (DD)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the actual cost when the record was created
+
+On a purchase receipt, this is the PO Price (adjusted by the Purchasing to Inventory Unit of Measure conversion factor). (DD)</inlineHelpText>
+    <label>Avg Unit Cost, Material</label>
+    <precision>16</precision>
+    <required>false</required>
+    <scale>6</scale>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

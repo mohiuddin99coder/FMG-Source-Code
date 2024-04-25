@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Access to Period Closing Activities</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Period Close</label>
+    <permissionSets>rstkf__RSF_Baseline_Permission_Set_1</permissionSets>
+    <permissionSets>rstkf__RSF_Period_Closing_Activities_1</permissionSets>
+    <permissionSets>rstkf__RSF_Period_Closing_VAT_Transactions_1</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

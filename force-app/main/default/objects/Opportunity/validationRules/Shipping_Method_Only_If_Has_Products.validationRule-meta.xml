@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shipping_Method_Only_If_Has_Products</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( HasOpportunityLineItem = FALSE, OR( ISBLANK( TEXT(Shipping_Method__c) )=FALSE , ISBLANK( TEXT(Shipping_Cost__c )) = FALSE) )</errorConditionFormula>
+    <errorMessage>You cannot Give Shipping Method and Shipping cost Without Having Products</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inventory_Commodity_Codes_LT</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__iccomcod_comcod__c</columns>
+    <columns>rstk__iccomcod_descr__c</columns>
+    <columns>rstk__iccomcod_src_pl__c</columns>
+    <columns>rstk__iccomcod_itemtype_po_pl__c</columns>
+    <columns>rstk__iccomcod_ltmfgwoshopflr__c</columns>
+    <columns>rstk__iccomcod_ltmfgworel__c</columns>
+    <columns>rstk__iccomcod_ltvend_po__c</columns>
+    <columns>rstk__iccomcod_ltreqcnvrtpo_po__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Inventory Commodity Codes Lead Times</label>
+    <language>en_US</language>
+</ListView>

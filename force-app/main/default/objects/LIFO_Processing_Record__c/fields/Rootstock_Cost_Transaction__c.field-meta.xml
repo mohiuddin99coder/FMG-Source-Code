@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rootstock_Cost_Transaction__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Rootstock Cost Transaction</label>
+    <referenceTo>rstk__sytxncst__c</referenceTo>
+    <relationshipLabel>LIFO Processing Records</relationshipLabel>
+    <relationshipName>LIFO_Processing_Records</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

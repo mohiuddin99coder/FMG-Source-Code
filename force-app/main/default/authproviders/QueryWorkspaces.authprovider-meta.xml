@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <consumerKey>3MVG9ux34Ig8G5eqqjS54JCqcKCdHitT1B2fWa8F3gEemflexcKE8hfkf0iH6ryBzc3EdvOCmEoz.btuvQ_id</consumerKey>
+    <consumerSecret>Placeholder_Value</consumerSecret>
+    <defaultScopes>api web refresh_token cdp_query_api</defaultScopes>
+    <friendlyName>Query Workspaces</friendlyName>
+    <includeOrgIdInIdentifier>true</includeOrgIdInIdentifier>
+    <isPkceEnabled>false</isPkceEnabled>
+    <providerType>Salesforce</providerType>
+    <requireMfa>false</requireMfa>
+    <sendAccessTokenInHeader>false</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <sendSecretInApis>true</sendSecretInApis>
+</AuthProvider>

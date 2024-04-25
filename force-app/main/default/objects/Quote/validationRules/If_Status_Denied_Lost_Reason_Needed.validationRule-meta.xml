@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_Status_Denied_Lost_Reason_Needed</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+AND( ISPICKVAL( Status , &quot;Denied&quot;) , ISPICKVAL( Loss_Reason__c , &quot;&quot;)),
+AND(ISPICKVAL(Status,&quot;Denied&quot;),ISPICKVAL(Loss_Reason__c,&quot;Other&quot;),Other_Loss_Reason__c == &quot;&quot;)
+)</errorConditionFormula>
+    <errorMessage>Loss Reason Needed. If Loss Reason is &quot;Other&quot;, Please provide the Other Loss Reason</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Gives the user the ability to run flows.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Flows</label>
+    <permissionSets>Run_Flows</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

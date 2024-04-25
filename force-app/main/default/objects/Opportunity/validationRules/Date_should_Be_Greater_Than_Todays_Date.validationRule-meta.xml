@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_should_Be_Greater_Than_Todays_Date</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+AND(
+NOT(ISNEW()),
+OR(
+CloseDate &lt; TODAY() &amp;&amp; ISCHANGED(CloseDate),
+Date_Needed_by__c  &lt; TODAY() &amp;&amp; ISCHANGED(Date_Needed_by__c),
+POETA_Date__c &lt; TODAY() &amp;&amp; ISCHANGED(POETA_Date__c)
+)
+)
+)</errorConditionFormula>
+    <errorMessage>Please select a valid Date, it can&apos;t be previous date.</errorMessage>
+</ValidationRule>

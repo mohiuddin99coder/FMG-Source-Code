@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MktCalcInsightObjectDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <creationType>Custom</creationType>
+    <description>This SQL query computes net and total purchase amounts monthly. It&apos;s part of a MC automation updated annually, activated each January for the current program period (July 1st, 2023, to June 30th, 2024), sending monthly summary emails.</description>
+    <expression>SELECT
+UnifiedssotIndividualTun1__dlm.ssot__Id__c as UnifiedIndividualID__c,
+
+SUM(CASE WHEN UnifiedLink.JANNetAmount &gt; 0 THEN UnifiedLink.JANNetAmount ELSE 0 END) as JanPERFamt__c,
+SUM(CASE WHEN UnifiedLink.FEBNetAmount &gt; 0 THEN UnifiedLink.FEBNetAmount ELSE 0 END) as FebPERFamt__c,
+SUM(CASE WHEN UnifiedLink.MARNetAmount &gt; 0 THEN UnifiedLink.MARNetAmount ELSE 0 END) as MarPERFamt__c,
+SUM(CASE WHEN UnifiedLink.APRNetAmount &gt; 0 THEN UnifiedLink.APRNetAmount ELSE 0 END) as AprPERFamt__c,
+SUM(CASE WHEN UnifiedLink.MAYNetAmount &gt; 0 THEN UnifiedLink.MAYNetAmount ELSE 0 END) as MayPERFamt__c,
+SUM(CASE WHEN UnifiedLink.JUNNetAmount &gt; 0 THEN UnifiedLink.JUNNetAmount ELSE 0 END) as JunPERFamt__c,
+
+SUM(CASE WHEN UnifiedLink.JANPurchaseTotal &gt; 0 THEN UnifiedLink.JANPurchaseTotal ELSE 0 END) as JanTOTALamt__c,
+SUM(CASE WHEN UnifiedLink.FEBPurchaseTotal &gt; 0 THEN UnifiedLink.FEBPurchaseTotal ELSE 0 END) as FebTOTALamt__c,
+SUM(CASE WHEN UnifiedLink.MARPurchaseTotal &gt; 0 THEN UnifiedLink.MARPurchaseTotal ELSE 0 END) as MarTOTALamt__c,
+SUM(CASE WHEN UnifiedLink.APRPurchaseTotal &gt; 0 THEN UnifiedLink.APRPurchaseTotal ELSE 0 END) as AprTOTALamt__c,
+SUM(CASE WHEN UnifiedLink.MAYPurchaseTotal &gt; 0 THEN UnifiedLink.MAYPurchaseTotal ELSE 0 END) as MayTOTALamt__c,
+SUM(CASE WHEN UnifiedLink.JUNPurchaseTotal &gt; 0 THEN UnifiedLink.JUNPurchaseTotal ELSE 0 END) as JunTOTALamt__c,
+
+MAX(UnifiedLink.CheckoutYear) as Year__c
+
+FROM UnifiedssotIndividualTun1__dlm 
+
+LEFT JOIN
+(SELECT UnifiedLinkssotIndividualTun1__dlm.UnifiedRecordId__c as UnifiedIndividualID,
+
+MAX(PlatinumProgramOneNetAmount.JANNetAmount) as JANNetAmount,
+MAX(PlatinumProgramOneNetAmount.FEBNetAmount) as FEBNetAmount,
+MAX(PlatinumProgramOneNetAmount.MARNetAmount) as MARNetAmount,
+MAX(PlatinumProgramOneNetAmount.APRNetAmount) as APRNetAmount,
+MAX(PlatinumProgramOneNetAmount.MAYNetAmount) as MAYNetAmount,
+MAX(PlatinumProgramOneNetAmount.JUNNetAmount) as JUNNetAmount,
+
+MAX(PlatinumProgramOnePurchaseTotal.JANPurchaseTotal) - MAX(PlatinumProgramOneNetAmount.JANGCCAmount) as JANPurchaseTotal,
+MAX(PlatinumProgramOnePurchaseTotal.FEBPurchaseTotal) - MAX(PlatinumProgramOneNetAmount.FEBGCCAmount) as FEBPurchaseTotal,
+MAX(PlatinumProgramOnePurchaseTotal.MARPurchaseTotal) - MAX(PlatinumProgramOneNetAmount.MARGCCAmount) as MARPurchaseTotal,
+MAX(PlatinumProgramOnePurchaseTotal.APRPurchaseTotal) - MAX(PlatinumProgramOneNetAmount.APRGCCAmount) as APRPurchaseTotal,
+MAX(PlatinumProgramOnePurchaseTotal.MAYPurchaseTotal) - MAX(PlatinumProgramOneNetAmount.MAYGCCAmount) as MAYPurchaseTotal,
+MAX(PlatinumProgramOnePurchaseTotal.JUNPurchaseTotal) - MAX(PlatinumProgramOneNetAmount.JUNGCCAmount) as JUNPurchaseTotal,
+
+SUM (DISTINCT (CASE WHEN PlatinumProgramOnePurchaseTotal.CheckoutYear &gt; 0 THEN PlatinumProgramOnePurchaseTotal.CheckoutYear ELSE YEAR (CURRENT_DATE())END)) as CheckoutYear,
+UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c AS IndividualId
+
+FROM UnifiedLinkssotIndividualTun1__dlm
+
+LEFT JOIN
+
+(SELECT ssot__SalesOrder__dlm.ssot__BillToContactId__c as Individual, 
+ 
+YEAR (CURRENT_DATE()) as CheckoutYear, 
+SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 1 AND ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c &gt;0 THEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c ELSE 0 END) - SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 1 AND ssot__SalesOrder__dlm.Order_Product_Adjustments__c&gt;0 THEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c ELSE 0 END)  - SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 1 AND GCCAmount.GCCTotalAmount &gt;0 THEN GCCAmount.GCCTotalAmount ELSE 0 END) AS JANNetAmount,
+
+SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 2 AND ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c &gt;0 THEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c ELSE 0 END) - SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 2 AND ssot__SalesOrder__dlm.Order_Product_Adjustments__c&gt;0 THEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c ELSE 0 END)  - SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 2 AND GCCAmount.GCCTotalAmount &gt;0 THEN GCCAmount.GCCTotalAmount ELSE 0 END) AS FEBNetAmount,
+
+SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 3 AND ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c &gt;0 THEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c ELSE 0 END) - SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 3 AND ssot__SalesOrder__dlm.Order_Product_Adjustments__c&gt;0 THEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c ELSE 0 END)  - SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 3 AND GCCAmount.GCCTotalAmount &gt;0 THEN GCCAmount.GCCTotalAmount ELSE 0 END) AS MARNetAmount,
+
+SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 4 AND ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c &gt;0 THEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c ELSE 0 END) - SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 4 AND ssot__SalesOrder__dlm.Order_Product_Adjustments__c&gt;0 THEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c ELSE 0 END)  - SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 4 AND GCCAmount.GCCTotalAmount &gt;0 THEN GCCAmount.GCCTotalAmount ELSE 0 END) AS APRNetAmount,
+
+SUM(CASE WHEN  MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 5 AND ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c &gt;0 THEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c ELSE 0 END) - SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 5 AND ssot__SalesOrder__dlm.Order_Product_Adjustments__c&gt;0 THEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c ELSE 0 END)  - SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 5 AND GCCAmount.GCCTotalAmount &gt;0 THEN GCCAmount.GCCTotalAmount ELSE 0 END) AS MAYNetAmount,
+
+SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 6 AND ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c &gt;0 THEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c ELSE 0 END) - SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 6 AND ssot__SalesOrder__dlm.Order_Product_Adjustments__c&gt;0 THEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c ELSE 0 END)  - SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 6 AND GCCAmount.GCCTotalAmount &gt;0 THEN GCCAmount.GCCTotalAmount ELSE 0 END) AS JUNNetAmount,
+
+SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 1 AND GCCAmount.GCCTotalAmount &gt;0 THEN GCCAmount.GCCTotalAmount ELSE 0 END)
+AS JANGCCAmount,
+SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 2 AND GCCAmount.GCCTotalAmount &gt;0 THEN GCCAmount.GCCTotalAmount ELSE 0 END)
+AS FEBGCCAmount,
+SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 3 AND GCCAmount.GCCTotalAmount &gt;0 THEN GCCAmount.GCCTotalAmount ELSE 0 END)
+AS MARGCCAmount,
+SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 4 AND GCCAmount.GCCTotalAmount &gt;0 THEN GCCAmount.GCCTotalAmount ELSE 0 END)
+AS APRGCCAmount,
+SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 5 AND GCCAmount.GCCTotalAmount &gt;0 THEN GCCAmount.GCCTotalAmount ELSE 0 END)
+AS MAYGCCAmount,
+SUM(CASE WHEN MONTH(ssot__SalesOrder__dlm.CheckoutDate__c) = 6 AND GCCAmount.GCCTotalAmount &gt;0 THEN GCCAmount.GCCTotalAmount ELSE 0 END)
+AS JUNGCCAmount
+
+
+FROM ssot__SalesOrder__dlm 
+LEFT JOIN 
+(select ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c AS SalesOrderId
+,SUM (CASE WHEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c &gt;0 THEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c ELSE 0 END) as GCCTotalAmount
+FROM ssot__SalesOrderProduct__dlm
+WHERE ssot__SalesOrderProduct__dlm.ssot__OrderProductNumber__c = &apos;eGiftCertificate&apos;
+GROUP BY ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c
+) AS GCCAmount ON GCCAmount.SalesOrderId = ssot__SalesOrder__dlm.ssot__Id__c 
+WHERE YEAR (CURRENT_DATE()) - YEAR (ssot__SalesOrder__dlm.CheckoutDate__c)  = 0
+GROUP BY  YEAR (CURRENT_DATE()), ssot__SalesOrder__dlm.ssot__BillToContactId__c) as PlatinumProgramOneNetAmount
+
+ON UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c = PlatinumProgramOneNetAmount.Individual
+LEFT JOIN
+
+(SELECT Order__dlm.BillToContactId__c as Individual, 
+ 
+YEAR (CURRENT_DATE()) as CheckoutYear, 
+SUM(CASE WHEN MONTH(Order__dlm.OrderedDate__c) = 1 AND Order__dlm.TotalAdjustedProductAmount__c &gt;0 THEN Order__dlm.TotalAdjustedProductAmount__c ELSE 0 END) - SUM(CASE WHEN MONTH(Order__dlm.OrderedDate__c) = 1 AND Order__dlm.TotalProductAdjDistAmount__c &gt;0 THEN Order__dlm.TotalProductAdjDistAmount__c ELSE 0 END) AS JANPurchaseTotal,
+
+SUM(CASE WHEN MONTH(Order__dlm.OrderedDate__c) = 2 AND Order__dlm.TotalAdjustedProductAmount__c &gt;0 THEN Order__dlm.TotalAdjustedProductAmount__c ELSE 0 END) - SUM(CASE WHEN MONTH(Order__dlm.OrderedDate__c) = 2 AND Order__dlm.TotalProductAdjDistAmount__c &gt;0 THEN Order__dlm.TotalProductAdjDistAmount__c ELSE 0 END) AS FEBPurchaseTotal,
+
+SUM(CASE WHEN MONTH(Order__dlm.OrderedDate__c) = 3 AND Order__dlm.TotalAdjustedProductAmount__c &gt;0 THEN Order__dlm.TotalAdjustedProductAmount__c ELSE 0 END) - SUM(CASE WHEN MONTH(Order__dlm.OrderedDate__c) = 3 AND Order__dlm.TotalProductAdjDistAmount__c &gt;0 THEN Order__dlm.TotalProductAdjDistAmount__c ELSE 0 END) AS MARPurchaseTotal,
+
+SUM(CASE WHEN MONTH(Order__dlm.OrderedDate__c) = 4 AND Order__dlm.TotalAdjustedProductAmount__c &gt;0 THEN Order__dlm.TotalAdjustedProductAmount__c ELSE 0 END) - SUM(CASE WHEN MONTH(Order__dlm.OrderedDate__c) = 4 AND Order__dlm.TotalProductAdjDistAmount__c &gt;0 THEN Order__dlm.TotalProductAdjDistAmount__c ELSE 0 END) AS APRPurchaseTotal,
+
+SUM(CASE WHEN  MONTH(Order__dlm.OrderedDate__c) = 5 AND Order__dlm.TotalAdjustedProductAmount__c &gt;0 THEN Order__dlm.TotalAdjustedProductAmount__c ELSE 0 END) - SUM(CASE WHEN MONTH(Order__dlm.OrderedDate__c) = 5 AND Order__dlm.TotalProductAdjDistAmount__c &gt;0 THEN Order__dlm.TotalProductAdjDistAmount__c ELSE 0 END) AS MAYPurchaseTotal,
+
+SUM(CASE WHEN MONTH(Order__dlm.OrderedDate__c) = 6 AND Order__dlm.TotalAdjustedProductAmount__c &gt;0 THEN Order__dlm.TotalAdjustedProductAmount__c ELSE 0 END) - SUM(CASE WHEN MONTH(Order__dlm.OrderedDate__c) = 6 AND Order__dlm.TotalProductAdjDistAmount__c &gt;0 THEN Order__dlm.TotalProductAdjDistAmount__c ELSE 0 END) AS JUNPurchaseTotal
+
+
+FROM Order__dlm 
+WHERE YEAR (CURRENT_DATE()) - YEAR (Order__dlm.OrderedDate__c)  = 0
+GROUP BY  YEAR (CURRENT_DATE()), Order__dlm.BillToContactId__c) as PlatinumProgramOnePurchaseTotal
+
+
+ON UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c = PlatinumProgramOnePurchaseTotal.Individual
+GROUP BY UnifiedLinkssotIndividualTun1__dlm.UnifiedRecordId__c,UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c) as UnifiedLink ON UnifiedssotIndividualTun1__dlm.ssot__Id__c = UnifiedLink.UnifiedIndividualID
+GROUP BY UnifiedssotIndividualTun1__dlm.ssot__Id__c</expression>
+    <masterLabel>Platinum Summary JAN-JUN PriorProgramYr</masterLabel>
+</MktCalcInsightObjectDef>

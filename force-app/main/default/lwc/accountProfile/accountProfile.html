@@ -1,0 +1,44 @@
+<template>
+<div class="container">
+  <div class="Background">
+<div class="slds-avatar">
+<abbr class="slds-avatar__initials slds-icon-standard-user" title="company name">{name}</abbr>
+
+</div>
+<div class="details">
+<lightning-formatted-text value={accountName} class="slds-text-heading-large accountName">
+</lightning-formatted-text><br />
+<lightning-formatted-text value={accountState} class="slds-text-heading-large accountState">
+</lightning-formatted-text>
+<!--<lightning-formatted-text value={accountCountry} class="slds-text-heading-large accountCountry">
+</lightning-formatted-text>-->
+</div>
+</div>
+<div class="Background2">
+</div>
+<div class="Background3">
+  <div class="trophy">
+    <div class="icon1">
+    <lightning-icon icon-name="utility:cart" size="medium" style="margin-top: 3px;"></lightning-icon>
+  </div>
+  <div class="amount1" style="padding-left: 30%;"> 
+    <lightning-formatted-text value={accountLifetimeAmount} class="amount" style="font-weight: bold;">
+    </lightning-formatted-text><br />
+    <lightning-formatted-text value='Lifetime Value' class="LifeTime">
+    </lightning-formatted-text>
+  </div>
+  </div>
+  <!--<div class="cart">
+    <div class="icon">
+    <lightning-icon icon-name="utility:cart" size="medium" style="margin-top: 3px;"></lightning-icon>
+  </div>
+  <div class="amount">
+    <lightning-formatted-text value='{accountLifetimeAmount}' class="amount" style="font-weight: bold;">
+    </lightning-formatted-text><br />
+    <lightning-formatted-text value='Lifetime Value' class="LifeTime">
+    </lightning-formatted-text>
+  </div>
+  </div>-->
+</div>
+</div>
+</template>

@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Automated_Process</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Automated Process</shortDescription>
+        <value>005Dn0000042qUmIAI</value>
+    </labels>
+    <labels>
+        <fullName>Billing_Address</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Billing Address</shortDescription>
+        <value>Billing Address</value>
+    </labels>
+    <labels>
+        <fullName>Business_Account_RecordTypeID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Business Account RecordTypeID</shortDescription>
+        <value>012DK000001aUjVYAU</value>
+    </labels>
+    <labels>
+        <fullName>CC_Product_CLIENT_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Product_CLIENT_ID</shortDescription>
+        <value>9cc60d13-c781-471b-80b2-284e3c524151</value>
+    </labels>
+    <labels>
+        <fullName>CC_Product_CLIENT_SECRET</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Product_CLIENT_SECRET</shortDescription>
+        <value>Bx7$K49R&amp;INqHGh2ayLwD</value>
+    </labels>
+    <labels>
+        <fullName>CC_Product_ENDPOINT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Product_ENDPOINT</shortDescription>
+        <value>https://account.demandware.com/dw/oauth2/access_token</value>
+    </labels>
+    <labels>
+        <fullName>CC_Product_TENANT_GROUP_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC_Product_TENANT_GROUP_ID</shortDescription>
+        <value>staging</value>
+    </labels>
+    <labels>
+        <fullName>CC_Product_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CC Product URL</shortDescription>
+        <value>https://sfccstage.firemountain.org/s/-/dw/data/v23_2/products/</value>
+    </labels>
+    <labels>
+        <fullName>Contest_Queue_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contest Queue Id</shortDescription>
+        <value>00GDn000003mrXF</value>
+    </labels>
+    <labels>
+        <fullName>FMG_Integration_User</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FMG Integration User</shortDescription>
+        <value>005DK000006Cz66YAC</value>
+    </labels>
+    <labels>
+        <fullName>FMG_Integration_User_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FMG Integration User Id</shortDescription>
+        <value>005Dn000008J6HwIAK</value>
+    </labels>
+    <labels>
+        <fullName>GC_Payment_Gateway</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GC Payment Gateway</shortDescription>
+        <value>a6XDn0000000fx9MAA</value>
+    </labels>
+    <labels>
+        <fullName>LA_Chat_CloseConfirmation_ChatStateBody_04IDn0000004jrN_5808278</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Chat_CloseConfirmation_ChatStateBody_04IDn0000004jrN_5808278</shortDescription>
+        <value>Don&apos;t Worry, if you aren&apos;t done, you can return to the chat by clicking the Go Back button at the bottom of the chat window.</value>
+    </labels>
+    <labels>
+        <fullName>LA_Chat_CloseConfirmation_ChatStateBody_04IDn0000004jvK_1100284</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Chat_CloseConfirmation_ChatStateBody_04IDn0000004jvK_1100284</shortDescription>
+        <value>Don&apos;t Worry, if you aren&apos;t done, you can return to the chat by clicking the Go Back button at the bottom of the chat window.</value>
+    </labels>
+    <labels>
+        <fullName>LA_Chat_Ended_ChatButtonClose_04IDn0000004jrN_2242965</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Chat_Ended_ChatButtonClose_04IDn0000004jrN_2242965</shortDescription>
+        <value>End Chat</value>
+    </labels>
+    <labels>
+        <fullName>LA_Chat_Ended_ChatButtonClose_04IDn0000004jvK_6943364</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Chat_Ended_ChatButtonClose_04IDn0000004jvK_6943364</shortDescription>
+        <value>End Chat</value>
+    </labels>
+    <labels>
+        <fullName>LA_OfflineSupport_CloseConfirmation_ConfirmationDialogTi_04IDn0000004jrN_5982685</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_OfflineSupport_CloseConfirmation_ConfirmationDialogTi_04IDn0000004jrN_5982685</shortDescription>
+        <value>Thank You</value>
+    </labels>
+    <labels>
+        <fullName>LA_OfflineSupport_CloseConfirmation_ConfirmationDialogTi_04IDn0000004jvK_6784588</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_OfflineSupport_CloseConfirmation_ConfirmationDialogTi_04IDn0000004jvK_6784588</shortDescription>
+        <value>Thank You</value>
+    </labels>
+    <labels>
+        <fullName>LegacyOrderDate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LegacyOrderDate</shortDescription>
+        <value>2023-02-20 00:00:00</value>
+    </labels>
+    <labels>
+        <fullName>OCI_API_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OCI API URL</shortDescription>
+        <value>https://ie5aw8ha.api.commercecloud.salesforce.com</value>
+    </labels>
+    <labels>
+        <fullName>OCI_API_Version</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OCI API Version</shortDescription>
+        <value>v1</value>
+    </labels>
+    <labels>
+        <fullName>OCI_CLIENT_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OCI CLIENT_ID</shortDescription>
+        <value>9cc60d13-c781-471b-80b2-284e3c524151</value>
+    </labels>
+    <labels>
+        <fullName>OCI_CLIENT_SECRET</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OCI CLIENT_SECRET</shortDescription>
+        <value>Bx7$K49R&amp;INqHGh2ayLwD</value>
+    </labels>
+    <labels>
+        <fullName>OCI_Endpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OCI Endpoint</shortDescription>
+        <value>https://account.demandware.com/dw/oauth2/access_token</value>
+    </labels>
+    <labels>
+        <fullName>OCI_Tenant_Group_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OCI Tenant Group ID</shortDescription>
+        <value>3504a9ea-f492-4eb4-9320-591767aa9a44</value>
+    </labels>
+    <labels>
+        <fullName>Person_Account_RecordType_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Person Account RecordType ID</shortDescription>
+        <value>012DK000001aUjLYAU</value>
+    </labels>
+    <labels>
+        <fullName>Platform_Integration_User</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Platform Integration User</shortDescription>
+        <value>005Dn0000042qUpIAI</value>
+    </labels>
+    <labels>
+        <fullName>RMA_Header_Action</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RMA Header Action</shortDescription>
+        <value>Issue Credit</value>
+    </labels>
+    <labels>
+        <fullName>ReshipOrderPrefix</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ReshipOrderPrefix</shortDescription>
+        <value>CCC</value>
+    </labels>
+    <labels>
+        <fullName>Rootstock</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RootstockGateway</shortDescription>
+        <value>a6XDn0000000fswMAA</value>
+    </labels>
+    <labels>
+        <fullName>Shipping_Address</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Shipping Address</shortDescription>
+        <value>Shipping Address</value>
+    </labels>
+    <labels>
+        <fullName>Web_to_Case_Queue_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Web to Case Queue ID</shortDescription>
+        <value>00GDn000003mYOJ</value>
+    </labels>
+    <labels>
+        <fullName>Web_to_Lead_Queue_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Web_to_Lead_Queue_ID</shortDescription>
+        <value>00GDn000003mrXA</value>
+    </labels>
+    <labels>
+        <fullName>ers_CancelButton</fullName>
+        <categories>buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>ers_ClearFilterAction</fullName>
+        <categories>actions</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Clear Filter</shortDescription>
+        <value>Clear Filter</value>
+    </labels>
+    <labels>
+        <fullName>ers_ClearFilterButton</fullName>
+        <categories>buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Clear All Filters</shortDescription>
+        <value>Clear All Filters</value>
+    </labels>
+    <labels>
+        <fullName>ers_ClearSelectionButton</fullName>
+        <categories>buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Clear Selection</shortDescription>
+        <value>Clear Selection</value>
+    </labels>
+    <labels>
+        <fullName>ers_ColumnHeader</fullName>
+        <categories>headers</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Column</shortDescription>
+        <value>Column</value>
+    </labels>
+    <labels>
+        <fullName>ers_EmptyTableMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Empty</shortDescription>
+        <value>This table currently has no data to display</value>
+    </labels>
+    <labels>
+        <fullName>ers_ErrorRequiredEntry</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Required</shortDescription>
+        <value>This is a required entry.  At least 1 row must be selected.</value>
+    </labels>
+    <labels>
+        <fullName>ers_FilterHeader</fullName>
+        <categories>headers</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Filter</shortDescription>
+        <value>Filter</value>
+    </labels>
+    <labels>
+        <fullName>ers_LabelHeader</fullName>
+        <categories>headers</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label</shortDescription>
+        <value>Label</value>
+    </labels>
+    <labels>
+        <fullName>ers_SaveButton</fullName>
+        <categories>buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>ers_SearchPlaceholder</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Search Term</shortDescription>
+        <value>Enter search term ...</value>
+    </labels>
+    <labels>
+        <fullName>ers_SetFilterAction</fullName>
+        <categories>actions</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Set Filter</shortDescription>
+        <value>Set Filter</value>
+    </labels>
+    <labels>
+        <fullName>fsc_AccessLevel</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccessLevel</shortDescription>
+        <value>Access Level</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Back</fullName>
+        <categories>Buttons,Filters,Title</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Back</shortDescription>
+        <value>Back</value>
+    </labels>
+    <labels>
+        <fullName>fsc_ButtonIsNotSupportedMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ButtonIsNotSupportedMessage</shortDescription>
+        <value>Following buttons are note supported:</value>
+    </labels>
+    <labels>
+        <fullName>fsc_ConditionLogicHelpText</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ConditionLogicHelpText</shortDescription>
+        <value>Use parentheses, AND, OR, and NOT to customize the logic. For example, if you enter “(1 AND 2 AND 3) OR 4”, the flow evaluates whether the first three conditions are true or only the fourth condition is true.</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Delete</fullName>
+        <categories>labels, buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delete</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>fsc_FieldIsNotSupportedMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FieldIsNotSupportedMessage</shortDescription>
+        <value>Following fields are not supported:</value>
+    </labels>
+    <labels>
+        <fullName>fsc_FieldTypeNotSuportedMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>fsc_FieldTypeNotSuportedMessage</shortDescription>
+        <value>You provided an unsupported value for the DataTypeFilter input on Object and Field Picker. Currently the only supported value is ’picklist’</value>
+    </labels>
+    <labels>
+        <fullName>fsc_For</fullName>
+        <categories>Buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>For</shortDescription>
+        <value>For</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Key_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Key Label</shortDescription>
+        <value>Key</value>
+    </labels>
+    <labels>
+        <fullName>fsc_LackingPermissions</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LackingPermissions</shortDescription>
+        <value>You don\&apos;t have the proper permissions for ths action</value>
+    </labels>
+    <labels>
+        <fullName>fsc_ManagerEmptyMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ManagerEmptyMessage</shortDescription>
+        <value>&quot;Manager APEX Class&quot; can not be empty</value>
+    </labels>
+    <labels>
+        <fullName>fsc_MultipleGroupsForRole</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MultipleGroupsForRole</shortDescription>
+        <value>There are multiple groups for that role</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Name</fullName>
+        <categories>quicklinks, Labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>fsc_NonePicklistValueLabel</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NonePicklistValueLabel</shortDescription>
+        <value>-- None --</value>
+    </labels>
+    <labels>
+        <fullName>fsc_OWDReadWrite</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OWDReadWrite</shortDescription>
+        <value>Sharing Settings must be private or public read/write to enable manual sharing</value>
+    </labels>
+    <labels>
+        <fullName>fsc_OwnerAdminModify</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OwnerAdminModify</shortDescription>
+        <value>Only the record owner or administrators can modify permissions</value>
+    </labels>
+    <labels>
+        <fullName>fsc_PublicGroups</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PublicGroups</shortDescription>
+        <value>Public Groups</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Queues</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Queues</shortDescription>
+        <value>Queues</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Read</fullName>
+        <categories>labels, buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Read</shortDescription>
+        <value>Read</value>
+    </labels>
+    <labels>
+        <fullName>fsc_ReadWrite</fullName>
+        <categories>labels, buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ReadWrite</shortDescription>
+        <value>Read / Write</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Reason</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reason</shortDescription>
+        <value>Reason</value>
+    </labels>
+    <labels>
+        <fullName>fsc_RelatedUsers</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RelatedUsers</shortDescription>
+        <value>Related Users</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Roles</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Roles</shortDescription>
+        <value>Roles</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Search</fullName>
+        <categories>Actions,Buttons,quicklinks</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Search in</shortDescription>
+        <value>Search in</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SearchFor</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SearchFor</shortDescription>
+        <value>For</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SetAccessLevel</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SetAccessLevel</shortDescription>
+        <value>Set Access Level</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SupportedAddCapabilitiesEmptyMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SupportedAddCapabilitiesEmptyMessage</shortDescription>
+        <value>&quot;Add Capabilities&quot; can not be empty</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SupportedButtonsEmptyMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SupportedButtonsEmptyMessage</shortDescription>
+        <value>&quot;Supported Buttons&quot; can not be empty</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SupportedEditCapabilitiesEmptyMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SupportedEditCapabilitiesEmptyMessage</shortDescription>
+        <value>&quot;Edit Capabilities&quot; can not be empty</value>
+    </labels>
+    <labels>
+        <fullName>fsc_TooManyResultsMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TooManyResultsMessage</shortDescription>
+        <value>Your search found more than 200 results.  Keep typing to make it more specific</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Type</fullName>
+        <categories>Buttons,Filters,Title</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Type</shortDescription>
+        <value>Type</value>
+    </labels>
+    <labels>
+        <fullName>fsc_UserOrGroup</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UserOrGroup</shortDescription>
+        <value>User Or Group</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Users</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Users</shortDescription>
+        <value>Users</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Value_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Value Label</shortDescription>
+        <value>Value</value>
+    </labels>
+</CustomLabels>

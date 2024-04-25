@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>B2C_Account_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>B2C Account Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer</fullName>
+                <default>false</default>
+                <label>Customer</label>
+            </value>
+            <value>
+                <fullName>Inquirer</fullName>
+                <default>false</default>
+                <label>Inquirer</label>
+            </value>
+            <value>
+                <fullName>Platinum</fullName>
+                <default>false</default>
+                <label>Platinum</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

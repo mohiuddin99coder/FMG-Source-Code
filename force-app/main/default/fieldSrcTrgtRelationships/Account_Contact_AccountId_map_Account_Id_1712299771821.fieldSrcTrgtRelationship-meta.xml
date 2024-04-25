@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSrcTrgtRelationship xmlns="http://soap.sforce.com/2006/04/metadata">
+    <definitionCreationType>Custom</definitionCreationType>
+    <lookupFieldName>Account_Contact__dlm.rel_1712299771821_end__c</lookupFieldName>
+    <masterLabel>Account_Contact_AccountId_map_Account_Id_1712299771821</masterLabel>
+    <relationshipCardinality>ManyToOne</relationshipCardinality>
+    <sourceFieldName>Account_Contact__dlm.AccountId__c</sourceFieldName>
+    <targetFieldName>Account__dlm.Id__c</targetFieldName>
+</FieldSrcTrgtRelationship>

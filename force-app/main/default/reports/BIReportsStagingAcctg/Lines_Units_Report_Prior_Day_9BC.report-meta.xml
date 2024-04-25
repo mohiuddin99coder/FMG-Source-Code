@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ORDER_NUMBER</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>ORDER_ITEM_QUANTITY</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>CDF1</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>1</calculatedFormula>
+        <dataType>Double</dataType>
+        <description>Simple formula for count of lines w/ friendly column name</description>
+        <developerName>CDF1</developerName>
+        <label>Lines</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <description>Lines and Units sold for prior day (related to Product Sales, rather than Shipped Sales).  Product only (no delivery charges).  Uses the &quot;Orders with Products&quot; Report Type.  &quot;Quantity&quot; is Units sold.</description>
+    <filter>
+        <criteriaItems>
+            <column>OI_TYPE_CODE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>P</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <field>ORDER_ORDERED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Lines &amp; Units Report - Prior Day</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>OrderItemList</reportType>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>ORDER_ORDERED_DATE</dateColumn>
+        <interval>INTERVAL_YESTERDAY</interval>
+    </timeFrameFilter>
+</Report>

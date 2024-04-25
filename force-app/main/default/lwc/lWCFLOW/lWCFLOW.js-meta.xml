@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__RecordAction</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="label" type="String" label="Button Label" role="inputOnly"/>
+            <property name="buttonId" type="String" label="Button ID" role="inputOnly"/>
+            <property name="SorM" type="String" label="SorM" role="inputOnly"/>
+            <property name="type" type="String" label = "Enter Single or Multiple" role = "inputOnly"/>
+            <property name="showFromLocNo" type="String" label = "showFromLocNo" role = "inputOnly"/>
+            <property name="showFromLocID" type="String" label = "showFromLocID" role = "inputOnly"/>
+            <property name="showToLocNo" type="String" label = "showToLocNo" role = "inputOnly"/>
+            <property name="showToLocID" type="String" label = "showToLocID" role = "inputOnly"/>
+            <property name="showItem" type="String" label = "showItem" role = "inputOnly"/>
+            <property name="singleButton" type="String" label = "singleButton" role = "inputOnly"/>
+            <property name="RemainingQty" type="String" label = "RemainingQty" role = "inputOnly"/>
+            <property name="msgIncoming" type="String" label = "msgIncoming" role = "inputOnly"/>
+            <property name="AutoCount" type="String" label = "AutoCount" role = "inputOnly"/>
+            <property name="showQty" type="String" label = "showQty" role = "inputOnly"/>
+            <property name="showButtons" type="String" label = "showButtons" role = "inputOnly"/>
+            <property name="showCheckbox" type="String" label = "showCheckbox" role = "inputOnly"/>
+            <property name="showFetchButton" type="String" label = "showFetchButton" role = "inputOnly"/>
+            <property name="buttonIdTransferAll" type="String" label = "buttonIdTransferAll" role = "inputOnly"/>
+            <property name="checkbox" type="String" label="checkbox" role="outputOnly"/>
+            <property name="item" type="String" label="item" role="outputOnly"/>
+            <property name="quantity" type="String" label="quantity" role="outputOnly"/>
+            <property name="fromLocID" type="String" label="fromLocID" role="outputOnly"/>
+            <property name="fromLocNo" type="String" label="fromLocNo" role="outputOnly"/>
+            <property name="toLocID" type="String" label="toLocID" role="outputOnly"/>
+            <property name="toLocNo" type="String" label="toLocNo" role="outputOnly"/>
+            <property name="selectedButtonId" type="String" label="Selected Button ID" role="outputOnly"/>
+            <property name= "checkAuto" type = "Boolean" label = "checkAuto" role="inputOnly"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

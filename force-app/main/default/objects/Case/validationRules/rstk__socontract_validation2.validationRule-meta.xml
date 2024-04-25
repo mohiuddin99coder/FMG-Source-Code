@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rstk__socontract_validation2</fullName>
+    <active>true</active>
+    <errorConditionFormula>!ISBLANK( rstk__case_socontract__c ) &amp;&amp;  
+(
+rstk__case_socontract__r.rstk__socontract_socust__r.rstk__socust_inactive__c = true || 
+(!ISBLANK( AccountId ) &amp;&amp; AccountId &lt;&gt;  rstk__case_socontract__r.rstk__socontract_socust__r.rstk__socust_sf_account__c )
+)</errorConditionFormula>
+    <errorMessage>Rootstock Customer associated with the case account must be active and must match the Rootstock Customer associated with the Sales Contract</errorMessage>
+</ValidationRule>

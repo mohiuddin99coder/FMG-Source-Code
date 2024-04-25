@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inventory_Cost_Transactions_Accounting</fullName>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>rstk__sytxncst_acctgdate__c</columns>
+    <columns>rstk__sytxncst_txnid__c</columns>
+    <columns>rstk__sytxncst_syaccdr__c</columns>
+    <columns>rstk__sytxncst_syacccr__c</columns>
+    <columns>rstk__sytxncst_ucsttotext__c</columns>
+    <columns>rstk__sytxncst_pohdr__c</columns>
+    <columns>rstk__sytxncst_item__c</columns>
+    <columns>rstk__sytxncst_txnqty__c</columns>
+    <columns>rstk__sytxncst_porcptno__c</columns>
+    <columns>rstk__sytxncst_usrno__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__sytxncst_item__c</field>
+        <operation>contains</operation>
+        <value>1295</value>
+    </filters>
+    <label>Inventory Cost Transactions - Accounting</label>
+</ListView>

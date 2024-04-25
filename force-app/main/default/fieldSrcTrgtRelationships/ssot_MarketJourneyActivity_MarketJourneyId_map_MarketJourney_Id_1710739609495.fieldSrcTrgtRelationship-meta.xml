@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSrcTrgtRelationship xmlns="http://soap.sforce.com/2006/04/metadata">
+    <definitionCreationType>Custom</definitionCreationType>
+    <lookupFieldName>ssot__MarketJourneyActivity__dlm.rel_1710739609495_end__c</lookupFieldName>
+    <masterLabel>ssot_MarketJourneyActivity_MarketJourneyId_map_MarketJourney_Id_1710739609495</masterLabel>
+    <relationshipCardinality>ManyToOne</relationshipCardinality>
+    <sourceFieldName>ssot__MarketJourneyActivity__dlm.MarketJourneyId__c</sourceFieldName>
+    <targetFieldName>MarketJourney__dlm.Id__c</targetFieldName>
+</FieldSrcTrgtRelationship>

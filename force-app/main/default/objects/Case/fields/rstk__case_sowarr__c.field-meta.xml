@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rstk__case_sowarr__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>The &quot;warranted&quot; item applicable to this Case, which is a specific Product and it&apos;s serial number.</inlineHelpText>
+    <label>Covered Item</label>
+    <referenceTo>rstk__sowarr__c</referenceTo>
+    <relationshipLabel>Cases</relationshipLabel>
+    <relationshipName>cases</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

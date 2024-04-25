@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Related_To_Lock_Fields</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( NOT( ISNEW() ) ,
+ OpportunityId  =  Opportunity.Id ,
+   ISPICKVAL( Opportunity.StageName , &quot;Closed Lost&quot;) )</errorConditionFormula>
+    <errorMessage>Closed Lost Opportunity cannot be Modified</errorMessage>
+</ValidationRule>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>How platinum program works as well as the benefits</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>A - Platinum Inquiry Explanation</name>
+    <pageDevName>A_Platinum_Inquiry_Explanation</pageDevName>
+    <style>none</style>
+    <subject>Platinum Partners – XXXX at Fire Mountain Gems and Bead</subject>
+    <textOnly>Dear XXX 
+
+I hope this email finds you well. Thank you for your interest in the Platinum Wholesale Program!
+
+How do you become Platinum Partner?
+
+You can qualify to become a Platinum Partner after spending $3,000 within 365 days which makes you eligible for the 3-Star Level. Your current purchase total is $ XXX .
+
+What is Platinum Partners?
+
+The Platinum program offers discounts to high purchase volume customers when purchases meet a set level. You discount level is determined by your previous 365-day purchases. 
+
+Once you have qualified, the program period runs from July 1st of the current year until June 30th of the following year. We look at accounts on a daily basis. When you are within $1,000 from qualifying, we will reach out to you to give you the great news!
+
+What are the levels of discount?
+
+The 3-Star Program: Purchase $3,000 in products within the 12-month time frame and you will receive a 5% discount off the lowest advertise price on all orders.
+
+The 4-Star Program: Purchase $5,000 in products within the 12-month time frame and you will receive a 10% discount off the lowest advertise price on all orders.
+
+The 5-Star Program: Purchase $10,000 in products within the 12-month time frame and you will receive a 15% discount off the lowest advertise price on all orders.
+
+What are the benefits of Platinum?
+
+1. A knowledgeable team of dedicated Platinum partner Representatives available to assist you through your member’s only exclusive phone line.
+
+2. Platinum Partner’s Exclusive emails, featuring new product previews, savings on closeout items and more.
+
+3. Expedited order processing- Platinum orders move to the front of the line for daily order processing.
+
+4. Online Order History- For quick reorder and convenience, log into your online account and view your order history for the past 18 months.
+
+5. 24/7 Online Ordering- Log in to your personal Fire Mountain Gems and Beads account to take advantage of your exclusive discount.
+
+6. Extended Return Policy – an additional 90 days to return unaltered product
+
+Please feel free to contact me with any questions.</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

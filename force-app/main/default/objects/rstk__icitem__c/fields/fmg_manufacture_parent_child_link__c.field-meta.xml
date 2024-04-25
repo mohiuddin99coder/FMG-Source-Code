@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>fmg_manufacture_parent_child_link__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This is a link between a manufactured item and the LIFO Purchased Item</description>
+    <externalId>false</externalId>
+    <label>FMG Manufacture Parent Child Link</label>
+    <referenceTo>rstk__icitem__c</referenceTo>
+    <relationshipLabel>Inventory Item Master (FMG Manufacture Parent Child Link)</relationshipLabel>
+    <relationshipName>fmg_manufacture_parent_child_link</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>rstkf__appayh__c.rstkf__appayds__r.rstkf__apapplics__r$rstkf__apapplic_dateappl__c</field>
+    </columns>
+    <columns>
+        <field>rstkf__appayh__c.rstkf__appayds__r$rstkf__appayd_vendno__c</field>
+    </columns>
+    <columns>
+        <field>rstkf__appayh__c.rstkf__appayds__r$rstkf__appayd_checknumber__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>rstkf__appayh__c.rstkf__appayds__r$rstkf__appayd_payamt__c</field>
+    </columns>
+    <columns>
+        <field>rstkf__appayh__c.rstkf__appayds__r$rstkf__appayd_trantype__c</field>
+    </columns>
+    <description>Check Register - USE</description>
+    <filter>
+        <criteriaItems>
+            <column>rstkf__appayh__c.rstkf__appayds__r$rstkf__appayd_trantype__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Bank Card,Check,EFT</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Copy of Copy of RSF - Check Register 04-</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>rstkf__Payment_Sessions_with_Detail_and_Application__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>rstkf__appayh__c.rstkf__appayds__r$rstkf__appayd_checknumber__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>rstkf__appayh__c$CreatedDate</dateColumn>
+        <endDate>2024-04-11</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2024-04-05</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Cannot_be_Fulfilled_Email</fullName>
+        <description>Cannot be Fulfilled Email</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Cannot_be_Fulfilled_Email_Template_1686802455373</template>
+    </alerts>
+    <alerts>
+        <fullName>Customer_Decision_Accept</fullName>
+        <description>Customer Decision Accept</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Customer_Decision_Accept_1686809761511</template>
+    </alerts>
+    <alerts>
+        <fullName>Customer_Decision_Accepted_for_GSK_Order</fullName>
+        <description>Customer Decision Accepted for GSK Order</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Customer_Decision_Accepted_for_GSK_Order_1686811391147</template>
+    </alerts>
+    <alerts>
+        <fullName>Customer_Decision_Deniedfor_GSK_Order</fullName>
+        <description>Customer Decision Denied for GSK Order</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Customer_Decision_Denied_for_GSK_Order_1686811813309</template>
+    </alerts>
+    <alerts>
+        <fullName>Customer_Decision_Denies</fullName>
+        <description>Customer Decision Denies</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Customer_Decision_Denies_1686812433246</template>
+    </alerts>
+    <alerts>
+        <fullName>Inventory_Available_Email_Alert</fullName>
+        <description>Inventory Available Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Inventory_Available_Email_Template_1686813344981</template>
+    </alerts>
+    <alerts>
+        <fullName>Inventory_Confirmation_from_Vendor</fullName>
+        <ccEmails>pmspecialorders@firemtn.com</ccEmails>
+        <description>Inventory Confirmation from Vendor</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Product_Management_Team</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Inventory_Confirmation_from_Vendor_1686821517738</template>
+    </alerts>
+    <alerts>
+        <fullName>Opportunity_ClosedLost</fullName>
+        <description>Opportunity ClosedLost</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Opportunity_Closed_Lost_1686813853083</template>
+    </alerts>
+    <alerts>
+        <fullName>Opportunity_CommitOrder</fullName>
+        <description>Opportunity CommitOrder</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Opportunity_CommitOrder_1686819259137</template>
+    </alerts>
+    <alerts>
+        <fullName>Place_Order_with_Vendor</fullName>
+        <ccEmails>pmspecialorders@firemtn.com</ccEmails>
+        <description>Place Order with Vendor</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Product_Management_Team</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Place_Order_with_Vendor_1688624111771</template>
+    </alerts>
+    <alerts>
+        <fullName>Review_By_CS_Team_for_Special_Order</fullName>
+        <description>Review By CS Team for Special Order</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CS_Team</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Review_By_Product_Team_1686810974124</template>
+    </alerts>
+    <alerts>
+        <fullName>Review_By_Platinum_Team_for_Special_Order</fullName>
+        <description>Review By Platinum Team for Special Order</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Platinum_Team</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Review_by_Pricing_Team_1686810294762</template>
+    </alerts>
+    <alerts>
+        <fullName>Review_by_CS_Team_for_GSK_Order</fullName>
+        <description>Review by CS Team for GSK Order</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CS_Team</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Review_by_Product_Team_for_GSK_Order_1686811640336</template>
+    </alerts>
+    <alerts>
+        <fullName>Special_Order_Approval_Mail_For_Todd</fullName>
+        <description>Special Order Approval Mail For Todd</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>bushmant@firemtn.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Special_Order_Approval_mail_1686819963144</template>
+    </alerts>
+    <alerts>
+        <fullName>Special_Order_Approved_By_Todd</fullName>
+        <description>Special Order Approved By Todd</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Special_Order_Approved_By_Todd_1686812297388</template>
+    </alerts>
+    <alerts>
+        <fullName>Special_Order_Rejected_By_Todd</fullName>
+        <description>Special Order Rejected By Todd</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Special_Order_Rejected_by_Todd_1686813040143</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Customer_Decision_Accept</fullName>
+        <field>Customer_Decision__c</field>
+        <literalValue>Accepted</literalValue>
+        <name>Customer Decision Accept</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Generate_Quote</fullName>
+        <field>Quote_Generated__c</field>
+        <literalValue>1</literalValue>
+        <name>Generate Quote</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>In_Approval</fullName>
+        <field>StageName</field>
+        <literalValue>Approval</literalValue>
+        <name>In Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>In_Review</fullName>
+        <field>StageName</field>
+        <literalValue>In Review</literalValue>
+        <name>In Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lock_Closed_Lost_Record</fullName>
+        <field>StageName</field>
+        <literalValue>Closed Lost</literalValue>
+        <name>Lock Closed Lost Record</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lock_Closed_Lost_Record1</fullName>
+        <field>StageName</field>
+        <literalValue>Closed Lost</literalValue>
+        <name>Lock Closed Lost Record</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lock_Closed_Lost_Records</fullName>
+        <field>StageName</field>
+        <literalValue>Closed Lost</literalValue>
+        <name>Lock Closed Lost Record</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lock_Opportunity</fullName>
+        <field>Lock_Opportunity__c</field>
+        <literalValue>1</literalValue>
+        <name>Lock Opportunity</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Loss_Reason_Update</fullName>
+        <field>Loss_Reason__c</field>
+        <literalValue>Other</literalValue>
+        <name>Loss Reason Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Unlock_the_Stage</fullName>
+        <field>Lock_Stage__c</field>
+        <literalValue>0</literalValue>
+        <name>Unlock the Stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_to_ClosedLost</fullName>
+        <field>StageName</field>
+        <literalValue>Closed Lost</literalValue>
+        <name>Update Approval to ClosedLost</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Other_Loss_Reason</fullName>
+        <field>Other_Loss_Reason__c</field>
+        <formula>IF(   Other_Loss_Reason__c ==&quot;&quot; , &quot;Rejected By Todd&quot;,&quot;Rejected By Todd&quot;)</formula>
+        <name>Update Other Loss Reason</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Other_Loss_Reason_by_Chris</fullName>
+        <field>Other_Loss_Reason__c</field>
+        <formula>IF( Other_Loss_Reason__c ==&quot;&quot; , &quot;Rejected By Chris&quot;,&quot;Rejected By Chris&quot;)</formula>
+        <name>Update Other Loss  Reason by Chris</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_to_Quote</fullName>
+        <field>StageName</field>
+        <literalValue>Quote</literalValue>
+        <name>Update to Quote</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <tasks>
+        <fullName>Special_Price_Approval_Request</fullName>
+        <assignedTo>bushmant@firemtn.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>2</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Special Price Approval Request</subject>
+    </tasks>
+</Workflow>

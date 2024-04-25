@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>icitemlifoseq_origtxnqty__c</fullName>
+    <description>This is the transaction quantity associated with the original creation of this FIFO record.
+The ICITEMFIFOSEQ_QTY can be decremented by a work order issue (for example) – but this ICITEMFIFOSEQ_ORIGTXNQTY will never be altered. (DD)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the transaction quantity associated with the original creation of this FIFO record.</inlineHelpText>
+    <label>Orig Txn Qty</label>
+    <precision>16</precision>
+    <required>false</required>
+    <scale>6</scale>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

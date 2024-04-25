@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rstk__oppprod_iccomcod__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Inventory Commodity Code</description>
+    <externalId>false</externalId>
+    <label>Inventory Commodity Code</label>
+    <referenceTo>rstk__iccomcod__c</referenceTo>
+    <relationshipLabel>Opportunity Product</relationshipLabel>
+    <relationshipName>oppprods</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

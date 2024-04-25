@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Filtered_PO_Receipt_Transactions</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__porcptap_rcptno__c</columns>
+    <columns>rstk__porcptap_packslipno__c</columns>
+    <columns>rstk__porcptap_qtycomp__c</columns>
+    <columns>rstk__porcptap_amtcomp__c</columns>
+    <columns>rstk__porcptap_upricercpt__c</columns>
+    <columns>rstk__porcptap_poitem__c</columns>
+    <columns>rstk__porcptap_ordno__c</columns>
+    <columns>rstk__porcptap_poline__c</columns>
+    <columns>rstk__porcptap_vendno__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>rstk__porcptap_upriceapinv__c</columns>
+    <columns>rstk__porcptap_porcptcst__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__porcptap_upriceapinv__c</field>
+        <operation>greaterThan</operation>
+        <value>0</value>
+    </filters>
+    <label>Filtered PO Receipt Transactions</label>
+</ListView>

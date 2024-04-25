@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Temporary_Product_Available</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISNEW(),
+Opportunity.Special_Order_Product_Added__c,
+NOT(ISPICKVAL(Product2.Family,&apos;Shipping&apos;)),
+OR(
+ISPICKVAL(Opportunity.StageName,&quot;Quote&quot;),
+ISPICKVAL(Opportunity.StageName,&quot;Awaiting for Customer Approval&quot;),
+ISPICKVAL(Opportunity.StageName,&quot;Awaiting for Inventory&quot;)
+)
+)</errorConditionFormula>
+    <errorMessage>Please remove temporary product (Special Order Product) before adding any product.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Work Order Management</label>
+    <permissionSets>rootstock__RS_Disassembly_Orders_Processing</permissionSets>
+    <permissionSets>rootstock__RS_Labor_Work_Orders</permissionSets>
+    <permissionSets>rootstock__RS_Shop_Floor_Admin</permissionSets>
+    <permissionSets>rootstock__RS_Time_and_Quantity_Booking_Management</permissionSets>
+    <permissionSets>rootstock__RS_WO_Material_Management</permissionSets>
+    <permissionSets>rootstock__RS_WO_Scheduling_Planner</permissionSets>
+    <permissionSets>rootstock__RS_Work_Order_Management</permissionSets>
+    <permissionSets>rootstock__RS_Work_Order_Receipts</permissionSets>
+    <permissionSets>rstkf__ERP_Financials_Transactional_Access_1</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

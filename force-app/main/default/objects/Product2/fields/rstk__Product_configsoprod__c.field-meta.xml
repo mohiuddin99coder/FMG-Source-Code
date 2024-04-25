@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rstk__Product_configsoprod__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>The Rootstock Product associated with the SF Product, where the Rootstock Product Type = Configured.</inlineHelpText>
+    <label>Z_Obsolete</label>
+    <referenceTo>rstk__soprod__c</referenceTo>
+    <relationshipLabel>Products</relationshipLabel>
+    <relationshipName>configsoprodProducts</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

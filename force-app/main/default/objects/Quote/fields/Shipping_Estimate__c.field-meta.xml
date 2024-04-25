@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shipping_Estimate__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Shipping charge is an estimate only.
+Actual shipping fee will be calculated at the time of shipment.</inlineHelpText>
+    <label>Shipping Estimate</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

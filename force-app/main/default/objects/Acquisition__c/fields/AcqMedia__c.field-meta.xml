@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AcqMedia__c</fullName>
+    <externalId>false</externalId>
+    <label>Media</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>On Line Request</fullName>
+                <default>false</default>
+                <label>On Line Request</label>
+            </value>
+            <value>
+                <fullName>3rd Party Forwarded</fullName>
+                <default>false</default>
+                <label>3rd Party Forwarded</label>
+            </value>
+            <value>
+                <fullName>Magazine Advertisement</fullName>
+                <default>false</default>
+                <label>Magazine Advertisement</label>
+            </value>
+            <value>
+                <fullName>Prospect List</fullName>
+                <default>false</default>
+                <label>Prospect List</label>
+            </value>
+            <value>
+                <fullName>Internal Referral</fullName>
+                <default>false</default>
+                <label>Internal Referral</label>
+            </value>
+            <value>
+                <fullName>Offered Lowest Published Price</fullName>
+                <default>false</default>
+                <label>Offered Lowest Published Price</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

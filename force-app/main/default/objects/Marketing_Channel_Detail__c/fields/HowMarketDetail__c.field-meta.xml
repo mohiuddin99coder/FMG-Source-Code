@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HowMarketDetail__c</fullName>
+    <externalId>false</externalId>
+    <label>How Market Detail</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>HowMarket__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Art Shows</fullName>
+                <default>false</default>
+                <label>Art Shows</label>
+            </value>
+            <value>
+                <fullName>Fairs</fullName>
+                <default>false</default>
+                <label>Fairs</label>
+            </value>
+            <value>
+                <fullName>Home Parties</fullName>
+                <default>false</default>
+                <label>Home Parties</label>
+            </value>
+            <value>
+                <fullName>Tradeshow</fullName>
+                <default>false</default>
+                <label>Tradeshow</label>
+            </value>
+            <value>
+                <fullName>Referral</fullName>
+                <default>false</default>
+                <label>Referral</label>
+            </value>
+            <value>
+                <fullName>Teaching</fullName>
+                <default>false</default>
+                <label>Teaching</label>
+            </value>
+            <value>
+                <fullName>Bead Shop</fullName>
+                <default>false</default>
+                <label>Bead Shop</label>
+            </value>
+            <value>
+                <fullName>Consignment</fullName>
+                <default>false</default>
+                <label>Consignment</label>
+            </value>
+            <value>
+                <fullName>Storefront</fullName>
+                <default>false</default>
+                <label>Storefront</label>
+            </value>
+            <value>
+                <fullName>Teacher</fullName>
+                <default>false</default>
+                <label>Teacher</label>
+            </value>
+            <value>
+                <fullName>Distributor</fullName>
+                <default>false</default>
+                <label>Distributor</label>
+            </value>
+            <value>
+                <fullName>Manufacturer</fullName>
+                <default>false</default>
+                <label>Manufacturer</label>
+            </value>
+            <value>
+                <fullName>Sales Reps</fullName>
+                <default>false</default>
+                <label>Sales Reps</label>
+            </value>
+            <value>
+                <fullName>Wholesaler</fullName>
+                <default>false</default>
+                <label>Wholesaler</label>
+            </value>
+            <value>
+                <fullName>Charity Donations</fullName>
+                <default>false</default>
+                <label>Charity Donations</label>
+            </value>
+            <value>
+                <fullName>Non-Profit</fullName>
+                <default>false</default>
+                <label>Non-Profit</label>
+            </value>
+            <value>
+                <fullName>Gifting</fullName>
+                <default>false</default>
+                <label>Gifting</label>
+            </value>
+            <value>
+                <fullName>Amazon</fullName>
+                <default>false</default>
+                <label>Amazon</label>
+            </value>
+            <value>
+                <fullName>Ebay</fullName>
+                <default>false</default>
+                <label>Ebay</label>
+            </value>
+            <value>
+                <fullName>Etsy</fullName>
+                <default>false</default>
+                <label>Etsy</label>
+            </value>
+            <value>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+                <label>Facebook</label>
+            </value>
+            <value>
+                <fullName>Other Ecom</fullName>
+                <default>false</default>
+                <label>Other Ecom</label>
+            </value>
+            <value>
+                <fullName>Own Website</fullName>
+                <default>false</default>
+                <label>Own Website</label>
+            </value>
+            <value>
+                <fullName>Google Ads</fullName>
+                <default>false</default>
+                <label>Google Ads</label>
+            </value>
+            <value>
+                <fullName>Pinterest</fullName>
+                <default>false</default>
+                <label>Pinterest</label>
+            </value>
+            <value>
+                <fullName>Twitter</fullName>
+                <default>false</default>
+                <label>Twitter</label>
+            </value>
+            <value>
+                <fullName>Instagram</fullName>
+                <default>false</default>
+                <label>Instagram</label>
+            </value>
+            <value>
+                <fullName>Tik Tok</fullName>
+                <default>false</default>
+                <label>Tik Tok</label>
+            </value>
+            <value>
+                <fullName>Bead Buying Group</fullName>
+                <default>false</default>
+                <label>Bead Buying Group</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Bead Buying Group</controllingFieldValue>
+            <valueName>Bead Buying Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Booth &amp; Tables</controllingFieldValue>
+            <valueName>Art Shows</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Booth &amp; Tables</controllingFieldValue>
+            <valueName>Fairs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Booth &amp; Tables</controllingFieldValue>
+            <valueName>Home Parties</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Booth &amp; Tables</controllingFieldValue>
+            <valueName>Tradeshow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Booth &amp; Tables</controllingFieldValue>
+            <valueName>Referral</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Booth &amp; Tables</controllingFieldValue>
+            <valueName>Teaching</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brick &amp; Mortar</controllingFieldValue>
+            <valueName>Bead Shop</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brick &amp; Mortar</controllingFieldValue>
+            <valueName>Consignment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brick &amp; Mortar</controllingFieldValue>
+            <valueName>Storefront</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brick &amp; Mortar</controllingFieldValue>
+            <valueName>Teacher</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>B to B</controllingFieldValue>
+            <valueName>Distributor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>B to B</controllingFieldValue>
+            <valueName>Manufacturer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>B to B</controllingFieldValue>
+            <valueName>Sales Reps</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>B to B</controllingFieldValue>
+            <valueName>Wholesaler</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non-Selling</controllingFieldValue>
+            <valueName>Charity Donations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non-Selling</controllingFieldValue>
+            <valueName>Non-Profit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non-Selling</controllingFieldValue>
+            <valueName>Gifting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online/Website</controllingFieldValue>
+            <valueName>Amazon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online/Website</controllingFieldValue>
+            <valueName>Ebay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online/Website</controllingFieldValue>
+            <valueName>Etsy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online/Website</controllingFieldValue>
+            <valueName>Facebook</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online/Website</controllingFieldValue>
+            <valueName>Other Ecom</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online/Website</controllingFieldValue>
+            <valueName>Own Website</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online/Website</controllingFieldValue>
+            <valueName>Google Ads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online/Website</controllingFieldValue>
+            <valueName>Pinterest</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online/Website</controllingFieldValue>
+            <valueName>Twitter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online/Website</controllingFieldValue>
+            <valueName>Instagram</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online/Website</controllingFieldValue>
+            <valueName>Tik Tok</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>7</visibleLines>
+</CustomField>

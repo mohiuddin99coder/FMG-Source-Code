@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSrcTrgtRelationship xmlns="http://soap.sforce.com/2006/04/metadata">
+    <definitionCreationType>Segment_Membership</definitionCreationType>
+    <lookupFieldName>Individual_SMH_1704384314568__dlm.rel_1704384315950_end__c</lookupFieldName>
+    <masterLabel>Individual_SMH_1704384314568_Id_map_ssot_Individual_ssot_Id_1704384315950</masterLabel>
+    <relationshipCardinality>ManyToOne</relationshipCardinality>
+    <sourceFieldName>Individual_SMH_1704384314568__dlm.Id__c</sourceFieldName>
+    <targetFieldName>ssot__Individual__dlm.ssot__Id__c</targetFieldName>
+</FieldSrcTrgtRelationship>

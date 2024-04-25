@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>fmgsohdrext_sohdr__c</columns>
+    <columns>batchId__c</columns>
+    <columns>Inventory_Transferred__c</columns>
+    <columns>IsHazardous__c</columns>
+    <columns>IsLightweight__c</columns>
+    <columns>IsPlatinum__c</columns>
+    <columns>IsFacility__c</columns>
+    <columns>IsEmployee__c</columns>
+    <columns>IsFirstOrder__c</columns>
+    <columns>IsForeign__c</columns>
+    <columns>IsOverweight__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

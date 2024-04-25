@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Adding a delay in days to prevent lead creation.</description>
+    <enableFeeds>false</enableFeeds>
+    <label>LeadPreventionDays</label>
+    <visibility>Public</visibility>
+</CustomObject>

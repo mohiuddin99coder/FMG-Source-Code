@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Order_Lines_Cancelled_Closed</fullName>
+    <columns>rstk__soline_sohdr__c</columns>
+    <columns>rootstock__Customer__c</columns>
+    <columns>NAME</columns>
+    <columns>rstk__soline_prod__c</columns>
+    <columns>rstk__soline_qtyorder__c</columns>
+    <columns>rstk__soline_price__c</columns>
+    <columns>rstk__soline_taxamount__c</columns>
+    <columns>rstk__soline_taxoverride__c</columns>
+    <columns>rstk__soline_qtyship__c</columns>
+    <columns>rstk__Amount_Shipped__c</columns>
+    <columns>rstk__soline_allshipped__c</columns>
+    <columns>rstk__soline_cancelled__c</columns>
+    <columns>rstk__soline_closed__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__soline_cancelled__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Sales Order Lines Cancelled</label>
+</ListView>

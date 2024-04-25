@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permissions for granting access to Accounts Receivable</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Accounts Receivable User</label>
+    <permissionSets>Accounts</permissionSets>
+    <permissionSets>B2C_CRM_JWT</permissionSets>
+    <permissionSets>B2C_CRM_SYNC</permissionSets>
+    <permissionSets>DOX__RootForms_admin</permissionSets>
+    <permissionSets>DOX__RootForms_user</permissionSets>
+    <permissionSets>Enable_Filters</permissionSets>
+    <permissionSets>Opportunites</permissionSets>
+    <permissionSets>Order_Summaries</permissionSets>
+    <permissionSets>RSF_Financial_System_Setup_Admin_Temp</permissionSets>
+    <permissionSets>RS_Printing_Rootforms</permissionSets>
+    <permissionSets>Run_Flows</permissionSets>
+    <permissionSets>rootstock__RS_Baseline_Lightning</permissionSets>
+    <permissionSets>rootstock__RS_Baseline_Permission_Set</permissionSets>
+    <permissionSets>rootstock__Rootstock_Custom_UI_Rules_and_Actions_Edit_V2</permissionSets>
+    <permissionSets>rootstock__Rootstock_Lightning_Toolkit_User</permissionSets>
+    <permissionSets>rstkf__ERP_Financials_Transactional_Access_1</permissionSets>
+    <permissionSets>rstkf__RSF_AR_Applications_1</permissionSets>
+    <permissionSets>rstkf__RSF_AR_Withholding_Tax_1</permissionSets>
+    <permissionSets>rstkf__RSF_Account_Receivables_1</permissionSets>
+    <permissionSets>rstkf__RSF_Baseline_Permission_Set_1</permissionSets>
+    <permissionSets>rstkf__RSF_Create_AR_transactions_1</permissionSets>
+    <permissionSets>rstkf__RSF_Customer_Receipts_1</permissionSets>
+    <permissionSets>rstkf__RSF_Customer_Statements_1</permissionSets>
+    <permissionSets>rstkf__RSF_Journal_Entries_1</permissionSets>
+    <permissionSets>rstkf__RSF_Reporting_1</permissionSets>
+    <permissionSets>rstkf__RSF_Review_Post_AR_transactions_1</permissionSets>
+    <permissionSets>rstkf__RSF_Vendor_Payments_1</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

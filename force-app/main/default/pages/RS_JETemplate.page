@@ -1,0 +1,331 @@
+<apex:page id="pg" standardController="rstkf__gljh__c" extensions="rstkf.ControllerExtnJEPrint" sideBar="true" action="{!doBeforePageLoad}" renderAs="pdf">
+<head>
+<style>
+    @page {
+        size:landscape;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    
+    }
+    html, body { height: auto; }
+    
+    body, table, th, td, div { 
+        font:normal normal 95%/1.0 arial, times new roman, verdana; 
+        
+    }
+    body {
+        counter-reset: pg 0;
+    }
+    table {
+        cell-padding: 0;
+        cell-spacing: 0;
+    }
+    #main {
+        margin:auto;
+        width:1000px;
+        background:#ffffff;
+    }
+    .headerSect {
+        width:950px;
+    }
+    .logoDiv {
+        height:95px;
+        width:190px;
+    }
+    .logoDiv img {
+        display: block;
+        height: 100%;
+    }
+    .cmpLogo {
+        max-height:90px;
+        max-width:185px;
+    }
+    .header {
+        width:480px;
+        border: 1px solid;
+        padding: 4px;
+    }
+    .formTitle {
+        float:left;
+        font-weight: bold;
+        font-size: 140%;
+        padding-left:4px;
+    }
+    .pageNumSect {
+        float:right;
+        counter-increment: pg;
+    }
+    div.pageNumSect:before {
+        content: "Page " counter(pg) " of " ;
+    
+    }
+    .headerInfo {
+        margin-top:24px;
+        padding: 2px;
+    }
+    .hdrInfoLbl {
+        font-weight: bold;
+    }
+    .hdrInfoData {
+        font-weight: normal;
+    }
+    td {
+        padding: 2px;
+    }
+    
+    .tdwrap {
+        white-space: pre-wrap; /* css-3 */
+        white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        word-wrap: break-word; /* Internet Explorer 5.5+ */
+    }
+
+    table.lines {
+        width:950px;
+        table-layout:fixed;
+        background-color: #ffffff;
+        margin-top:6px;
+        margin-right:2px;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        border-right: 1px solid;
+    }
+    table.lines td {
+        background-color:#ffffff;
+        vertical-align:top;
+        padding: 2px;
+        border-left: 1px solid black;
+    }
+    table.lines th {
+        background-color:#000000;
+        color:#ffffff;
+        padding: 3px 0px 3px 0px;
+        text-align:center;
+        font-weight:bold;
+    }
+    table.footerSect {
+        width:950px;
+        margin-top:6px;
+        margin-right:2px;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        border-right: 1px solid;
+    }
+    table.footerSect td {
+        margin-top: 6px;
+        border-left: 1px solid black;
+    }
+    table.footerSect td td {
+        border: none;
+    }
+    //230
+    .totalLabel {
+        font-weight: bold;
+        width: 90px;
+    }
+    .totalAmt {
+        text-align:right;
+        width: 140px;
+    }
+    .totalSect td {
+        border: 0;
+    }
+    .shippingComments {
+        font-weight:bold;
+    }
+    table.lines tr.lines_content_row td.col_description {
+        text-align:left;
+        font-weight:bold;
+        text-overflow:ellipsis;
+        padding-left: 1em;
+        white-space: wrap;
+    }
+    table.lines tr.lines_content_row td.col_comment {
+        text-align:left;
+        font-style:italic;
+        padding-left: 1em;
+        text-overflow:ellipsis;
+    }
+    table.lines tr.lines_content_row td.col_empty {
+        text-align:left;
+        color: #ffffff;
+    }
+    table.lines tr.lines_content_row td.col_serial {
+        text-align:left;
+        padding-left: 4em;
+        text-overflow:ellipsis;
+    }
+    table.lines tr.lines_content_row td.col_component {
+        text-align:left;
+        padding-left:1em;
+        text-overflow:ellipsis;
+    }
+    table.lines tr.lines_content_row td.col_product{
+        text-align:left;
+        text-overflow:ellipsis;
+    }
+    table.lines tr.lines_content_row td.col_uom {
+        text-align:center;
+    }
+    table.lines tr.lines_content_row td.col_shipper {
+        text-align:left;
+    }
+    table.lines tr.lines_content_row td {
+        text-align:right; 
+        overflow:hidden;
+        text-overflow:clip;
+        white-space:nowrap;
+    }
+    .footer-table{
+        padding-top:30px;
+        padding-bottom:40px;
+        padding-right:60px;
+   
+    }
+  
+    div:last {
+      page-break-after: auto;
+    }
+</style>
+</head>
+<body>
+<apex:repeat value="{!relatedTo}" var="r">
+
+<div id="main" style="page-break-after: always;}">
+<apex:repeat value="{!pages}" var="page">
+
+    <div class="headerSect" style="{!IF(page.pageNum>1,'page-break-before:always;','')}">
+ 
+      <table cellpadding="2" cellspacing="0" style="font-size:100%; width:100%;" border="0">
+        <tr>
+            <td width="100%" align="center" style="font-size: 22px;" >
+                <Strong>{!r.rstkf__gljh_cmpno__r.Name}</Strong> 
+            </td>
+        </tr>
+        <tr >
+            <td  width="100%" align="center" style="font-size: 20px;padding-top:20px " >
+               <Strong>Journal Voucher</Strong> 
+            </td>
+        </tr>
+        <tr>
+            <td width="100%" align="right" style="font-size: 18px;padding-top:20px" >
+                DATE:
+               <apex:outputText value="{0, date, MM/dd/yyyy}">
+                    <apex:param value="{!r.rstkf__gljh_date__c}" /> 
+                </apex:outputText>
+            </td>
+        </tr>
+        <tr>
+            <td width="100%" align="left" style="font-size: 18px;" >
+               <Strong>Journal Number :</Strong> {!r.name}
+            </td>
+        </tr>
+        </table>
+    </div>
+    <div  style="padding-top:30px">
+    <table border="1" style="font-size:16px" cellspacing="0" cellpadding="0" class="lines">
+        <tr  class="lines_header_row">
+          <th width="40%" >Account</th>
+          <th width="18%">Dimension</th>
+          <th width="12%" >Comment</th>
+          <th width="15%" >Debits</th>
+          <th width="15%" >Credits</th>
+        </tr>
+        <apex:repeat var="l" value="{!r.rstkf__gljds__r}">
+        <tr>
+           <td width="40%">{!l.rstkf__gljd_glacct__r.rstkf__glacct_acct__c} ({!l.rstkf__gljd_glacct__r.rstkf__glacct_desc__c})
+           </td>
+           <td width="18%">
+               <table border="0" style="font-size:16px" cellspacing="0" cellpadding="0" class="tdwrap">
+                   <tr>
+                       <td class="tdwrap"> {!l.rstkf__gljd_dimvals__r.rstk__dimval1__c} </td>
+                   </tr>
+                   <tr>    
+                       <td class="tdwrap"> {!l.rstkf__gljd_dimvals__r.rstk__dimval2__c} </td>
+                   </tr>
+                   <tr>    
+                       <td class="tdwrap"> {!l.rstkf__gljd_dimvals__r.rstk__dimval3__c} </td>
+                   </tr>
+                   <tr>    
+                       <td class="tdwrap"> {!l.rstkf__gljd_dimvals__r.rstk__dimval4__c} </td>
+                   </tr>
+                   <tr>    
+                       <td class="tdwrap"> {!l.rstkf__gljd_dimvals__r.rstk__dimval5__c} </td>
+                   </tr>
+                   <tr>    
+                       <td class="tdwrap"> {!l.rstkf__gljd_dimvals__r.rstk__dimval6__c} </td>
+                   </tr>
+                   <tr>    
+                       <td class="tdwrap"> {!l.rstkf__gljd_dimvals__r.rstk__dimval7__c} </td>
+                   </tr>
+                   <tr>    
+                       <td class="tdwrap"> {!l.rstkf__gljd_dimvals__r.rstk__dimval8__c} </td>                       
+                   </tr>
+               </table>
+           
+           </td>
+           <td width="12%">{!l.rstkf__gljd_linecomment__c}
+           </td>
+           <td width="15%" align="right" >
+           <apex:outputText value="{0, number, 0.00}">
+                    <apex:param value="{!l.rstkf__gljd_dramt__c}" /> 
+               </apex:outputText>
+           </td>
+           <td width="15%" align="right">
+           <apex:outputText value="{0,number, 0.00}">
+                    <apex:param value="{!l.rstkf__gljd_cramt__c}" /> 
+               </apex:outputText>
+           </td>
+        </tr>
+        </apex:repeat>
+        <tr>
+        <td width="40%" >
+         <STRONG>Total</STRONG>  
+        </td>
+        <td width="15%">
+        </td>
+        <td width="15%">
+        </td>
+        <td width="15%" align="right" >
+               <apex:outputText value="{0,number, 0.00}">
+                    <apex:param value="{!r.rstkf__sum_of_debit__c}" /> 
+               </apex:outputText>
+        </td>
+        <td width="15%" align="right">
+            <apex:outputText value="{0, number, 0.00}">
+                   <apex:param value="{!r.rstkf__sum_of_credit__c}" /> 
+             </apex:outputText>
+        </td>
+        </tr>
+    </table>
+    </div>
+</apex:repeat>
+    <div  style="padding-top:30px;font-size:16px">
+    <table class="footerSect" cellpadding="0" cellspacing="0" border="1">
+      <tr  width="100%">
+          <td class="footer-table">
+          Issue By
+          </td>
+          <td class="footer-table">
+          Account
+          </td>
+          <td class="footer-table">
+          Office
+          </td>
+          <td class="footer-table">
+          Responsibe
+          </td>
+          <td class="footer-table">
+          Approve By
+          </td>
+          <td class="footer-table">
+          Cashier
+          </td>
+      </tr>      
+     </table>
+     </div>
+</div>
+  </apex:repeat>   
+</body>
+</apex:page>

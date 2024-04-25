@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AcqSource__c</fullName>
+    <externalId>false</externalId>
+    <label>Acquisition Source</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>$1,000 Plus Order</fullName>
+                <default>false</default>
+                <label>$1,000 Plus Order</label>
+            </value>
+            <value>
+                <fullName>Avalara</fullName>
+                <default>false</default>
+                <label>Avalara</label>
+            </value>
+            <value>
+                <fullName>Inquiry Form Filled Out</fullName>
+                <default>false</default>
+                <label>Inquiry Form Filled Out</label>
+            </value>
+            <value>
+                <fullName>Post Platinum</fullName>
+                <default>false</default>
+                <label>Post Platinum</label>
+            </value>
+            <value>
+                <fullName>Purchasing Near Plat</fullName>
+                <default>false</default>
+                <label>Purchasing Near Plat</label>
+            </value>
+            <value>
+                <fullName>Swarovski</fullName>
+                <default>false</default>
+                <label>Swarovski</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

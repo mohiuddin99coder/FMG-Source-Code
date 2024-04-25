@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>AML - USA Patriot Act Paperwork</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AML - No Order Pending</name>
+    <pageDevName>AML</pageDevName>
+    <style>none</style>
+    <subject>Platinum Partners – XXXX at Fire Mountain Gems and Bead</subject>
+    <textOnly>Dear XXX
+
+I hope this email finds you well!
+
+The USA PATRIOT Act (under the Bank Secrecy Act of 1970) requires gem and jewelry businesses to maintain a formal Anti-Money Laundering (AML) Program.
+
+To meet our compliance obligations under the USA PATRIOT Act, and other regulatory requirements of the United States we must ask customers who purchase gemstones and precious metal items to complete an anti-money laundering form. The form is attached above and we ask that it be completed and returned back to us to ensure no delays of any future orders.
+
+The information needed besides name, address, and phone number, and either your business license or driver’s license number. You may check NO about instituting an AML program of your own. Please email the filled out and signed form, with a copy of your driver’s license or business license back to me. 
+
+For your reference, below are some links regarding the Anti-Money Laundering Compliance Act:
+
+https://www.finra.org/industry/2017-report-exam-findings/aml-program &lt; https://www.finra.org/industry/2017-report-exam-findings/aml-program &gt; 
+
+https://www.fincen.gov/resources/statutes-regulations/guidance/frequently-asked-questions-0 &lt; https://www.fincen.gov/resources/statutes-regulations/guidance/frequently-asked-questions-0 &gt;</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

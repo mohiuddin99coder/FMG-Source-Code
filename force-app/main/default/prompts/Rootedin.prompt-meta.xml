@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Rootedin</masterLabel>
+    <promptVersions>
+        <actionButtonLabel>Register Here</actionButtonLabel>
+        <actionButtonLink>https://rootedin.rootstock.com/contact/</actionButtonLink>
+        <body>&lt;p&gt;The Future of Manufacturing on the Salesforce Platform &lt;/p&gt;&lt;p&gt;March 25-27 • New Orleans&lt;/p&gt;&lt;p&gt;Keynotes featuring industry leaders&lt;/p&gt;&lt;p&gt;Edu Breakout Sessions&lt;/p&gt;&lt;p&gt;Rootstock Training Day Mar’25&lt;/p&gt;&lt;p&gt;Network with powers users and partners&amp;nbsp;&lt;/p&gt;&lt;p&gt;Code ERP100 For $100 Off&lt;/p&gt;</body>
+        <delayDays>1</delayDays>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>TopCenter</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <endDate>2024-03-22</endDate>
+        <experience>Lightning</experience>
+        <isPublished>true</isPublished>
+        <masterLabel>Rootedin</masterLabel>
+        <publishedDate>2024-02-25</publishedDate>
+        <shouldDisplayActionButton>true</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
+        <startDate>2024-02-22</startDate>
+        <targetPageKey1>home</targetPageKey1>
+        <targetPageType>standard__namedPage</targetPageType>
+        <themeColor>Theme1</themeColor>
+        <themeSaturation>Dark</themeSaturation>
+        <timesToDisplay>3</timesToDisplay>
+        <title>Rooted-In Manufacturing Conference</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+</Prompt>

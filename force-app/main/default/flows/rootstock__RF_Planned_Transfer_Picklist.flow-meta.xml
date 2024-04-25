@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <description>Print RF Planned Transfer Picklist using Rootform app</description>
+    <environments>Default</environments>
+    <label>RF Planned Transfer Picklist</label>
+    <processMetadataValues>
+        <name>AssociatedRecord</name>
+        <value/>
+    </processMetadataValues>
+    <processType>Flow</processType>
+</Flow>

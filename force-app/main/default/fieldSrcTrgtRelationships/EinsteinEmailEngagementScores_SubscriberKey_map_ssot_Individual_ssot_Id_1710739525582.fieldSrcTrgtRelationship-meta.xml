@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSrcTrgtRelationship xmlns="http://soap.sforce.com/2006/04/metadata">
+    <definitionCreationType>Custom</definitionCreationType>
+    <lookupFieldName>EinsteinEmailEngagementScores__dlm.rel_1710739525582_end__c</lookupFieldName>
+    <masterLabel>EinsteinEmailEngagementScores_SubscriberKey_map_ssot_Individual_ssot_Id_1710739525582</masterLabel>
+    <relationshipCardinality>ManyToOne</relationshipCardinality>
+    <sourceFieldName>EinsteinEmailEngagementScores__dlm.SubscriberKey__c</sourceFieldName>
+    <targetFieldName>ssot__Individual__dlm.ssot__Id__c</targetFieldName>
+</FieldSrcTrgtRelationship>

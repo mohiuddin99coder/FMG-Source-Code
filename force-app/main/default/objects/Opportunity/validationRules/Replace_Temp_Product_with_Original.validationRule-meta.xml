@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Replace_Temp_Product_with_Original</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(StageName,&quot;Commit Order&quot;),
+ISPICKVAL(PRIORVALUE(StageName),&quot;Awaiting for Inventory&quot;),
+Replace_Temporary_Product_with_Original__c == False,
+Special_Order_Product_Added__c == True
+)</errorConditionFormula>
+    <errorMessage>Please Replace the Temporary Product (Special Order Product) with Original Product.</errorMessage>
+</ValidationRule>

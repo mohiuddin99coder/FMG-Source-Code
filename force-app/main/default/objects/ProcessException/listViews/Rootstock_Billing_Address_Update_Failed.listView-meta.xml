@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rootstock_Billing_Address_Update_Failed</fullName>
+    <columns>Name</columns>
+    <columns>CreatedDate</columns>
+    <columns>Status</columns>
+    <columns>Category</columns>
+    <columns>Severity</columns>
+    <columns>Priority</columns>
+    <columns>Owner</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Message</field>
+        <operation>equals</operation>
+        <value>Rootstock Billing Address Update Failed</value>
+    </filters>
+    <label>Rootstock Billing Address Update Failed</label>
+</ListView>

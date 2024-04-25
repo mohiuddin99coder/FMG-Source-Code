@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>contivio_link_to_call</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>false</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>200</height>
+    <isResizable>false</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Contivio Link To Call</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>https://usweb1.contivio.com/Contivio.ADT.Web.Site/10.0.7/cmd.htm?action=callUpdateCustomParam&amp;callParamID=CRMAccountID&amp;callParamValue={!Account.Id}</url>
+    <width>200</width>
+</WebLink>

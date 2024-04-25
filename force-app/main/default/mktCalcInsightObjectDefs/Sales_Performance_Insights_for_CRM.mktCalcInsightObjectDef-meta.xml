@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MktCalcInsightObjectDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <creationType>Custom</creationType>
+    <description>This query retrieves various aggregated performance metrics related to individuals, such as total amounts spent over different periods, percentage changes year over year, and lifetime performance indicators, with data joined from various tables.</description>
+    <expression>SELECT
+UnifiedssotIndividualTun1__dlm.ssot__Id__c as UnifiedIndividualID__c,
+SUM(CASE WHEN UnifiedLink.PlatinumPeriodTotalAmount &gt; 0 THEN UnifiedLink.PlatinumPeriodTotalAmount ELSE 0 END) as PlatinumPeriodTotalAmount__c,
+SUM(CASE WHEN UnifiedLink.PlatinumPriorPeriodTotalAmount &gt; 0 THEN UnifiedLink.PlatinumPriorPeriodTotalAmount ELSE 0 END) as PlatinumPriorPeriodTotalAmount__c,
+SUM(DISTINCT(CASE WHEN UnifiedLink.PlatinumPeriodTotalAmount &gt;0 THEN UnifiedLink.PlatinumPeriodTotalAmount ELSE 0 END)) + SUM(DISTINCT(CASE WHEN UnifiedLink.PlatinumPriorPeriodTotalAmount &gt;0 THEN UnifiedLink.PlatinumPriorPeriodTotalAmount ELSE 0 END)) as PlatinumTotalProgram__c,
+SUM(CASE WHEN UnifiedLink.Perf365DaysTotalAmount &gt;0 THEN UnifiedLink.Perf365DaysTotalAmount ELSE 0 END) as last365DaysPerfAmount__c,
+
+
+SUM(CASE WHEN UnifiedLink.PlatinumPriorPeriodTotalAmount &gt; 0 THEN UnifiedLink.LYTYAmnt*100 ELSE 100 END) as LYTYPercent__c,
+
+UnifiedLink.IndividualId AS IndividualId__c,
+
+SUM(CASE WHEN UnifiedLink.ThirtySixMonthsTotalAmount &gt; 0 THEN UnifiedLink.ThirtySixMonthsTotalAmount ELSE 0 END) as last36MonthPerfAmount__c,
+SUM(CASE WHEN UnifiedLink.SixtyMonthTotalAmount &gt; 0 THEN UnifiedLink.SixtyMonthTotalAmount ELSE 0 END) as last60MonthPerfAmount__c,
+SUM(CASE WHEN UnifiedLink.TwentyFourMonthsTotalAmount &gt; 0 THEN UnifiedLink.TwentyFourMonthsTotalAmount ELSE 0 END) as last24MonthPerfAmount__c,
+SUM(CASE WHEN UnifiedLink.last90DaysTotalAmount &gt; 0 THEN UnifiedLink.last90DaysTotalAmount ELSE 0 END) as last90DaysPerfAmount__c,
+SUM(CASE WHEN UnifiedLink.GCCTotalAmount &gt; 0 THEN UnifiedLink.GCCTotalAmount ELSE 0 END) as GCCTotalAmount__c,
+
+ SUM(DISTINCT(CASE WHEN ISNULL(AccountLegacyLifetimeAmount.Legacy_Lifetime) THEN 0  ELSE AccountLegacyLifetimeAmount.Legacy_Lifetime END))
++ SUM(DISTINCT(CASE WHEN ISNULL(UnifiedLink.LifetimeTotalAmount) THEN 0 ELSE UnifiedLink.LifetimeTotalAmount END))
+as LifetimePerfAmount__c,
+
+ SUM(DISTINCT(CASE WHEN ISNULL(AccountLegacyLifetimeAmount.Legacy_Lifetime_Orders) THEN 0  ELSE AccountLegacyLifetimeAmount.Legacy_Lifetime_Orders END))
++ SUM(DISTINCT(CASE WHEN ISNULL(UnifiedLink.LifetimeOfCountOrders) THEN 0 ELSE UnifiedLink.LifetimeOfCountOrders END))
+as LifetimeCountOrders__c
+
+FROM UnifiedssotIndividualTun1__dlm 
+
+JOIN
+(SELECT UnifiedLinkssotIndividualTun1__dlm.UnifiedRecordId__c as UnifiedIndividualID,
+MAX(PlatinumPeriod.PlatinumPeriodTotalAmount) as PlatinumPeriodTotalAmount,
+MAX(PlatinumPriorPeriod.PlatinumPriorPeriodTotalAmount) as PlatinumPriorPeriodTotalAmount,
+MAX(Perf365Days.Perf365DaysTotalAmount) as Perf365DaysTotalAmount,
+MAX(Lifetime.LifetimeTotalAmount) as LifetimeTotalAmount,
+MAX(LifetimeOfCountOrders.LifetimeOfCountOrders) as LifetimeOfCountOrders,
+
+(MAX(PlatinumPeriod.PlatinumPeriodTotalAmount) - MAX(PlatinumPriorPeriod.PlatinumPriorPeriodTotalAmount)) / MAX(PlatinumPriorPeriod.PlatinumPriorPeriodTotalAmount) as LYTYAmnt,
+
+UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c AS IndividualId,
+
+MAX(ThirtySix.ThirtySixMonthsTotalAmount) as ThirtySixMonthsTotalAmount,
+MAX(SixtyMonths.SixtyMonthTotalAmount) as SixtyMonthTotalAmount,
+MAX(TwentyFour.TwentyFourMonthsTotalAmount) as TwentyFourMonthsTotalAmount,
+MAX(last90Days.last90DaysTotalAmount) as last90DaysTotalAmount,
+MAX(GCCQuery.GCCTotalAmount) as GCCTotalAmount
+
+FROM UnifiedLinkssotIndividualTun1__dlm
+
+LEFT JOIN (SELECT ssot__SalesOrder__dlm.ssot__BillToContactId__c as ContactId,
+(SUM (CASE WHEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c &gt;0 THEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c ELSE 0 END) - SUM (CASE WHEN GCCAmount.GCCTotalAmount &gt; 0 THEN GCCAmount.GCCTotalAmount ELSE 0 END) - SUM (CASE WHEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c &gt;0 THEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c ELSE 0 END)) as PlatinumPeriodTotalAmount
+FROM ssot__SalesOrder__dlm
+LEFT JOIN 
+(select ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c AS SalesOrderId
+,SUM (CASE WHEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c &gt;0 THEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c ELSE 0 END) as GCCTotalAmount
+FROM ssot__SalesOrderProduct__dlm
+WHERE ssot__SalesOrderProduct__dlm.ssot__OrderProductNumber__c = &apos;eGiftCertificate&apos;
+GROUP BY ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c
+) AS GCCAmount ON GCCAmount.SalesOrderId = ssot__SalesOrder__dlm.ssot__Id__c 
+WHERE (YEAR(CURRENT_DATE()) - YEAR(ssot__SalesOrder__dlm.CheckoutDate__c)=1 AND MONTH (ssot__SalesOrder__dlm.CheckoutDate__c) &gt;=7) OR (YEAR(CURRENT_DATE()) - YEAR(ssot__SalesOrder__dlm.CheckoutDate__c)=0 AND ssot__SalesOrder__dlm.CheckoutDate__c &lt;= CURRENT_DATE()) 
+GROUP BY ssot__SalesOrder__dlm.ssot__BillToContactId__c) as PlatinumPeriod ON UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c = PlatinumPeriod.ContactId
+
+
+LEFT JOIN (SELECT ssot__SalesOrder__dlm.ssot__BillToContactId__c as ContactId,
+SUM (CASE WHEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c &gt;0 THEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c ELSE 0 END)  - SUM (CASE WHEN GCCAmount.GCCTotalAmount &gt; 0 THEN GCCAmount.GCCTotalAmount ELSE 0 END) - SUM (CASE WHEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c &gt;0 THEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c ELSE 0 END) as PlatinumPriorPeriodTotalAmount
+FROM ssot__SalesOrder__dlm
+LEFT JOIN 
+(select ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c AS SalesOrderId
+,SUM (CASE WHEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c &gt;0 THEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c ELSE 0 END) as GCCTotalAmount
+FROM ssot__SalesOrderProduct__dlm
+WHERE ssot__SalesOrderProduct__dlm.ssot__OrderProductNumber__c = &apos;eGiftCertificate&apos;
+GROUP BY ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c
+) AS GCCAmount ON GCCAmount.SalesOrderId = ssot__SalesOrder__dlm.ssot__Id__c
+WHERE (YEAR(CURRENT_DATE()) - YEAR(ssot__SalesOrder__dlm.CheckoutDate__c)=2 AND MONTH (ssot__SalesOrder__dlm.CheckoutDate__c) &gt;=7) OR (YEAR(CURRENT_DATE()) - YEAR(ssot__SalesOrder__dlm.CheckoutDate__c)=1 AND MONTH (ssot__SalesOrder__dlm.CheckoutDate__c) &lt;= 6)
+GROUP BY ssot__SalesOrder__dlm.ssot__BillToContactId__c) as PlatinumPriorPeriod ON UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c = PlatinumPriorPeriod.ContactId
+
+
+LEFT JOIN (SELECT ssot__SalesOrder__dlm.ssot__BillToContactId__c as ContactId,
+SUM (CASE WHEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c &gt;0 THEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c ELSE 0 END)  - SUM(CASE WHEN GCCAmount.GCCTotalAmount &gt; 0 THEN GCCAmount.GCCTotalAmount ELSE 0 END) - SUM(CASE WHEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c &gt;0 THEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c ELSE 0 END)  as Perf365DaysTotalAmount
+FROM ssot__SalesOrder__dlm
+LEFT JOIN 
+(select ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c AS SalesOrderId
+,SUM (CASE WHEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c &gt;0 THEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c ELSE 0 END) as GCCTotalAmount
+FROM ssot__SalesOrderProduct__dlm
+WHERE ssot__SalesOrderProduct__dlm.ssot__OrderProductNumber__c = &apos;eGiftCertificate&apos;
+GROUP BY ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c
+) AS GCCAmount ON GCCAmount.SalesOrderId = ssot__SalesOrder__dlm.ssot__Id__c
+WHERE DATEDIFF(CURRENT_DATE(), ssot__SalesOrder__dlm.CheckoutDate__c) &lt;= 365
+GROUP BY ssot__SalesOrder__dlm.ssot__BillToContactId__c) as Perf365Days ON UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c = Perf365Days.ContactId
+
+
+LEFT JOIN (SELECT ssot__SalesOrder__dlm.ssot__BillToContactId__c as ContactId,
+SUM (CASE WHEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c &gt;0 THEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c ELSE 0 END)   - SUM (CASE WHEN GCCAmount.GCCTotalAmount &gt; 0 THEN GCCAmount.GCCTotalAmount ELSE 0 END) - SUM (CASE WHEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c &gt;0 THEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c ELSE 0 END) as LifetimeTotalAmount
+FROM ssot__SalesOrder__dlm
+LEFT JOIN 
+(select ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c AS SalesOrderId
+,SUM (CASE WHEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c &gt;0 THEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c ELSE 0 END) as GCCTotalAmount
+FROM ssot__SalesOrderProduct__dlm
+WHERE ssot__SalesOrderProduct__dlm.ssot__OrderProductNumber__c = &apos;eGiftCertificate&apos;
+GROUP BY ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c
+) AS GCCAmount ON GCCAmount.SalesOrderId = ssot__SalesOrder__dlm.ssot__Id__c
+JOIN Account__dlm
+ON Account__dlm.Id__c = ssot__SalesOrder__dlm.ssot__SoldToCustomerId__c
+WHERE ssot__SalesOrder__dlm.CheckoutDate__c &gt;= Account__dlm.Legacy_As_Of_Date_c__c
+ AND (ssot__SalesOrder__dlm.CheckoutDate__c &lt;= CURRENT_DATE())
+GROUP BY ssot__SalesOrder__dlm.ssot__BillToContactId__c) as Lifetime
+ON UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c = Lifetime.ContactId
+
+
+
+LEFT JOIN (SELECT ssot__SalesOrder__dlm.ssot__BillToContactId__c as ContactId,
+COUNT (ssot__SalesOrder__dlm.ssot__BillToContactId__c) as LifetimeOfCountOrders
+FROM ssot__SalesOrder__dlm
+JOIN Account__dlm
+ON Account__dlm.Id__c = ssot__SalesOrder__dlm.ssot__SoldToCustomerId__c
+WHERE ssot__SalesOrder__dlm.CheckoutDate__c &gt;= Account__dlm.Legacy_As_Of_Date_c__c
+AND (ssot__SalesOrder__dlm.CheckoutDate__c &lt;= CURRENT_DATE())
+GROUP BY ssot__SalesOrder__dlm.ssot__BillToContactId__c) as LifetimeOfCountOrders
+ON UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c = LifetimeOfCountOrders.ContactId
+
+
+LEFT JOIN (SELECT ssot__SalesOrder__dlm.ssot__BillToContactId__c as ContactId,
+SUM (CASE WHEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c &gt;0 THEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c ELSE 0 END)   - SUM (CASE WHEN GCCAmount.GCCTotalAmount &gt; 0 THEN GCCAmount.GCCTotalAmount ELSE 0 END) - SUM (CASE WHEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c &gt;0 THEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c ELSE 0 END) as ThirtySixMonthsTotalAmount
+FROM ssot__SalesOrder__dlm
+LEFT JOIN 
+(select ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c AS SalesOrderId
+,SUM (CASE WHEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c &gt;0 THEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c ELSE 0 END) as GCCTotalAmount
+FROM ssot__SalesOrderProduct__dlm
+WHERE ssot__SalesOrderProduct__dlm.ssot__OrderProductNumber__c = &apos;eGiftCertificate&apos;
+GROUP BY ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c
+) AS GCCAmount ON GCCAmount.SalesOrderId = ssot__SalesOrder__dlm.ssot__Id__c
+WHERE DATEDIFF(CURRENT_DATE(),ssot__SalesOrder__dlm.CheckoutDate__c) &lt;= 1080
+ 
+GROUP BY ssot__SalesOrder__dlm.ssot__BillToContactId__c) as ThirtySix ON UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c = ThirtySix.ContactId
+
+LEFT JOIN (SELECT ssot__SalesOrder__dlm.ssot__BillToContactId__c as ContactId,
+SUM (CASE WHEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c &gt;0 THEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c ELSE 0 END)  - SUM (CASE WHEN GCCAmount.GCCTotalAmount &gt; 0 THEN GCCAmount.GCCTotalAmount ELSE 0 END) - SUM (CASE WHEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c &gt;0 THEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c ELSE 0 END) as TwentyFourMonthsTotalAmount
+FROM ssot__SalesOrder__dlm
+LEFT JOIN 
+(select ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c AS SalesOrderId
+,SUM (CASE WHEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c &gt;0 THEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c ELSE 0 END) as GCCTotalAmount
+FROM ssot__SalesOrderProduct__dlm
+WHERE ssot__SalesOrderProduct__dlm.ssot__OrderProductNumber__c = &apos;eGiftCertificate&apos;
+GROUP BY ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c
+) AS GCCAmount ON GCCAmount.SalesOrderId = ssot__SalesOrder__dlm.ssot__Id__c
+WHERE DATEDIFF(CURRENT_DATE(),ssot__SalesOrder__dlm.CheckoutDate__c) &lt;= 730
+ 
+GROUP BY ssot__SalesOrder__dlm.ssot__BillToContactId__c) as TwentyFour ON UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c = TwentyFour.ContactId
+
+LEFT JOIN (SELECT ssot__SalesOrder__dlm.ssot__BillToContactId__c as ContactId,
+SUM (CASE WHEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c &gt;0 THEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c ELSE 0 END)   - SUM (CASE WHEN GCCAmount.GCCTotalAmount &gt; 0 THEN GCCAmount.GCCTotalAmount ELSE 0 END) - SUM (CASE WHEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c &gt;0 THEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c ELSE 0 END) as SixtyMonthTotalAmount
+FROM ssot__SalesOrder__dlm
+LEFT JOIN 
+(select ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c AS SalesOrderId
+,SUM (CASE WHEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c &gt;0 THEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c ELSE 0 END) as GCCTotalAmount
+FROM ssot__SalesOrderProduct__dlm
+WHERE ssot__SalesOrderProduct__dlm.ssot__OrderProductNumber__c = &apos;eGiftCertificate&apos;
+GROUP BY ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c
+) AS GCCAmount ON GCCAmount.SalesOrderId = ssot__SalesOrder__dlm.ssot__Id__c
+WHERE DATEDIFF(CURRENT_DATE(),ssot__SalesOrder__dlm.CheckoutDate__c) &lt;= 1800
+
+GROUP BY ssot__SalesOrder__dlm.ssot__BillToContactId__c) as SixtyMonths ON UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c = SixtyMonths.ContactId
+
+LEFT JOIN (SELECT ssot__SalesOrder__dlm.ssot__BillToContactId__c as ContactId,
+SUM (CASE WHEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c &gt;0 THEN ssot__SalesOrder__dlm.ssot__AdjustedTotalProductAmount__c ELSE 0 END)   - SUM (CASE WHEN GCCAmount.GCCTotalAmount &gt; 0 THEN GCCAmount.GCCTotalAmount ELSE 0 END) - SUM (CASE WHEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c &gt;0 THEN ssot__SalesOrder__dlm.Order_Product_Adjustments__c ELSE 0 END) as last90DaysTotalAmount
+FROM ssot__SalesOrder__dlm
+LEFT JOIN 
+(select ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c AS SalesOrderId
+,SUM (CASE WHEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c &gt;0 THEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c ELSE 0 END) as GCCTotalAmount
+FROM ssot__SalesOrderProduct__dlm
+WHERE ssot__SalesOrderProduct__dlm.ssot__OrderProductNumber__c = &apos;eGiftCertificate&apos;
+GROUP BY ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c
+) AS GCCAmount ON GCCAmount.SalesOrderId = ssot__SalesOrder__dlm.ssot__Id__c
+WHERE DATEDIFF(CURRENT_DATE(),ssot__SalesOrder__dlm.CheckoutDate__c) &lt;= 90
+ 
+GROUP BY ssot__SalesOrder__dlm.ssot__BillToContactId__c) as last90Days ON UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c = last90Days.ContactId
+
+LEFT JOIN (SELECT ssot__SalesOrder__dlm.ssot__BillToContactId__c as ContactId,
+SUM (CASE WHEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c &gt;0 THEN ssot__SalesOrderProduct__dlm.ssot__TotalLineAmount__c ELSE 0 END)  as GCCTotalAmount
+FROM ssot__SalesOrder__dlm
+JOIN ssot__SalesOrderProduct__dlm ON ssot__SalesOrderProduct__dlm.ssot__SalesOrderId__c = ssot__SalesOrder__dlm.ssot__Id__c
+WHERE ssot__SalesOrderProduct__dlm.ssot__OrderProductNumber__c = &apos;eGiftCertificate&apos;
+ 
+GROUP BY ssot__SalesOrder__dlm.ssot__BillToContactId__c) as GCCQuery ON UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c = GCCQuery.ContactId
+
+GROUP BY UnifiedLinkssotIndividualTun1__dlm.UnifiedRecordId__c,UnifiedLinkssotIndividualTun1__dlm.SourceRecordId__c) as UnifiedLink ON UnifiedssotIndividualTun1__dlm.ssot__Id__c = UnifiedLink.UnifiedIndividualID
+
+JOIN(
+SELECT Account__dlm.Id__c as AccountID,
+MAX(Account__dlm.Legacy_Lifetime_c__c)  as Legacy_Lifetime,
+MAX(Account__dlm.of_Legacy_Lifetime_Orders_c__c) AS Legacy_Lifetime_Orders
+FROM Account__dlm
+GROUP BY Account__dlm.Id__c
+) AS AccountLegacyLifetimeAmount
+ON AccountLegacyLifetimeAmount.AccountID = UnifiedssotIndividualTun1__dlm.Account_ID__c
+
+GROUP BY UnifiedssotIndividualTun1__dlm.ssot__Id__c,UnifiedLink.IndividualId</expression>
+    <masterLabel>Sales Performance Insights for CRM</masterLabel>
+</MktCalcInsightObjectDef>

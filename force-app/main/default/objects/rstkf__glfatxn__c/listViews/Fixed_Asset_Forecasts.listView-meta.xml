@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fixed_Asset_Forecasts</fullName>
+    <columns>rstkf__glfatxn_glfa__c</columns>
+    <columns>NAME</columns>
+    <columns>rstkf__glfatxn_txntype__c</columns>
+    <columns>rstkf__glfatxn_txndate__c</columns>
+    <columns>rstkf__glfatxn_acctdate__c</columns>
+    <columns>rstkf__glfatxn_amount__c</columns>
+    <columns>rstkf__glfatxn_deprmethod__c</columns>
+    <columns>rstkf__glfatxn_thrudate__c</columns>
+    <columns>rstkf__glfatxn_deprcalc__c</columns>
+    <columns>rstkf__glfatxn_convertfcst__c</columns>
+    <columns>rstkf__glfatxn_posted__c</columns>
+    <columns>rstkf__glfatxn_depryear__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstkf__glfatxn_txntype__c</field>
+        <operation>equals</operation>
+        <value>Forecast</value>
+    </filters>
+    <label>Fixed Asset Forecasts</label>
+</ListView>

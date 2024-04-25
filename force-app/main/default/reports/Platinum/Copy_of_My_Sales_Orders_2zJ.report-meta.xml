@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>rstk__sohdr__c.rstk__sohdr_custno__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>rstk__sohdr__c.rstk__sohdr_ordertotal__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>rstk__sohdr__c.rstk__sohdr_closed__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>rstk__sohdr__c.rstk__sohdr_cancelled__c</field>
+    </columns>
+    <columns>
+        <field>rstk__sohdr__c.rstk__sohdr_orderdate__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Copy of My Sales Orders</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$rstk__sohdr__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>rstk__sohdr__c.rstk__sohdr_ackdate__c</dateColumn>
+        <interval>INTERVAL_LAST30</interval>
+    </timeFrameFilter>
+</Report>

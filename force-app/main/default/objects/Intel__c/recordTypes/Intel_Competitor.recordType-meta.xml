@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intel_Competitor</fullName>
+    <active>false</active>
+    <label>Intel Competitor</label>
+    <picklistValues>
+        <picklist>Competitive__c</picklist>
+        <values>
+            <fullName>AMAZON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ARTBEADS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEADALON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHAIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FUSION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HELBY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IMPORT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LIMABEADS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTHERWHO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RIOGRANDE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SHIPWRECK</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product__c</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason__c</picklist>
+        <values>
+            <fullName>Items Not Branded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Out of Stock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality or Grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unique of One of a Kind</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Vendor__c</picklist>
+        <values>
+            <fullName>Amazon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Art Beads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beadsmith%2FHelby</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chain Store</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Importing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lima Beads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rio Grande</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

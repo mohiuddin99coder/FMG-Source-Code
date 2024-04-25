@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectSourceTargetMap xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <creationType>Custom</creationType>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>ProductCategoryProduct_bkcr_prd.catalogId__c</sourceField>
+        <sourceFormula>catalogId</sourceFormula>
+        <targetField>ProductCategoryProduct_bkcr_prd__dll.catalogId__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>ProductCategoryProduct_bkcr_prd.productId__c</sourceField>
+        <sourceFormula>productId</sourceFormula>
+        <targetField>ProductCategoryProduct_bkcr_prd__dll.productId__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>ProductCategoryProduct_bkcr_prd.productCategoryId__c</sourceField>
+        <sourceFormula>productCategoryId</sourceFormula>
+        <targetField>ProductCategoryProduct_bkcr_prd__dll.productCategoryId__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>System</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <sourceFormula>&quot;ProductCategoryProduct&quot;</sourceFormula>
+        <targetField>ProductCategoryProduct_bkcr_prd__dll.DataSourceObject__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>System</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <sourceFormula>&quot;Commerce_bkcr_prd&quot;</sourceFormula>
+        <targetField>ProductCategoryProduct_bkcr_prd__dll.DataSource__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <sourceFormula>CONCAT(sourceField[&apos;catalogId&apos;], &quot;.&quot;, sourceField[&apos;productCategoryId&apos;], &quot;.&quot;, sourceField[&apos;productId&apos;])</sourceFormula>
+        <targetField>ProductCategoryProduct_bkcr_prd__dll.unique_id__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>ProductCategoryProduct_bkcr_prd.tenantId__c</sourceField>
+        <sourceFormula>tenantId</sourceFormula>
+        <targetField>ProductCategoryProduct_bkcr_prd__dll.tenantId__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>ProductCategoryProduct_bkcr_prd.classification__c</sourceField>
+        <sourceFormula>classification</sourceFormula>
+        <targetField>ProductCategoryProduct_bkcr_prd__dll.classification__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <sourceFormula>sourceField[&apos;tenantId&apos;]</sourceFormula>
+        <targetField>ProductCategoryProduct_bkcr_prd__dll.instanceId__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>ProductCategoryProduct_bkcr_prd.version__c</sourceField>
+        <sourceFormula>version</sourceFormula>
+        <targetField>ProductCategoryProduct_bkcr_prd__dll.version__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>ProductCategoryProduct_bkcr_prd.primary__c</sourceField>
+        <sourceFormula>primary</sourceFormula>
+        <targetField>ProductCategoryProduct_bkcr_prd__dll.primary__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <sourceFormula>CONCAT(sourceField[&apos;catalogId&apos;], &quot;.&quot;, sourceField[&apos;productCategoryId&apos;])</sourceFormula>
+        <targetField>ProductCategoryProduct_bkcr_prd__dll.unique_productCategoryId__c</targetField>
+    </fieldSourceTargetMaps>
+    <masterLabel>ProductCategoryProduct_bkcr_prd_map_ProductCategoryProduct_bkcr_prd_1708939170213</masterLabel>
+    <sourceObjectName>ProductCategoryProduct_bkcr_prd</sourceObjectName>
+    <targetObjectName>ProductCategoryProduct_bkcr_prd__dll</targetObjectName>
+</ObjectSourceTargetMap>

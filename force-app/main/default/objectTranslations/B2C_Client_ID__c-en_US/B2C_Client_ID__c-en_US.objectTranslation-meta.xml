@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>B2C Client ID</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>B2C Client IDs</value>
+    </caseValues>
+    <layouts>
+        <layout>B2C Client ID Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Retrieve_a_B2C_AuthToken</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Verify_JWT_Certificate</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

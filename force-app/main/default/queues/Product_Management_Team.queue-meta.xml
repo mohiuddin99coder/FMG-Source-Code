@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>Product Management Team</name>
+    <queueMembers>
+        <users>
+            <user>puckettc@firemtn.com</user>
+            <user>wenclk@firemtn.com</user>
+            <user>colemans@firemtn.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>

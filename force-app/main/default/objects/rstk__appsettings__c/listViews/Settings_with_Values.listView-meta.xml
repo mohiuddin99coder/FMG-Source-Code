@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Settings_with_Values</fullName>
+    <columns>NAME</columns>
+    <columns>OBJECT_ID</columns>
+    <columns>rstk__desc__c</columns>
+    <columns>rstk__value__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Settings with Values</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>Admin</group>
+    </sharedTo>
+</ListView>

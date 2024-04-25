@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Activation_Failure_Notification</name>
+        <label>Activation Failure Notification</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <stringValue>servicedesk2@firemtn.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>it_helpdesk@firemtn.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Data Cloud Alert: Activation {!$Record.Name} has Failed!</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>ActivationFailure</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Activation Failure Notification {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Activation Failure Notifications</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Activation_Failure_Notification</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>LastPublishStatus</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>ERROR</stringValue>
+            </value>
+        </filters>
+        <object>MarketSegmentActivation</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>ActivationFailure</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Activation: {!$Record.Name} has encountered a failure!  
+
+Possible Issues &amp; Solutions: 
+
+1. Issue: Required fields don&apos;t have a value 
+   Solution: Complete the required fields. 
+
+2. Issue: Invalid email address.
+   Solution: Ensure the email address contains &quot;@&quot; and &quot;.&quot; and is fewer than 254 characters. 
+
+3. Issue: Field not found.
+    Solution: Determine if the field still exists in the data extension. Modify the field mapping if the data extension schema changes. 
+
+Steps to Fix / Check: Go to Activation Tab &gt;&gt; Select Activation Name &gt;&gt; Scroll Down and Check to Publish Status &gt;&gt; Click on Error log to know what needs to be fixed.  
+
+Product-Level Concerns: There are ongoing issues being addressed by the Data Cloud Product Team. If you don&apos;t see a specific issue listed above, please visit the following link for more information: https://issues.salesforce.com/</text>
+    </textTemplates>
+</Flow>

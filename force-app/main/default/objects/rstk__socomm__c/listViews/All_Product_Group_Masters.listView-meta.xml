@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Product_Group_Masters</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__socomm_comcod__c</columns>
+    <columns>rstk__socomm_descr__c</columns>
+    <columns>rstk__socomm_prodtype__c</columns>
+    <columns>rstk__socomm_dimval__c</columns>
+    <columns>rstk__socomm_firm__c</columns>
+    <columns>rstk__socomm_overshipok__c</columns>
+    <columns>rstk__socomm_cosacct__c</columns>
+    <columns>rstk__socomm_salesacct__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Product Group Masters</label>
+</ListView>

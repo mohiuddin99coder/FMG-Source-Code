@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invalid_Star_Level_Downgrade</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+ OR(
+  ISPICKVAL(Type,&apos;Platinum&apos;),
+  ISPICKVAL(Type,&apos;Platinum Prospect&apos;)
+ ),
+ OR(
+  AND(
+   OR(
+    ISPICKVAL(Discount_Level__c ,&apos;4 Star&apos;),
+    ISPICKVAL(Discount_Level__c ,&apos;3 Star&apos;),
+    ISPICKVAL(Discount_Level__c ,&apos;P4&apos;)
+   ),
+   ISPICKVAL(PRIORVALUE(Discount_Level__c ), &apos;5 Star&apos;)
+  ),
+  AND(
+   OR(
+    ISPICKVAL(Discount_Level__c ,&apos;3 Star&apos;),
+    ISPICKVAL(Discount_Level__c ,&apos;P4&apos;)
+   ),
+   ISPICKVAL(PRIORVALUE(Discount_Level__c ),&apos;4 Star&apos;)
+  ),
+  AND(
+   ISPICKVAL(Discount_Level__c ,&apos;P4&apos;),
+   ISPICKVAL(PRIORVALUE(Discount_Level__c ),&apos;3 Star&apos;)
+  )
+ )
+)</errorConditionFormula>
+    <errorDisplayField>of_Legacy_Lifetime_Orders__c</errorDisplayField>
+    <errorMessage>Invalid Star Level Downgrade.</errorMessage>
+</ValidationRule>

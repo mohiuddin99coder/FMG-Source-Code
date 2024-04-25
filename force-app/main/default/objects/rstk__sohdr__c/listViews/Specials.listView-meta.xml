@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Specials</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__sohdr_contact__c</columns>
+    <columns>rstk__sohdr_div__c</columns>
+    <columns>rstk__sohdr_shiptoaddr__c</columns>
+    <columns>rstk__sohdr_order__c</columns>
+    <columns>rstk__sohdr_ordertotal__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>rstk__sohdr_cancelled__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__sohdr_order__c</field>
+        <operation>contains</operation>
+        <value>RS</value>
+    </filters>
+    <label>Specials</label>
+</ListView>

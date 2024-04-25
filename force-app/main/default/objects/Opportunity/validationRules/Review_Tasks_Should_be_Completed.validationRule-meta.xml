@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Review_Tasks_Should_be_Completed</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+AND(
+Special_Price_Order__c == True,
+Reviewed_By_Both_Pricing_Product_Group__c == False,
+ISPICKVAL(PRIORVALUE(StageName),&quot;In Review&quot;),
+ISPICKVAL(StageName, &quot;Approval&quot;),
+ISBLANK(TEXT(Shipping_Method__c)) == False
+),
+AND(
+Special_Price_Order__c == False,
+Reviewed_By_Both_Pricing_Product_Group__c == False,
+ISPICKVAL(PRIORVALUE(StageName),&quot;In Review&quot;),
+ISPICKVAL(StageName, &quot;Quote&quot;),
+ISBLANK(TEXT(Shipping_Method__c)) == False
+)
+)</errorConditionFormula>
+    <errorMessage>Make Sure Review Tasks are Completed.</errorMessage>
+</ValidationRule>

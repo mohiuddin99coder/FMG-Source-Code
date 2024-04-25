@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Can_Add_Products_at_New_stage</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+ISPICKVAL(Opportunity.StageName , &quot;Vendor Confirmation&quot;),
+ISPICKVAL(Opportunity.StageName , &quot;In Review&quot;),
+ISPICKVAL(Opportunity.StageName , &quot;Approval&quot;),
+ISPICKVAL(Opportunity.StageName , &quot;Place Order with Vendor&quot;),
+ISPICKVAL(Opportunity.StageName , &quot;Commit Order&quot;)
+),
+ISNEW(),
+NOT(ISPICKVAL(Product2.Family, &apos;Shipping&apos;))
+)</errorConditionFormula>
+    <errorMessage>You can&apos;t add Product at this Stage.</errorMessage>
+</ValidationRule>

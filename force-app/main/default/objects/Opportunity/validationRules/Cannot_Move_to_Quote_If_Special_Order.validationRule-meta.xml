@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Move_to_Quote_If_Special_Order</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(StageName,&quot;Quote&quot;),
+ISPICKVAL(PRIORVALUE(StageName),&quot;In Review&quot;), Special_Price_Order__c == True,
+Reviewed_By_Both_Pricing_Product_Group__c == False
+)</errorConditionFormula>
+    <errorMessage>Make sure Review Tasks are Completed and Special Price Request is Approved by Todd.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_cannot_be_Previous_or_Current</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+AND(
+ISNEW(),
+OR(
+CloseDate &lt;= TODAY(),
+Date_Needed_by__c  &lt;= TODAY(),
+POETA_Date__c &lt;= TODAY()
+)
+),
+AND(
+NOT(ISNEW()),
+OR(
+CloseDate ==  DATEVALUE(CreatedDate)  &amp;&amp; ISCHANGED(CloseDate),
+Date_Needed_by__c  ==  DATEVALUE(CreatedDate) &amp;&amp; ISCHANGED(Date_Needed_by__c),
+POETA_Date__c ==  DATEVALUE(CreatedDate) &amp;&amp; ISCHANGED(POETA_Date__c)
+)
+)
+)</errorConditionFormula>
+    <errorMessage>Please Select Future Date.</errorMessage>
+</ValidationRule>

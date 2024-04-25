@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>output_mrp__c</columns>
+    <columns>formula_mrp_completed__c</columns>
+    <columns>output_mrp_creation_status__c</columns>
+    <columns>formula_mrp_error__c</columns>
+    <columns>output_mrp_launch_creation_message__c</columns>
+    <columns>formula_mrp_status__c</columns>
+    <columns>Plan_Option__c</columns>
+    <columns>output_request_status__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

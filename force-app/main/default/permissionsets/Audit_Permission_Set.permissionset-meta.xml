@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PPBTLOM__BTWH_WebhookNotification__c.PPBTLOM__Payload__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PPBTLOM__BTWH_WebhookNotification__c.PPBTLOM__Signature__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Audit Permission Set</label>
+    <license>Salesforce</license>
+</PermissionSet>

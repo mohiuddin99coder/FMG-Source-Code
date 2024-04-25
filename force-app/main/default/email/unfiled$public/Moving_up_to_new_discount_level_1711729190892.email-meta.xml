@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Moving up to 4-star or 5-star discount</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>A - Moving up to new discount level</name>
+    <pageDevName>Moving_up_to_new_discount_level</pageDevName>
+    <style>none</style>
+    <subject>Platinum Partners – Kathy at Fire Mountain Gems and Bead</subject>
+    <textOnly>Dear XXX,
+
+Welcome to More Benefits and BIGGER Savings!
+
+Congratulations on earning XXXX Star wholesale buyer status. Get ready for BIG savings….
+
+Your XXX Star wholesale buyer benefits include:
+
+1. An “extra” XXXX% OFF the lowest advertise price on ALL orders – regardless of the quantity you are ordering.
+
+2. Your exclusive Platinum Partners representative is still available to take your orders and answer any questions you may have at 888-364-4378.
+
+All you have to do to maintain your XXX Star wholesale buyer status is what you have already done. You will get to enjoy this additional discount until June 30th, XXXX.
+
+Just a reminder, this additional discount is not to be confused with requalifying for the Platinum Partners annual program period. We will be looking at the purchases done between July 1st this year and June 30th of next year to determine your discount for the following program period which begins July 1st, XXXX. 
+
+Again Congratulations!</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

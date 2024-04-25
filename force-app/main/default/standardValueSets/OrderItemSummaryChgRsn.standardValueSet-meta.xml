@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>01 - COLOR - Color not as expected</fullName>
+        <default>true</default>
+        <label>01 - COLOR - Color not as expected</label>
+    </standardValue>
+    <standardValue>
+        <fullName>02 - QUALITY - Quality not as expected</fullName>
+        <default>false</default>
+        <label>02 - QUALITY - Quality not as expected</label>
+    </standardValue>
+    <standardValue>
+        <fullName>03 - SIZE - Size not as expected</fullName>
+        <default>false</default>
+        <label>03 - SIZE - Size not as expected</label>
+    </standardValue>
+    <standardValue>
+        <fullName>04 - MIS-PICK - Received wrong item</fullName>
+        <default>false</default>
+        <label>04 - MIS-PICK - Received wrong item</label>
+    </standardValue>
+    <standardValue>
+        <fullName>05 - SHORTAGE - Missing item from order</fullName>
+        <default>false</default>
+        <label>05 - SHORTAGE - Missing item from order</label>
+    </standardValue>
+    <standardValue>
+        <fullName>06 - LATE - Arrived late</fullName>
+        <default>false</default>
+        <label>06 - LATE - Arrived late</label>
+    </standardValue>
+    <standardValue>
+        <fullName>07 - DISLIKED - Changed mind/did not meet needs</fullName>
+        <default>false</default>
+        <label>07 - DISLIKED - Changed mind/did not meet needs</label>
+    </standardValue>
+    <standardValue>
+        <fullName>08 - OTHER - Other</fullName>
+        <default>false</default>
+        <label>08 - OTHER - Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>09 - ADVERTISING - Not as pictured/described</fullName>
+        <default>false</default>
+        <label>09 - ADVERTISING - Not as pictured/described</label>
+    </standardValue>
+    <standardValue>
+        <fullName>10 - DATA ENTRY - Wrong item ordered</fullName>
+        <default>false</default>
+        <label>10 - DATA ENTRY - Wrong item ordered</label>
+    </standardValue>
+    <standardValue>
+        <fullName>12 - PRICING - Pricing</fullName>
+        <default>false</default>
+        <label>12 - PRICING - Pricing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>14 - QUANTITY - Quantity/Overbought</fullName>
+        <default>false</default>
+        <label>14 - QUANTITY - Quantity/Overbought</label>
+    </standardValue>
+    <standardValue>
+        <fullName>17 - ASSORTMENT - Did not like assortment</fullName>
+        <default>false</default>
+        <label>17 - ASSORTMENT - Did not like assortment</label>
+    </standardValue>
+    <standardValue>
+        <fullName>22 - DAMAGED - Damaged or defective</fullName>
+        <default>false</default>
+        <label>22 - DAMAGED - Damaged or defective</label>
+    </standardValue>
+    <standardValue>
+        <fullName>30 - LOST - Lost package</fullName>
+        <default>false</default>
+        <label>30 - LOST - Lost package</label>
+    </standardValue>
+    <standardValue>
+        <fullName>31 - ADDRESS - Shipping address change/error</fullName>
+        <default>false</default>
+        <label>31 - ADDRESS - Shipping address change/error</label>
+    </standardValue>
+    <standardValue>
+        <fullName>40 - CANCELED - FMG cancellation</fullName>
+        <default>false</default>
+        <label>40 - CANCELED - FMG cancellation</label>
+    </standardValue>
+</StandardValueSet>

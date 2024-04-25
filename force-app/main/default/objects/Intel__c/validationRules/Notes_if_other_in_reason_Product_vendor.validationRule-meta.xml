@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Notes_if_other_in_reason_Product_vendor</fullName>
+    <active>true</active>
+    <errorConditionFormula>(ISPICKVAL( Product__c , &apos;Other&apos;) || ISPICKVAL( Reason__c , &apos;Other&apos;) || ISPICKVAL( Vendor__c , &apos;Other&apos;)) &amp;&amp;  ISBLANK( Notes__c )</errorConditionFormula>
+    <errorMessage>Please mention Other Product/Vendor/Reason</errorMessage>
+</ValidationRule>

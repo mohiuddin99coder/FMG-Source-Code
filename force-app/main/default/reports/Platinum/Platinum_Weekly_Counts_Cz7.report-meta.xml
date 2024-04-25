@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_98445007</developerName>
+        <masterLabel>Above $2,000</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>Account.Perf365Days__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>1,999.99</to>
+            </sourceValues>
+            <value>Below $2,000</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>1,999.99</from>
+            </sourceValues>
+            <value>Above $2,000</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>CDF1</field>
+    </columns>
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>TYPE</field>
+    </columns>
+    <columns>
+        <field>Account.Platinum_Status__c</field>
+    </columns>
+    <columns>
+        <field>Account.Discount_Level__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Perf365Days__c</field>
+    </columns>
+    <columns>
+        <field>BucketField_98445007</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>TODAY()</calculatedFormula>
+        <dataType>DateOnly</dataType>
+        <developerName>CDF1</developerName>
+        <label>Date</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <description>Weekly counts for various Star and Prospect Groups</description>
+    <filter>
+        <criteriaItems>
+            <column>TYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Platinum,Platinum Prospect,Post Platinum</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Platinum Weekly Counts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <sortColumn>Account.Perf365Days__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cant_Add_Products_After_Opp_Closed</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISNEW(),
+Opportunity.Lock_Opportunity__c
+)</errorConditionFormula>
+    <errorMessage>Can&apos;t add Products, when the Opportunity is Closed.</errorMessage>
+</ValidationRule>

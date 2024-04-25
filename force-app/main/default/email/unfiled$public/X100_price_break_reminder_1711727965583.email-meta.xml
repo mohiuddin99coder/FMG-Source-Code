@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Reminding customer of discount</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>100+ price break reminder</name>
+    <pageDevName>X100_price_break_reminder</pageDevName>
+    <style>none</style>
+    <subject>Platinum Partners – Kathy at Fire Mountain Gems and Bead</subject>
+    <textOnly>Hello XXXX,
+
+I hope this email is finding you well.
+
+As a reminder, you are automatically receiving the 100+ pricing discount, no matter the size of your order through June 30TH, XXXX. It is our sincere hope that you will find value in this savings, and ideally, will assist you in attaining Platinum Partner status. 
+
+If there is anything that you need, please do not hesitate to contact Customer Service at 800-423-2319 or reply to this email. 
+
+I hope you have a wonderful day!</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

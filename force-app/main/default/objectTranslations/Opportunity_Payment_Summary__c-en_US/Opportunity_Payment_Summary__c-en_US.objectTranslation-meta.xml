@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Opportunity Payment Summary</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Opportunity Payment Summaries</value>
+    </caseValues>
+    <layouts>
+        <layout>Opportunity Payment Summary Layout</layout>
+        <sections>
+            <label></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Card Payment Method</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Gateway Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Opportunity Gateway Log</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Opportunity Payment Summary Amounts</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Opportunity Payment Summary Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Changes_Cant_be_made_till_Approval</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISCHANGED(StageName),
+Lock_Stage__c == True &amp;&amp; ISPICKVAL(PRIORVALUE(StageName),&quot;Approval&quot;)
+)</errorConditionFormula>
+    <errorMessage>Changes cannot be made till Approval Process is Complete.</errorMessage>
+</ValidationRule>

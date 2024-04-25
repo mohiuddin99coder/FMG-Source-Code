@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Filtered_AR_Statements_Customer_Headers</fullName>
+    <columns>NAME</columns>
+    <columns>rstkf__arcuststmt3_arcuststmt2__c</columns>
+    <columns>rstkf__arcuststmt3_finchgcalc__c</columns>
+    <columns>rstkf__arcuststmt3_calcfinchg__c</columns>
+    <columns>rstkf__arcuststmt3_finchgtextline__c</columns>
+    <columns>rstkf__arcuststmt3_headerline1__c</columns>
+    <columns>rstkf__arcuststmt3_headerline2__c</columns>
+    <columns>rstkf__arcuststmt3_headerline3__c</columns>
+    <columns>rstkf__arcuststmt3_headerline4__c</columns>
+    <columns>rstkf__arcuststmt3_headerline5__c</columns>
+    <columns>rstkf__arcuststmt3_finchg__c</columns>
+    <columns>rstkf__arcuststmt3_pdf_file__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <label>Filtered AR Statements Customer Headers</label>
+</ListView>

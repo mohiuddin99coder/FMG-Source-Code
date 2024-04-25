@@ -1,0 +1,15 @@
+<apex:page showHeader="false" sidebar="false">
+    <apex:includeLightning />    
+    <div id="LightningComponentid" />    
+    <script>
+    $Lightning.use("c:jewelryMakingContestAura", function() {
+        $Lightning.createComponent("c:jewelryMakingContestLWC",
+          { 
+          },
+          "LightningComponentid",
+          function(cmp) {
+             console.log('LWC Componenet added in VF page');
+          });
+    });
+    </script>
+</apex:page>

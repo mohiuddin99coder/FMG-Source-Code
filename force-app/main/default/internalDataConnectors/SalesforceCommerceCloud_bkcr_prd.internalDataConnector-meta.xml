@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InternalDataConnector xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataConnectionStatus>Connected</dataConnectionStatus>
+    <dataConnectorType>SalesforceCommerceCloud</dataConnectorType>
+    <dataPlatform>Salesforce_Commerce_Cloud</dataPlatform>
+    <dataSourceTenant>SalesforceCommerceCloud_commercecloud_production_bkcrprd</dataSourceTenant>
+    <externalRecordId>bkcr_prd</externalRecordId>
+    <masterLabel>Commerce Connector bkcr_prd</masterLabel>
+</InternalDataConnector>

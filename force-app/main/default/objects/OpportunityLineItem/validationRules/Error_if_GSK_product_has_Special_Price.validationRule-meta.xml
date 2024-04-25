@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Error_if_GSK_product_has_Special_Price</fullName>
+    <active>true</active>
+    <errorConditionFormula>Product2.GSK_Product__c = true &amp;&amp;  Special_Price_Request__c = TRUE</errorConditionFormula>
+    <errorMessage>Special Price not applicable for GSK product</errorMessage>
+</ValidationRule>

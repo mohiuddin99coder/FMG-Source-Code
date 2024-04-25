@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>ORDER_TOT_ADJ_PRODAMT:SUM/PREVGROUPVAL(ORDER_TOT_ADJ_PRODAMT:SUM,CDF1,1) -1</calculatedFormula>
+        <datatype>number</datatype>
+        <description>The difference between MTD this year vs last year</description>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>CDF1</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Variance</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>RowCount / PREVGROUPVAL(RowCount, CDF1 ,1) -1</calculatedFormula>
+        <datatype>percent</datatype>
+        <description>MTD this year vs last year variance in the count of orders.</description>
+        <developerName>FORMULA2</developerName>
+        <downGroupingContext>CDF1</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Order Variance</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>ORDER_TOT_ADJ_PRODAMT:SUM/RowCount</calculatedFormula>
+        <datatype>number</datatype>
+        <description>Average Order Value</description>
+        <developerName>FORMULA3</developerName>
+        <downGroupingContext>CDF1</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>AOV</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>ORDER_TOT_ADJ_PRODAMT</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>CASE(MONTH(DATEVALUE(ORDER_ORDERED_DATE)), 
+1, &quot;Jan&quot;,
+2, &quot;Feb&quot;,
+3, &quot;Mar&quot;, 
+4, &quot;Apr&quot;, 
+5, &quot;May&quot;, 
+6, &quot;Jun&quot;,
+7, &quot;Jul&quot;,
+8, &quot;Aug&quot;,
+9, &quot;Sep&quot;,
+10, &quot;Oct&quot;,
+11, &quot;Nov&quot;,
+12, &quot;Dec&quot;,
+&quot;None&quot;)  &amp; &quot; &quot; &amp;  TEXT(Year(DATEVALUE(ORDER_ORDERED_DATE)))</calculatedFormula>
+        <dataType>Text</dataType>
+        <description>Month and year output based on Order Date</description>
+        <developerName>CDF1</developerName>
+        <label>Month</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <filter>
+        <booleanFilter>((1 AND 4) OR (2 AND 3)) AND 5</booleanFilter>
+        <criteriaItems>
+            <column>ORDER_ORDERED_DATE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>THIS_MONTH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ORDER_ORDERED_DATE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>N_MONTHS_AGO:12</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ORDER_ORDERED_DATE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessOrEqual</operator>
+            <value>N_DAYS_AGO:365</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ORDER_ORDERED_DATE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessOrEqual</operator>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ORDER_TOT_ADJ_PRODAMT</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>0</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CDF1</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Product Sales MTD TY vs LY</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OrderItemList</reportType>
+    <showDetails>false</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>ORDER_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

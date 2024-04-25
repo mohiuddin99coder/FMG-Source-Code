@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payable_Transactions_Today</fullName>
+    <columns>rstkf__apinvtxn_cmpno__c</columns>
+    <columns>NAME</columns>
+    <columns>rstkf__apinvtxn_vendno__c</columns>
+    <columns>rstkf__apinvtxn_trantype__c</columns>
+    <columns>rstkf__apinvtxn_paymentoffset__c</columns>
+    <columns>rstkf__apinvtxn_docno__c</columns>
+    <columns>rstkf__apinvtxn_docnoseq__c</columns>
+    <columns>rstkf__apinvtxn_trandate__c</columns>
+    <columns>rstkf__apinvtxn_disptxnamt__c</columns>
+    <columns>rstkf__apinvtxn_amtapplmaint__c</columns>
+    <columns>rstkf__apinvtxn_homeamt__c</columns>
+    <columns>rstkf__apinvtxn_taxmaintamtnet__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>rstkf__apinvtxn_prepayind__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>Payable Transactions - Today</label>
+</ListView>

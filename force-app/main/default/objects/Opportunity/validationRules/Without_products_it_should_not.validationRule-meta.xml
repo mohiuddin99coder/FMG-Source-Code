@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Without_products_it_should_not</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(PRIORVALUE(StageName ),&apos;New&apos;),
+HasOpportunityLineItem = False,
+ISCHANGED(StageName)
+)</errorConditionFormula>
+    <errorMessage>Make sure Products are added before moving to further Sales process.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Calculated_Insights_Notifications</name>
+        <label>Calculated Insights Notifications</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <stringValue>servicedesk2@firemtn.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>it_helpdesk@firemtn.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Data Cloud Alert : Calculated Insights {!$Record.Name} has failed!</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>CalculatedInsightsFailure</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Calculated Insights Failure Notifications {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Calculated Insights Failure Notifications</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Calculated_Insights_Notifications</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>LastRunStatus</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>ERROR</stringValue>
+            </value>
+        </filters>
+        <object>MktCalculatedInsight</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>CalculatedInsightsFailure</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Calculated Insights: {!$Record.Name} has encountered a failure! 
+
+ 
+Possible Issues &amp; Solutions: 
+
+ 1. Issue: Calculated Insights Issue - Unexpected Segment Count. 
+    Solution: Validate Calculated Insight logic, check for Identity Resolution rule changes, and ensure date operators match time zones. 
+
+ 2.Issue: Calculated Insights Issue - Unexpected Behaviour. 
+   Solution: Optimize queries, verify external data source accessibility, and check for Data Cloud environment constraints. 
+
+ 3.Issue: Calculated Insights Issue - Data Discrepancies. 
+   Solution: Investigate source data changes, align Calculated Insights changes, and review Identity Resolution rules for consistency. 
+
+Steps to Fix: Go to Calculated Insights Tab &gt;&gt; Click Edit &gt;&gt; Check the targeted fields &gt;&gt; check data type of the fields OR go to query &gt;&gt; Check the joins in the tables as per the solutions mentioned in the above.  
+
+Product-Level Concerns: There are ongoing issues being addressed by the Data Cloud Product Team. If you don&apos;t see a specific issue listed above, please visit the following link for more information: https://issues.salesforce.com/</text>
+    </textTemplates>
+</Flow>

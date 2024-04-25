@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Customer</fullName>
+        <default>false</default>
+        <label>Customer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inquirer</fullName>
+        <default>false</default>
+        <label>Inquirer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Post Platinum</fullName>
+        <default>false</default>
+        <label>Post Platinum</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Platinum</fullName>
+        <default>false</default>
+        <label>Platinum</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Platinum Prospect</fullName>
+        <default>false</default>
+        <label>Platinum Prospect</label>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Segment_Failure_notifications</name>
+        <label>Segment Failure notifications</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <stringValue>servicedesk2@firemtn.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>it_helpdesk@firemtn.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Data Cloud Alert : Segment {!$Record.Name} has Failed!</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>SegmentFailure</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Segment Failure Notifications {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Segment Failure Notifications</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Segment_Failure_notifications</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>PublishStatus</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>ERROR</stringValue>
+            </value>
+        </filters>
+        <object>MarketSegment</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>SegmentFailure</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Segment: {!$Record.Name} has encountered a failure! 
+
+
+Possible Issues &amp; Solutions: 
+
+1. Issue: References Too Many Data Lake Objects (DLOs). 
+    Solution: Use a Calculated Insight (CI) to reduce the number of DLOs referenced by your segment. 
+
+2. Issue: Too Complex. 
+    Solution: Use a CI instead of many attributes and nested operators. Combine text values into one Is In text operator. 
+
+3. Issue: Unable to Edit Segment or Segment Editor UI Times Out. 
+   Solution: Remove unnecessary relationships defined at Segment On at the DMO level. If the issue persists, contact Salesforce 
+   Customer Support for help. 
+
+Steps to Fix: Check all the listed possible issues from the below path. If any related to Calculated Insights, please follow the steps specified in the below: 
+
+1. Go to Segments Tab &gt;&gt; Select Segment &gt;&gt; Scroll Down &gt;&gt; Check Publish Status Error if any and Go to the Segment Criteria. 
+
+2. Segment Criteria - Segments Tab &gt;&gt; Select Segment &gt;&gt; Click on Edit Rules &gt;&gt; Again Edit &gt;&gt; Check Container path &gt;&gt; Criteria Fields, Operators and Conditions &gt;&gt; Make Changes accordingly.  
+
+3. Go to the Calculated Insights Tab &gt;&gt; Click Edit &gt;&gt; Check the targeted fields &gt;&gt; Check the data type of the fields OR go to query &gt;&gt; Check the joins in the tables as per the solutions mentioned above.    
+
+Product-Level Concerns: There are ongoing issues being addressed by the Data Cloud Product Team. If you don&apos;t see a specific issue listed above, please visit the following link for more information: https://issues.salesforce.com/</text>
+    </textTemplates>
+</Flow>

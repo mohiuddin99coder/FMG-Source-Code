@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>B2C_Star_Level__c</fullName>
+    <externalId>false</externalId>
+    <label>B2C Star Level</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>3 Star</fullName>
+                <default>false</default>
+                <label>3 Star</label>
+            </value>
+            <value>
+                <fullName>4 Star</fullName>
+                <default>false</default>
+                <label>4 Star</label>
+            </value>
+            <value>
+                <fullName>5 Star</fullName>
+                <default>false</default>
+                <label>5 Star</label>
+            </value>
+            <value>
+                <fullName>P4</fullName>
+                <default>false</default>
+                <label>P4</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

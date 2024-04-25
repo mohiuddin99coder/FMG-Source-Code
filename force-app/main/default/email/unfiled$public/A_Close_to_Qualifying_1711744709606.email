@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initialscale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <style type="text/css">@media screen and (max-width: 480px) {slot[style] {margin-right: 0 !important;}.columnDiv {margin-right: 0 !important;}}@media screen and (min-width: 480px) {slot[style] {margin-bottom: 0 !important;}.columnDiv {margin-bottom: 0 !important;}}</style>
+  <style type="text/css">@media screen and (max-width: 480px) {.contentbuilderBaseColumnRow .columnCell {display:inline-block;width:100%}}</style>
+  <style type="text/css">.contentpageDefaultEmailTemplatePageTemplate .contentRoot {width: 600px;}@media only screen and (max-width: 480px) {.contentpageDefaultEmailTemplatePageTemplate .contentRoot {width: 320px;}}</style>
+ </head>
+ <body>
+  <table class="contentpageDefaultEmailTemplatePageTemplate" style="background-color: #E9EAEC;" role="presentation" id="contentpage_emailTemplateBodyContent" width="100%" cellpadding="0" cellspacing="0">
+   <tbody>
+    <tr>
+     <td width="100%" align="center">
+      <table class="contentRoot" style="background-color: #FFFFFF;" role="presentation" width="600" cellpadding="0" cellspacing="0">
+       <tbody>
+        <tr>
+         <td style="padding-top: 10px; padding-bottom: 10px; padding-left: 10px; padding-right: 10px;">
+          <table class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+           <tbody>
+            <tr valign="top">
+             <td width="100%" class="columnCell" style="vertical-align: top;display: inline-block; float:left">
+              <table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+               <tbody>
+                <tr>
+                 <td>
+                  <table style="width:100%; border-collapse: collapse; word-break:break-word;" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0">
+                   <tbody>
+                    <tr>
+                     <td align="Center"><img style="width: 100%; display: block; border: none; max-width: 100%; object-fit: fill;" src="{[devName:Email_Template_Logo]}" alt="" width="600" /></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table>
+          <table class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+           <tbody>
+            <tr valign="top">
+             <td width="100%" class="columnCell" style="vertical-align: top;display: inline-block; float:left">
+              <table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+               <tbody>
+                <tr>
+                 <td>
+                  <table style="width: 100%; border-collapse: collapse; word-break: break-word; font-size: 14px" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0">
+                   <tbody>
+                    <tr>
+                     <td style="font-family: Arial, Helvetica, sans-serif;"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">Dear XXXX,</span></span></span><br /><br /><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">This email is following the voicemail I just left for you, I hope this email finds you well.&nbsp; I wanted to let you know that you are very close to qualifying for our discount program that we have here at Fire Mountain Gems.&nbsp; This program is set up for our customers who are purchasing at higher volumes.</span></span></span><br /><br /><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:12.0pt">How do you become Platinum Partner?</span></b></span></span><br /><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">You become a Platinum Partner by spending $3,000 in a 365-day period to be eligible for the 3 Star Platinum Program.&nbsp; Your current purchase total is $XXX which means you are <b>only $XXX away</b> from qualifying. This amount will be <b>accurate until XXX</b>! If you were to order an average of $250.00 a month, this would qualify you for the program. <span style="background:yellow">Please note as our way of saying thank you for ordering with us, I have set up your account with the 100+ pricing discount. So, no matter the size of your order you will be getting the lowest advertised price until June 30<sup>th</sup>, XXXX!</span></span></span></span><br /><br /><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><a name="_Hlk90629938"><span style="font-size:12.0pt"><span style="color:black">In addition, we have a third-party company called Avalara, that manages our tax exemption certificates. </span></span></a><span style="font-size:12.0pt"><span style="color:black">Please let us know if you have a tax exemption so we can email you the paperwork.</span></span></span></span><br /><br /><br /><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:12.0pt">What are the benefits of Platinum?</span></b></span></span><br /><br /><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>A knowledgeable team of dedicated Platinum partner Representatives</b> available to assist you through your member’s only exclusive phone line.</span></span></span><br /><br /><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Platinum Partner’s Exclusive emails</b>, featuring new product previews, savings on closeout items and more.</span></span></span><br /><br /><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Expedited order processing</b>- Platinum orders move to the front of the line for daily order processing.</span></span></span><br /><br /><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Online Order History</b>- For quick reorder and convenience, log into your online account and view your order history for the past 18 months.</span></span></span><br /><br /><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>24/7 Online Ordering</b>- Log in to your personal Fire Mountain Gems and Beads account to take advantage of your exclusive discount.</span></span></span><br /><br /><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>&nbsp;&nbsp; Extended Return Policy – </b>an additional 90 days to return unaltered product</span></span></span><br /><br /><br /><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">The Platinum program is an annual program that will run July 1<sup>st</sup> of the current year through June 30<sup>th</sup> of the following year.&nbsp; The level of discounts you will be eligible for will be based on your purchases with a 365-day period. Below are the 3 discount levels available in the Platinum Program.</span></span></span><br /><br /><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:12.0pt">The 3 Star Program:</span></b><span style="font-size:12.0pt"> Purchase $3,000 in products within the 12-month time frame and you will receive a 5% discount off the 100+ price on all orders.</span></span></span><br /><br /><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:12.0pt">The 4 Star Program:</span></b><span style="font-size:12.0pt"> Purchase $5,000 in products within the 12-month time frame and you will receive a 10% discount off the 100+ price on all orders.</span></span></span><br /><br /><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:12.0pt">The 5 Star Program:</span></b><span style="font-size:12.0pt"> Purchase $10,000 in products within the 12-month time frame and you will receive a 15% discount off the 100+ price on all orders.</span></span></span><br /><br /><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">Please feel free to contact me with any questions.</span></span></span></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table></td>
+        </tr>
+       </tbody>
+      </table></td>
+    </tr>
+   </tbody>
+  </table>
+ </body>
+</html>

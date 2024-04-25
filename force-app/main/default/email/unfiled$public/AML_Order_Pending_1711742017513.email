@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initialscale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <style type="text/css">@media screen and (max-width: 480px) {slot[style] {margin-right: 0 !important;}.columnDiv {margin-right: 0 !important;}}@media screen and (min-width: 480px) {slot[style] {margin-bottom: 0 !important;}.columnDiv {margin-bottom: 0 !important;}}</style>
+  <style type="text/css">@media screen and (max-width: 480px) {.contentbuilderBaseColumnRow .columnCell {display:inline-block;width:100%}}</style>
+  <style type="text/css">.contentpageDefaultEmailTemplatePageTemplate .contentRoot {width: 600px;}@media only screen and (max-width: 480px) {.contentpageDefaultEmailTemplatePageTemplate .contentRoot {width: 320px;}}</style>
+ </head>
+ <body>
+  <table class="contentpageDefaultEmailTemplatePageTemplate" style="background-color: #E9EAEC;" role="presentation" id="contentpage_emailTemplateBodyContent" width="100%" cellpadding="0" cellspacing="0">
+   <tbody>
+    <tr>
+     <td width="100%" align="center">
+      <table class="contentRoot" style="background-color: #FFFFFF;" role="presentation" width="600" cellpadding="0" cellspacing="0">
+       <tbody>
+        <tr>
+         <td style="padding-top: 10px; padding-bottom: 10px; padding-left: 10px; padding-right: 10px;">
+          <table class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+           <tbody>
+            <tr valign="top">
+             <td width="100%" class="columnCell" style="vertical-align: top;display: inline-block; float:left">
+              <table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+               <tbody>
+                <tr>
+                 <td>
+                  <table style="width:100%; border-collapse: collapse; word-break:break-word;" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0">
+                   <tbody>
+                    <tr>
+                     <td align="Center"><img style="width: 100%; display: block; border: none; max-width: 100%; object-fit: fill;" src="{[devName:Email_Template_Logo]}" alt="" width="600" /></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table>
+          <table class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+           <tbody>
+            <tr valign="top">
+             <td width="100%" class="columnCell" style="vertical-align: top;display: inline-block; float:left">
+              <table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+               <tbody>
+                <tr>
+                 <td>
+                  <table style="width: 100%; border-collapse: collapse; word-break: break-word; font-size: 14px" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0">
+                   <tbody>
+                    <tr>
+                     <td style="font-family: Arial, Helvetica, sans-serif;">Hello XXX,&nbsp;<br /> &nbsp;<br /> Thank you for your order. &nbsp;I was alerted that your order is being processed, however we are missing documentation required by The USA PATRIOT Act. &nbsp;It requires gem and jewelry businesses to maintain a formal Anti-Money Laundering (AML) Program.<br /><br /> To meet our compliance obligations under the USA PATRIOT Act, and other regulatory requirements of the United States we must ask customers who purchase gemstones and precious metal items to complete an anti-money laundering form. &nbsp; The form is attached above and we ask that it be completed and returned back to us to ensure no delays of any future orders.<br /><br /> The information needed besides name, address, and phone number, and either your business license or driver’s license number. &nbsp;You may check NO about instituting an AML program of your own. &nbsp;Please email the filled out and signed form, with a copy of your driver’s license or business license back to me.&nbsp;<br /><br /> For your reference, below are some links regarding the Anti-Money Laundering Compliance Act:<br /><br /><a href="https://www.finra.org/industry/2017-report-exam-findings/aml-program">https://www.finra.org/industry/2017-report-exam-findings/aml-program</a><br /><br /><a href="https://www.fincen.gov/resources/statutes-regulations/guidance/frequently-asked-questions-0">https://www.fincen.gov/resources/statutes-regulations/guidance/frequently-asked-questions-0</a></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table></td>
+        </tr>
+       </tbody>
+      </table></td>
+    </tr>
+   </tbody>
+  </table>
+ </body>
+</html>

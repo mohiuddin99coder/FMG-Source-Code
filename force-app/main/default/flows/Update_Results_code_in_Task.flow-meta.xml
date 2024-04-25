@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <assignments>
+        <name>Assign_task_name</name>
+        <label>Assign task name</label>
+        <locationX>2426</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Task_Names__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Special Price Approval Request</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.WhoId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.PersonContact.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Updating_Special_Price_Approval_Request</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_For_Subject</name>
+        <label>Check For Subject</label>
+        <locationX>1502</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Prospect_Near</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Prospect Near $</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Updating_Prospect_Near</targetReference>
+            </connector>
+            <label>Prospect Near $-Acc</label>
+        </rules>
+        <rules>
+            <name>Platinum_Prospect_Near</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Platinum Prospect Near $</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Updating_Platinum_Prospect_Near</targetReference>
+            </connector>
+            <label>Platinum Prospect Near $-Acc</label>
+        </rules>
+        <rules>
+            <name>New_Prospect_Contact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New Prospect Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Updating_New_Prospect_Contact</targetReference>
+            </connector>
+            <label>New Prospect Contact-Acc</label>
+        </rules>
+        <rules>
+            <name>Prospect_Follow_Up_Contact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Prospect Follow-Up Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Updating_Prospect_Follow_Up_Contact</targetReference>
+            </connector>
+            <label>Prospect Follow-Up Contact-Acc</label>
+        </rules>
+        <rules>
+            <name>New_Platinum_Introduction</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New Platinum Introduction</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Updating_New_Platinum_Introduction</targetReference>
+            </connector>
+            <label>New Platinum Introduction-Acc</label>
+        </rules>
+        <rules>
+            <name>Regular_Customer_Contact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Regular Customer Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Updating_Regular_Customer_Contact</targetReference>
+            </connector>
+            <label>Regular Customer Contact-Acc</label>
+        </rules>
+        <rules>
+            <name>PM_Vendor_Confirmation_Details</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PM Vendor Confirmation Details</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_PM_Vendor_Confirmation_Details</targetReference>
+            </connector>
+            <label>PM Vendor Confirmation Details-Opp</label>
+        </rules>
+        <rules>
+            <name>PM_Place_Order_with_Vendor</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PM Place Order with Vendor</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Updating_PM_Place_Order_with_Vendor</targetReference>
+            </connector>
+            <label>PM Place Order with Vendor-OPP</label>
+        </rules>
+        <rules>
+            <name>X84_day_test_task</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>84 day test task</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Updating_84_day_test_task</targetReference>
+            </connector>
+            <label>84 day test task</label>
+        </rules>
+        <rules>
+            <name>Special_Price_Approval_Request</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Special Price Approval Request</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_task_name</targetReference>
+            </connector>
+            <label>Special Price Approval Request</label>
+        </rules>
+        <rules>
+            <name>Customer_Reached_1000</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer Reached 1000$</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Customer_Reached</targetReference>
+            </connector>
+            <label>Customer Reached 1000$</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Update Results code in Task {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Results code in Task</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Customer_Reached</name>
+        <label>Customer Reached 1000$</label>
+        <locationX>2690</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Task_Names__c</field>
+            <value>
+                <stringValue>Customer Reached 1000$</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_PM_Vendor_Confirmation_Details</name>
+        <label>Update PM Vendor Confirmation Details</label>
+        <locationX>1634</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Task_Names__c</field>
+            <value>
+                <stringValue>PM Vendor Confirmation Details</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Updating_84_day_test_task</name>
+        <label>Updating 84 day test task</label>
+        <locationX>2162</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Task_Names__c</field>
+            <value>
+                <stringValue>84 day test task</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Updating_New_Platinum_Introduction</name>
+        <label>Updating New Platinum Introduction</label>
+        <locationX>1106</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Task_Names__c</field>
+            <value>
+                <stringValue>New Platinum Introduction</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Updating_New_Prospect_Contact</name>
+        <label>Updating New Prospect Contact</label>
+        <locationX>578</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Task_Names__c</field>
+            <value>
+                <stringValue>New Prospect Contact</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Updating_Platinum_Prospect_Near</name>
+        <label>Updating Platinum Prospect Near $</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Task_Names__c</field>
+            <value>
+                <stringValue>Platinum Prospect Near $</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Updating_PM_Place_Order_with_Vendor</name>
+        <label>Updating PM Place Order with Vendor</label>
+        <locationX>1898</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Task_Names__c</field>
+            <value>
+                <stringValue>PM Place Order with Vendor</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Updating_Prospect_Follow_Up_Contact</name>
+        <label>Updating Prospect Follow-Up Contact</label>
+        <locationX>842</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Task_Names__c</field>
+            <value>
+                <stringValue>Prospect Follow-Up Contact</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Updating_Prospect_Near</name>
+        <label>Updating Prospect Near $</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Task_Names__c</field>
+            <value>
+                <stringValue>Prospect Near $</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Updating_Regular_Customer_Contact</name>
+        <label>Updating Regular Customer Contact</label>
+        <locationX>1370</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Task_Names__c</field>
+            <value>
+                <stringValue>Regular Customer Contact</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Updating_Special_Price_Approval_Request</name>
+        <label>Updating  Special Price Approval Request</label>
+        <locationX>2426</locationX>
+        <locationY>539</locationY>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>1376</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_For_Subject</targetReference>
+        </connector>
+        <object>Task</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>P4 offer</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>100+ offer with no questions</name>
+    <pageDevName>X100_offer_with_no_questions</pageDevName>
+    <style>none</style>
+    <subject>Platinum Partners – XXXX at Fire Mountain Gems and Beads</subject>
+    <textOnly>Hello XXX,
+
+Thank you for your recent inquiry about our Fire Mountain Gems and Beads&apos; Platinum Partners Wholesale program. We would love to earn your business.
+
+As you saw, there is a minimum purchase of $3,000 in the previous 365 days in order to participate in Platinum Partner Annual Program. Since you are interested in purchasing with Fire Mountain Gems, I have set up your account to automatically apply the 100+ pricing discounts, no matter the size of your order! The additional savings will remain on your account through June 30th,XXXX. This opportunity should assist you in reaching the Platinum status, which will allow you to receive additional discounts.
+
+In addition, we have a third-party company called Avalara, that manages our tax exemption certificates. Please let us know if you have a tax exemption so we can email you the paperwork. 
+
+In addition, we have a third-party company called Avalara, that manages our tax exemption certificates. I have emailed you the required information to become tax exempt with us. There is a link in the email for you to fill out the paperwork and send back to Avalara. Please be aware that it can take up to 7 business days to process the paperwork once received. 
+
+When you are ready to order, log in and enter your email address password if you created one. If not, click on the Forgot Password link and you’ll be directed to create one!
+
+If you have any questions, please do not hesitate to call the Platinum Partner Team at 888-364-4378 or dial Customer Service and ask for the Platinum Partners team.</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

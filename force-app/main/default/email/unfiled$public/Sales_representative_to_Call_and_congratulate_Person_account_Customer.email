@@ -1,0 +1,268 @@
+<!DOCTYPE html >
+<html lang="en">
+	<head>
+		<meta charset="utf-8"> <!-- utf-8 works for most cases -->
+		<meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+		<meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+		<title>TITLE</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+		<style>
+		/* What it does: Remove spaces around the email design added by some email clients. */
+		/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+			html,body {
+				margin: 0 auto !important;
+				padding: 0 !important;
+				height: 100% !important;
+				width: 100% !important;
+				font-family: Arial, Helvetica, sans-serif !important;
+				max-width: 660px;
+						}
+		/* What it does: Stops email clients resizing small text. */
+			* {
+				-ms-text-size-adjust: 100%;
+				-webkit-text-size-adjust: 100%;
+				font-family: Arial, Helvetica, sans-serif !important;
+						}
+		/* What it does: Centers email on Android 4.4 */
+			div[style*="margin: 16px 0"] {
+				margin:0 !important;
+						}
+		/* What it does: Stops Outlook from adding extra spacing to tables. */
+			table,
+			td {
+				mso-table-lspace: 0pt !important;
+				mso-table-rspace: 0pt !important;
+			}
+		/* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+			table {
+				border-spacing: 0 !important;
+				border-collapse: collapse !important;
+				table-layout: fixed !important;
+				margin: 0 auto !important;
+			}
+			table table table {
+				table-layout: auto;
+			}
+		/* What it does: Uses a better rendering method when resizing images in IE. */
+			img {
+				-ms-interpolation-mode:bicubic;
+				height: auto !important;
+			}
+		/* What it does: A work-around for iOS meddling in triggered links. */
+			.mobile-link--footer a,
+			a[x-apple-data-detectors],
+			td a, 
+            a {
+				transition: all 100ms ease-in;
+				color:#333333;
+				text-decoration: underline;
+			}
+            .button-td,
+			.button-a {
+				color: #2D5C3F;
+			}
+
+<!-- Progressive Enhancements -->
+
+			/* What it does: Hover styles */
+            
+			.button-td,
+			.button-a,
+			 .button-td-resource:hover,
+			.button-a-resource:hover {
+				transition: all 2s ease-in;
+				text-decoration: none !important;
+			}
+			  .button-td:hover,
+			.button-a:hover {
+				background:#D7EFE0 !important;
+				border-color: #2D5C3F !important;
+			}
+			   .button-td-resource:hover,
+			.button-a-resource:hover {
+				background:#F2EFE9 !important;
+				border-color: #595959 !important;
+			}
+
+			
+		/*typographic style*/
+			.body-text {font-family: Arial, Helvetica, sans-serif !important;}
+			h1 a, .h1 a {
+			font-family: Arial, Helvetica, sans-serif !important;
+			font-size: 36px;
+			font-weight: bold;
+			}
+
+    /* Media Queries */
+			@media screen and (max-width: 550px) {
+				/*What it does: prevents widows and orphans in responsive typography. Wrap span with this class around last group of words. May need it's own breakpoint*/
+		.break {display: block; }
+        /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+        .fluid {
+            width: 100% !important;
+            max-width: 200px !important;
+            height: auto !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+        /* What it does: Forces table cells into full-width rows. */
+        .stack-column,
+        .stack-column-center {
+            display: block !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            direction: ltr !important;
+        }
+        /* And center justify these ones. */
+        .stack-column-center {
+            text-align: center !important;
+        }
+        /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+        .center-on-narrow {
+            text-align: center !important;
+            display: block !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            float: none !important;
+        }
+        table.center-on-narrow {
+            display: inline-block !important;
+        }
+
+				/* What it does: makes item disappear on mobile--adjust disappear point with max-width above*/
+				.hide-mobile {display:none !important;}
+
+		</style>
+	</head>
+<body bgcolor="#ffffff" style="margin: 0; width: 100%;">
+    <center style="width: 100%; background: #ffffff; " >
+        <!-- Visually Hidden Preheader Text for INBOX PREVIEW : BEGIN -->
+        <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;">
+         PREVIEW TEXT
+  &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;   
+        </div>
+        <!-- Visually Hidden Preheader Text : END -->
+<!--      EMAIL BODY: BEGIN-->
+        <div style="max-width: 640px; margin: auto;">
+            <!--[if mso]>
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="640" align="center">
+            <tr>
+            <td>
+            <![endif]-->
+<!-- Email Header : BEGIN -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 640px; padding-bottom: 10px;">
+                <tr>
+                    <td align="center" style=" text-align: center; padding:10px 0 0 0; ">
+                        <a href="https://www.firemountaingems.com" rilt="logo" rilc="Header"><img src="https://image1.fmgstatic.com/grafx/emailcampaigns/campaignlogo.gif" width="250px" alt="-- Fire Mountain Gems and Beads -- " border="0" style="background: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 16px; mso-height-rule: exactly; line-height: 20px; color: #111111;"></a>
+                     </td>
+                   </tr>
+                   <tr class="hide-mobile">
+                      <td class="body-text" align="center" style=" text-align: center;  padding-bottom: 10px; text-align:center; font-style:italic; "><em style="font-family:Arial, Helvetica, sans-serif; color:#012c81; font-size:16px;">America's Favorite Beading and <span class="break">Jewelry Supply Company<sup>&reg;</sup></span></em>
+                      </td>
+                	</tr>
+            </table>
+ <!-- Email Header : END -->
+   <!-- Email Body : BEGIN -->
+      <!--Main Email Message: BEGIN-->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 660px; padding-top: 20px;"  bgcolor="#ffffff">
+				<tr>
+					<td>
+						<table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width: 660px;" >
+                                             <tr>
+                                                <td  style="padding: 0 25px;" align="left">
+                                                <font class="body-text" style="color: #000000; font-family: Helvetica, Arial, sans-serif; font-size: 15px; font-weight: normal; line-height: 24px;">
+ Hi {!Account.OwnerFullName},<br><br>
+
+  This Customer {!Account.Name} has reached the Platinum level. <br>
+  Please call the customer and Congratulate them.<br><br>
+
+  Below are the Account Details:<br>
+  Name: {!Account.Name}<br>
+  Phone: {!Account.Phone}<br>
+  Email: {!Account.PersonEmail}<br><br>
+
+ Thanks,<br>
+ FMG Team
+
+
+                                                  </font>
+                                                </td>
+                                             </tr>
+                             </table>
+                          </td>
+                        </tr>
+			</table>
+  <!-- Main Email Message : END -->
+ <!-- Clear Spacer : BEGIN -->
+                <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 660px;">
+                <tr>
+                    <td height="20" style="font-size: 0; line-height: 0;">&nbsp;
+                    </td>
+                </tr>
+                </table>
+   <!-- Clear Spacer : END -->
+		
+   <!--        EMAIL BODY: END-->
+   <!-- Email Footer : BEGIN -->
+               <!--[if mso]>
+		             <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="660" align="center">
+		             <tr>
+		             <td>
+		             <![endif]-->
+		    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 660px; background-color: #f7f7f7; text-align: center; padding: 20px  10px 10px 10px;">
+				<tr>
+					<td   align="center" valign="middle" style="font-family: Arial, Helvetica, sans-serif; font-size: 20px; font-weight: bold">
+				<br>Connect with Us<br><br>
+					</td>
+				</tr>
+	       	</table>         
+		             
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 660px; background-color: #f7f7f7; text-align: center; padding-bottom: 10px;">
+          		<tr>
+          			<td width="16%">
+          				<a href="https://bit.ly/FMG-FaceBook" rilt="facebook"><img style="display: inline-block; width:100%; max-width: 46px;"  src="http://image1.fmgstatic.com/grafx/emailcampaigns/icons/facebook_46x46.png"  border="0" alt=" FACEBOOK "></a>
+          			</td>
+          			<td width="16%">
+          				<a href="https://bit.ly/Youtube-FMG" rilt="youtube"><img style="display: inline-block; width:100%; max-width: 46px;"  src="http://image1.fmgstatic.com/grafx/emailcampaigns/icons/youtube_46x46.png" border="0" alt=" YOUTUBE "></a>
+          			</td>
+          			<td width="16%">
+          				<a href="https://bit.ly/Twitter-FMG" rilt="twitter"><img style="display: inline-block; width:100%; max-width: 46px;"  src="http://image1.fmgstatic.com/grafx/emailcampaigns/icons/twitter_46x46.png"  border="0" alt=" TWITTER "></a>
+          			</td>
+          			<td width="16%">
+          				<a href="https://bit.ly/FMG-Pinterest" rilt="pinterest"><img style="display: inline-block; width:100%; max-width: 46px;"  src="http://image1.fmgstatic.com/grafx/emailcampaigns/icons/pinterest_46x46.png"  border="0" alt=" PINTEREST "></a>
+          			</td>
+          			<td width="16%">
+          				<a href="https://bit.ly/FMG-Instagram" rilt="instagram"><img style="display: inline-block; width:100%; max-width: 46px;"  src="http://image1.fmgstatic.com/grafx/emailcampaigns/icons/instagram_46x46.png"  border="0" alt=" INSTAGRAM "></a>
+          			</td>     			
+          		</tr>
+			</table>
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 660px; background-color: #f7f7f7;">
+          
+                <tr>
+                    <td style="padding: 20px 10px 5px 10px;width: 100%;font-size: 14px; font-family: Arial, Helvetica, sans-serif; mso-height-rule: exactly; line-height:18px; text-align: center; color: #222222;">
+                       
+                       <strong>Fire Mountain Gems and Beads, Inc.</strong> <br><span class="break">One Fire Mountain Way,</span><span class="break"> Grants Pass, OR </span><span class="break">97526-2373 USA</span><br>US and Canada Customer Service: <span class="break">(800) 423-2319</span><br />
+International Customer Service: <span class="break">(541) 956-7890</span><br>
+<br>
+
+                     </td>
+                 </tr>
+            	<tr>
+                	<td style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; mso-height-rule: exactly; line-height:18px; text-align: center; color: #222222; padding-bottom: 20px;">
+                   Copyright 2023 All Rights Reserved<br><br>
+<em>Prices subject to change without prior notice. <br>
+Not responsible for typographical, descriptive or technical errors for products listed.</em>
+<br><br><img src="http://p.FIREMOUNTAINGEMS-cmr.net/esp/open?cl=FIREMOUNTAINGEMS&em=${EMAIL_ADDRESS_}" width="1" height="1"/>
+                	</td>
+                </tr>
+			</table>
+            <!--[if mso]>
+                            </td>
+                            </tr>
+                            </table>
+                            <![endif]-->
+            <!-- Email Footer : END -->
+			</div>
+    </center>
+</body>
+</html>

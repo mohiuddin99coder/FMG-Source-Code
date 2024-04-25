@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Reports Creation</label>
+    <permissionSets>Product_Master_Read_Only</permissionSets>
+    <permissionSets>Reports_and_Dashboards</permissionSets>
+    <permissionSets>rootstock__ERP_RootForm_User</permissionSets>
+    <permissionSets>rootstock__RS_Baseline_Lightning</permissionSets>
+    <permissionSets>rootstock__RS_Baseline_Permission_Set</permissionSets>
+    <permissionSets>rootstock__Rootstock_Custom_UI_Rules_and_Actions_Edit_V2</permissionSets>
+    <permissionSets>rootstock__Rootstock_Lightning_Toolkit_User</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cant_move_to_return_or_cancel_special</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  Is_Special_Order__c ,
+  ISPICKVAL( Status , &quot;Returned&quot;) || ISPICKVAL( Status , &quot;Canceled&quot;)
+)</errorConditionFormula>
+    <errorMessage>Is Special Order checkbox is checked Can&apos;t Move to Return or Cancel</errorMessage>
+</ValidationRule>

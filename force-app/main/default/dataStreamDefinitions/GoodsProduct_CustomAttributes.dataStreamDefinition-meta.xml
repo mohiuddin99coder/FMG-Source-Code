@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataStreamDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <areHeadersIncludedInFile>false</areHeadersIncludedInFile>
+    <bulkIngest>true</bulkIngest>
+    <creationType>Custom</creationType>
+    <dataConnector>Data_Cloud_SFTP</dataConnector>
+    <dataConnectorType>SFTP</dataConnectorType>
+    <dataPlatformDataSetItemName>CONNECTORSFRAMEWORK</dataPlatformDataSetItemName>
+    <dataSource>SFTP_Data_Cloud_SFTP</dataSource>
+    <isLimitedToNewFiles>true</isLimitedToNewFiles>
+    <isMissingFileFailure>false</isMissingFileFailure>
+    <masterLabel>GoodsProduct_CustomAttributes</masterLabel>
+    <mktDataLakeObject>GoodsProduct_CustomAttributes__dll</mktDataLakeObject>
+    <mktDataTranObject>GoodsProduct_CustomAttributes</mktDataTranObject>
+</DataStreamDefinition>

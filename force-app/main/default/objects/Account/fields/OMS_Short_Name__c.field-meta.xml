@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OMS_Short_Name__c</fullName>
+    <externalId>false</externalId>
+    <label>OMS Short Name</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>04 PRIOR PROSP</fullName>
+                <default>false</default>
+                <label>04 PRIOR PROSP</label>
+            </value>
+            <value>
+                <fullName>06 PLAT INQ PROSP 4T</fullName>
+                <default>false</default>
+                <label>06 PLAT INQ PROSP 4T</label>
+            </value>
+            <value>
+                <fullName>07 PLAT FMG PROSP 4T</fullName>
+                <default>false</default>
+                <label>07 PLAT FMG PROSP 4T</label>
+            </value>
+            <value>
+                <fullName>08 PLAT FMG PROSP</fullName>
+                <default>false</default>
+                <label>08 PLAT FMG PROSP</label>
+            </value>
+            <value>
+                <fullName>09 PLAT INQ PROSP</fullName>
+                <default>false</default>
+                <label>09 PLAT INQ PROSP</label>
+            </value>
+            <value>
+                <fullName>79 PROSP BDSHP TIER4</fullName>
+                <default>false</default>
+                <label>79 PROSP BDSHP TIER4</label>
+            </value>
+            <value>
+                <fullName>71 POST PLAT 4TH TIER</fullName>
+                <default>false</default>
+                <label>71 POST PLAT 4TH TIER</label>
+            </value>
+            <value>
+                <fullName>80 BEADSHOP 3</fullName>
+                <default>false</default>
+                <label>80 BEADSHOP 3</label>
+            </value>
+            <value>
+                <fullName>81 BEADSHOP 4</fullName>
+                <default>false</default>
+                <label>81 BEADSHOP 4</label>
+            </value>
+            <value>
+                <fullName>82 BEADSHOP 5</fullName>
+                <default>false</default>
+                <label>82 BEADSHOP 5</label>
+            </value>
+            <value>
+                <fullName>72 PLAT 5 STAR PLUS</fullName>
+                <default>false</default>
+                <label>72 PLAT 5 STAR PLUS</label>
+            </value>
+            <value>
+                <fullName>75 PLAT 5 STAR</fullName>
+                <default>false</default>
+                <label>75 PLAT 5 STAR</label>
+            </value>
+            <value>
+                <fullName>76 PLAT 4 STAR</fullName>
+                <default>false</default>
+                <label>76 PLAT 4 STAR</label>
+            </value>
+            <value>
+                <fullName>85 PLAT 3 STAR</fullName>
+                <default>false</default>
+                <label>85 PLAT 3 STAR</label>
+            </value>
+            <value>
+                <fullName>60 BEADBUY 3</fullName>
+                <default>false</default>
+                <label>60 BEADBUY 3</label>
+            </value>
+            <value>
+                <fullName>61 BEADBUY 4</fullName>
+                <default>false</default>
+                <label>61 BEADBUY 4</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Pricing discount being removed from account</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>100+ pricing - Losing Discount</name>
+    <pageDevName>X100_pricing_Losing_Discount</pageDevName>
+    <style>none</style>
+    <subject>Platinum Partners – XXXX at Fire Mountain Gems and Bead</subject>
+    <textOnly>Dear Valued Customer,
+
+Our Platinum Partners annual review is complete. Due to limited activity, your account no longer qualifies for automatic 100+ discount pricing. You will still receive all assortable discount pricing on your individual orders. 
+
+If you have any questions, please call our friendly Customer Service representatives at 800-355-2137. 
+
+Wishing you the very best,</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

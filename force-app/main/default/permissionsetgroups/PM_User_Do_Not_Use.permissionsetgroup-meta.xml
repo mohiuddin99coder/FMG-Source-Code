@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Marked for deletion</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>PM User Do Not Use</label>
+    <permissionSets>Add_API</permissionSets>
+    <permissionSets>B2C_CRM_JWT</permissionSets>
+    <permissionSets>B2C_CRM_SYNC</permissionSets>
+    <permissionSets>DOX__Dox</permissionSets>
+    <permissionSets>DOX__RootForms_admin</permissionSets>
+    <permissionSets>DOX__RootForms_user</permissionSets>
+    <permissionSets>Purchase_Order_Receipts_and_Authorizations</permissionSets>
+    <permissionSets>RS_MRP_with_Forcasting</permissionSets>
+    <permissionSets>rootstock__ERP_RootForm_User</permissionSets>
+    <permissionSets>rootstock__RS_Baseline_Lightning</permissionSets>
+    <permissionSets>rootstock__RS_Baseline_Permission_Set</permissionSets>
+    <permissionSets>rootstock__RS_PO_AP_Match</permissionSets>
+    <permissionSets>rootstock__RS_PO_Demand_Management</permissionSets>
+    <permissionSets>rootstock__RS_PO_Entry_and_Processing</permissionSets>
+    <permissionSets>rootstock__RS_PO_Inbound_Shipment</permissionSets>
+    <permissionSets>rootstock__RS_Purchase_Order_Receipts_and_Authorization</permissionSets>
+    <permissionSets>rootstock__RS_Purchasing_Setup_Data_Manager</permissionSets>
+    <permissionSets>rootstock__RS_Requisitions</permissionSets>
+    <permissionSets>rootstock__RS_Sales_Order_Setup</permissionSets>
+    <permissionSets>rootstock__Rootstock_Custom_UI_Rules_and_Actions_Edit_V2</permissionSets>
+    <permissionSets>rootstock__Rootstock_Lightning_Toolkit_User</permissionSets>
+    <permissionSets>rstk__FLC</permissionSets>
+    <permissionSets>rstkf__ERP_Financials_Transactional_Access_1</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>B2C CustomerList</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>B2C CustomerLists</value>
+    </caseValues>
+    <layouts>
+        <layout>B2C CustomerList Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Activate_B2C_CustomerList</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Activate_B2C_Sites</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Apply_B2C_ClientID_Values</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Apply_Named_Credential_to_Sites</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Assign_Named_Credential</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Deactivate_B2C_CustomerList</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Deactivate_B2C_Sites</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Reset_B2C_ClientID_Values</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Reset_Named_Credential_Site_Values</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Update_Site_Counts</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Ensure_API_Url_has_Prefix</name>
+    </validationRules>
+</CustomObjectTranslation>

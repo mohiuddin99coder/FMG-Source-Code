@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Production LiveChat</name>
+    <queueMembers>
+        <users>
+            <user>madrigala@firemtn.com</user>
+            <user>b2c_sync@firemtn.com</user>
+            <user>krutsingerb@firemtn.com</user>
+            <user>bakerc@firemtn.com</user>
+            <user>martinezc@firemtn.com.prod</user>
+            <user>etg.firemtn@etg.digital</user>
+            <user>rossj@firemtn.com</user>
+            <user>saulk@firemtn.com</user>
+            <user>berryk@firemtn.com</user>
+            <user>ritchiek@firemtn.com</user>
+            <user>mencek@firemtn.com</user>
+            <user>burnsl@firemtn.com</user>
+            <user>clarkl@firemtn.com</user>
+            <user>mendozary@firemtn.com</user>
+            <user>steffens@firemtn.com</user>
+            <user>millers@firemtn.com</user>
+            <user>ferrys@firemtn.com</user>
+            <user>raymonds@firemtn.com</user>
+            <user>hueyt@firemtn.com</user>
+            <user>niesv@firemtn.com.prod</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Production_LiveChat</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>LiveChatTranscript</sobjectType>
+    </queueSobject>
+</Queue>

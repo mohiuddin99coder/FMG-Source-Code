@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>All the permissions of PM User with the addition of uploading data and access to CS Orders and Special Buys.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>PM Upload</label>
+    <permissionSets>Add_API</permissionSets>
+    <permissionSets>Approval_Requests</permissionSets>
+    <permissionSets>B2C_CRM_JWT</permissionSets>
+    <permissionSets>B2C_CRM_SYNC</permissionSets>
+    <permissionSets>Bulk_Data_Load_Jobs</permissionSets>
+    <permissionSets>Bulk_Data_Loader_Permissions</permissionSets>
+    <permissionSets>DOX__RootForms_user</permissionSets>
+    <permissionSets>Enable_Filters</permissionSets>
+    <permissionSets>Import_Wizard</permissionSets>
+    <permissionSets>Inventory_Management</permissionSets>
+    <permissionSets>Inventory_Requisition_WorkBench</permissionSets>
+    <permissionSets>Opportunites</permissionSets>
+    <permissionSets>Product_Master_Custom_Fields_Attributes</permissionSets>
+    <permissionSets>Purchasing_Data_Manager_Import</permissionSets>
+    <permissionSets>RS_MRP_with_Forcasting</permissionSets>
+    <permissionSets>Reports_and_Dashboards</permissionSets>
+    <permissionSets>Run_Flows</permissionSets>
+    <permissionSets>Units_of_Measure</permissionSets>
+    <permissionSets>rootstock__ERP_RootForm_User</permissionSets>
+    <permissionSets>rootstock__RS_Baseline_Lightning</permissionSets>
+    <permissionSets>rootstock__RS_Baseline_Permission_Set</permissionSets>
+    <permissionSets>rootstock__RS_Disassembly_Orders_Processing</permissionSets>
+    <permissionSets>rootstock__RS_Mfg_Engineering</permissionSets>
+    <permissionSets>rootstock__RS_PO_AP_Match</permissionSets>
+    <permissionSets>rootstock__RS_PO_Demand_Management</permissionSets>
+    <permissionSets>rootstock__RS_PO_Entry_and_Processing</permissionSets>
+    <permissionSets>rootstock__RS_PO_Inbound_Shipment</permissionSets>
+    <permissionSets>rootstock__RS_Product_Configurator_Admin</permissionSets>
+    <permissionSets>rootstock__RS_Purchase_Order_Receipts_and_Authorization</permissionSets>
+    <permissionSets>rootstock__RS_Purchasing_Setup_Data_Manager</permissionSets>
+    <permissionSets>rootstock__RS_Requisitions</permissionSets>
+    <permissionSets>rootstock__RS_Shop_Floor_Admin</permissionSets>
+    <permissionSets>rootstock__RS_Work_Order_Management</permissionSets>
+    <permissionSets>rootstock__Rootstock_Custom_UI_Rules_and_Actions_Edit</permissionSets>
+    <permissionSets>rootstock__Rootstock_Custom_UI_Rules_and_Actions_Edit_V2</permissionSets>
+    <permissionSets>rootstock__Rootstock_Custom_UI_Rules_and_Actions_ReadOnly</permissionSets>
+    <permissionSets>rootstock__Rootstock_Lightning_Toolkit_User</permissionSets>
+    <permissionSets>rstk__FLC</permissionSets>
+    <permissionSets>rstkf__ERP_Financials_Transactional_Access_1</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

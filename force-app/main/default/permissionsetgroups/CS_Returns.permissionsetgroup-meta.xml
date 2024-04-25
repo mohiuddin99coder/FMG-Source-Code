@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>CS Returns</label>
+    <permissionSets>Add_API</permissionSets>
+    <permissionSets>B2C_CRM_JWT</permissionSets>
+    <permissionSets>B2C_CRM_SYNC</permissionSets>
+    <permissionSets>CS_Inventory_Returns</permissionSets>
+    <permissionSets>Customer_Leads</permissionSets>
+    <permissionSets>Opportunites</permissionSets>
+    <permissionSets>Order_Summaries</permissionSets>
+    <permissionSets>Order_Summary_Routing_Salesforce</permissionSets>
+    <permissionSets>PPBTLOM__BraintreeLightningOrderManagementShopper</permissionSets>
+    <permissionSets>PPBTLOM__Braintree_LOM_Admin</permissionSets>
+    <permissionSets>RMA_CS</permissionSets>
+    <permissionSets>Run_Flows</permissionSets>
+    <permissionSets>rootstock__RS_Baseline_Lightning</permissionSets>
+    <permissionSets>rootstock__RS_Baseline_Permission_Set</permissionSets>
+    <permissionSets>rootstock__RS_SO_RMA</permissionSets>
+    <permissionSets>rootstock__Rootstock_Custom_UI_Rules_and_Actions_Edit_V2</permissionSets>
+    <permissionSets>rootstock__Rootstock_Lightning_Toolkit_User</permissionSets>
+    <permissionSets>rootstock__Rootstock_Non_Admin_User</permissionSets>
+    <permissionSets>rstkf__ERP_Financials_Transactional_Access_1</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

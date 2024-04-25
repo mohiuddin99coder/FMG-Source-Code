@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inventory_Commodity_Codes_MRP</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__iccomcod_comcod__c</columns>
+    <columns>rstk__iccomcod_descr__c</columns>
+    <columns>rstk__iccomcod_mrpplanpol_pl__c</columns>
+    <columns>rstk__iccomcod_mrppolqty__c</columns>
+    <columns>rstk__iccomcod_sspolqty__c</columns>
+    <columns>rstk__iccomcod_mrpminqty__c</columns>
+    <columns>rstk__iccomcod_mrpmaxqty__c</columns>
+    <columns>rstk__iccomcod_supplymultiplier__c</columns>
+    <columns>rstk__iccomcod_fifoind__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Inventory Commodity Codes MRP</label>
+</ListView>

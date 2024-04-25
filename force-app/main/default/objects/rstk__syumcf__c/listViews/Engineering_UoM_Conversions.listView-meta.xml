@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Engineering_UoM_Conversions</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__syumcf_type_pl__c</columns>
+    <columns>rstk__syumcf_fruom__c</columns>
+    <columns>rstk__syumcf_touom__c</columns>
+    <columns>rstk__syumcf_umcf__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__syumcf_type_pl__c</field>
+        <operation>equals</operation>
+        <value>Eng to Inv</value>
+    </filters>
+    <label>Engineering UoM Conversions</label>
+</ListView>

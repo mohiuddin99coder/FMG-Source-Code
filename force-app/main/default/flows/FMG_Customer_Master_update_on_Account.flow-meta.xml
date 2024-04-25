@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <description>Customer Master update on Account:  When Current A/R Balance is updated in Customer Master will be synced back to Account Available Credit</description>
+    <environments>Default</environments>
+    <interviewLabel>FMG Customer Master update on Account {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>FMG Customer Master update on Account</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Update the Available Credit on the Account</description>
+        <name>Update_Account</name>
+        <label>Update Account</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.rstk__socust_sf_account__r.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>AvailableCredit__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>$Record.rstk__socust_arbalance__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>AvailableCredit__c</field>
+            <value>
+                <elementReference>$Record.rstk__socust_arbalance__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Account</targetReference>
+        </connector>
+        <object>rstk__socust__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

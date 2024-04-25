@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inventory_Item_Master_Filtered</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__icitem_item__c</columns>
+    <columns>rstk__icitem_descr__c</columns>
+    <columns>rstk__icitem_iccomcod__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>rstk__icitem_src_pl__c</columns>
+    <columns>rstk__icitem_invuom__c</columns>
+    <columns>rstk__icitem_backflushpol__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__icitem_iccomcod__c</field>
+        <operation>contains</operation>
+        <value>GSK</value>
+    </filters>
+    <label>Inventory Item Master - Filtered</label>
+</ListView>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PM_Manager_Approval_pohdr</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__pohdr_vendno__c</columns>
+    <columns>rstk__pohdr_approvalsts__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>rstk__pohdr_poadddte__c</columns>
+    <columns>rstk__pohdr_totamt__c</columns>
+    <columns>rstk__pohdr_ordsts__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__pohdr_ordsts__c</field>
+        <operation>equals</operation>
+        <value>3-Approvals Processing</value>
+    </filters>
+    <label>PM Manager Approval</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

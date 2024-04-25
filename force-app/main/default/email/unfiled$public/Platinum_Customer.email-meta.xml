@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Email_Logo</letterhead>
+    <name>Platinum Customer</name>
+    <style>freeForm</style>
+    <subject>New Platinum Request Lead Created</subject>
+    <textOnly>*** NEW LEAD ASSIGNMENT NOTIFICATION ***
+
+The following Lead has been assigned to you by Platinum Customer.
+
+Lead Name: {!Lead.Name}
+Email: {!Lead.Email}
+
+Click here to access the lead directly.
+
+Regards
+FMG Team</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

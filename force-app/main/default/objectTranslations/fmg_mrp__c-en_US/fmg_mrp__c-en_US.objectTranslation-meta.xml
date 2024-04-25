@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>FMG MRP</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>FMG MRPs</value>
+    </caseValues>
+    <layouts>
+        <layout>FMG MRP Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>MRP</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>MRP Creation</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Startup</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

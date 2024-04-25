@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rstk__Quote_rsjob__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>When checked, indicates that this quote is for a Rootstock job.</inlineHelpText>
+    <label>Quote is for a Rootstock Job</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

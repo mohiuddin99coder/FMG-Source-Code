@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Filtered_Inventory_Cost_Transactions</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__formula_cost__c</columns>
+    <columns>rstk__formula_ucsttot__c</columns>
+    <columns>rstk__sytxncst_usrno__c</columns>
+    <columns>rstk__sytxncst_txnid__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>rstk__sytxncst_item__c</columns>
+    <columns>rstk__sytxncst_txnqty__c</columns>
+    <columns>rstk__sytxncst_totqtyloc__c</columns>
+    <columns>rstk__sytxncst_locid__c</columns>
+    <columns>rstk__sytxncst_locnum__c</columns>
+    <columns>rstk__sytxncst_porcptno__c</columns>
+    <columns>rstk__sytxncst_fifoseq__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__sytxncst_txnid__c</field>
+        <operation>contains</operation>
+        <value>WOC</value>
+    </filters>
+    <label>Filtered Inventory Cost Transactions</label>
+</ListView>

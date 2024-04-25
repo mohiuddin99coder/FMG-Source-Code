@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>rstk__icitem__c$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>rstk__icitem__c$rstk__icitem_qtydecimalind__c</field>
+    </columns>
+    <columns>
+        <field>rstk__icitem__c$rstk__icitem_iccomcod__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>rstk__icitem__c$rstk__icitem_iccomcod__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Reg Purch Sellable</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>rstk__icitem__c$rstk__icitem_qtydecimalind__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>58823 RS Inventory item master Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>RS_Inventory_item_master__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>rstk__icitem__c$rstk__icitem_abcdate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

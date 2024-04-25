@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Warehouse Manager</label>
+    <permissionSets>DOX__Dox</permissionSets>
+    <permissionSets>DOX__RootForms_user</permissionSets>
+    <permissionSets>FLC_Add</permissionSets>
+    <permissionSets>Import_Wizard</permissionSets>
+    <permissionSets>Location_Management</permissionSets>
+    <permissionSets>RS_Work_Order_Management_with_Reversals</permissionSets>
+    <permissionSets>Receiving</permissionSets>
+    <permissionSets>Reports_and_Dashboards</permissionSets>
+    <permissionSets>Run_Flows</permissionSets>
+    <permissionSets>rootstock__ERP_RootForm_User</permissionSets>
+    <permissionSets>rootstock__RS_Baseline_Lightning</permissionSets>
+    <permissionSets>rootstock__RS_Baseline_Permission_Set</permissionSets>
+    <permissionSets>rootstock__RS_DRP</permissionSets>
+    <permissionSets>rootstock__RS_Inventory_Transactions_Management_Admin</permissionSets>
+    <permissionSets>rootstock__RS_MRP</permissionSets>
+    <permissionSets>rootstock__RS_Mfg_Engineering</permissionSets>
+    <permissionSets>rootstock__RS_PO_Demand_Management</permissionSets>
+    <permissionSets>rootstock__RS_Planned_Location_Transfer</permissionSets>
+    <permissionSets>rootstock__RS_Purchase_Order_Receipts_and_Authorization</permissionSets>
+    <permissionSets>rootstock__RS_SO_Entry_Data_Input</permissionSets>
+    <permissionSets>rootstock__RS_SO_Entry_Fulfillment_Processing</permissionSets>
+    <permissionSets>rootstock__RS_Shop_Floor_Admin</permissionSets>
+    <permissionSets>rootstock__RS_Time_and_Quantity_Booking_Management</permissionSets>
+    <permissionSets>rootstock__RS_WO_Material_Management</permissionSets>
+    <permissionSets>rootstock__RS_WO_Scheduling_Planner</permissionSets>
+    <permissionSets>rootstock__RS_Work_Order_Receipts</permissionSets>
+    <permissionSets>rootstock__Rootstock_Custom_UI_Rules_and_Actions_Edit_V2</permissionSets>
+    <permissionSets>rootstock__Rootstock_Lightning_Toolkit_User</permissionSets>
+    <permissionSets>rstkf__ERP_Financials_Transactional_Access_1</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

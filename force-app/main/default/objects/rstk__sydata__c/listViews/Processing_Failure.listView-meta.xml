@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Processing_Failure</fullName>
+    <columns>NAME</columns>
+    <columns>rstk__sydata_icitem__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>rstk__sydata_porcptno__c</columns>
+    <columns>rstk__sydata_pohdr__c</columns>
+    <columns>rstk__sydata_prcrptap__c</columns>
+    <columns>rstk__sydata_txntype__c</columns>
+    <columns>rstk__sydata_process__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>rstk__sydata_process__c</field>
+        <operation>equals</operation>
+        <value>Processing Failure</value>
+    </filters>
+    <label>Processing Failure</label>
+    <language>en_US</language>
+</ListView>
